@@ -26,13 +26,16 @@
 .btn-orange{
   background:#ff5100;
   color:white;
-  padding:5px 100px;
+  padding:5px 120px;
   border-radius: 5px;
   border: none !important;
+  
+  
 }
 .btn-orange-absolute:active{
   background:#ff5100;
   color:white;
+  
 }
 
 .btn-orange-absolute{
@@ -40,6 +43,8 @@
   color:white;
    border-radius: 5px;
   border: none !important;
+    white-space: nowrap; /* Metnin alt satıra geçmesini engeller */
+
 }
 select,
 select:focus,
@@ -50,6 +55,8 @@ select:focus-visible {
 .binek-araclar-btn{
   background-color: #5c5c70;
   border-radius: 5px;
+    white-space: nowrap; /* Metnin alt satıra geçmesini engeller */
+
 }
 .binek-araclar-btn:active{
   background-color: #5c5c70;

@@ -1,47 +1,47 @@
 <nav class="navbar navbar-expand-lg bg-white py-4">
-  <div class="container d-flex align-items-center">
-
+  <div class="container">
     <!-- Logo -->
-    <a class="navbar-brand me-4" href="#">
-      <img src="suvmarket-logo-main.svg" height="50">
+    <a class="navbar-brand me-lg-4 order-lg-1 order-md-1 order-sm-1 order-1 pb-0 mx-auto" href="#">
+      <img class="logo" style="width: 270px;" src="suvmarket-logo-main.svg" height="50" />
     </a>
 
     <!-- Search -->
-    <div class="flex-grow-1 position-relative me-4 header">
-
+    <div class="flex-grow-1 position-relative me-lg-4 order-lg-2 order-md-3 order-sm-3 order-3 w-100 mt-lg-0 mt-2">
       <input
-        class="search-input rounded-pill pe-5"
+        class="search-input rounded-pill"
         type="search"
-        placeholder="Marka, Model arayın">
+        placeholder="Marka, Model arayın"
+      />
 
       <button class="search-icon">
         <i class="bi bi-search fs-18"></i>
       </button>
-
     </div>
 
     <!-- Menu -->
-    <div class="d-flex align-items-center">
+    <div class="d-flex flex-column flex-sm-row gap-1 gap-sm-0 align-items-center order-lg-3 order-md-2 order-sm-2 order-2 mt-lg-0 mt-2  w-100">
 
-      <button class="btn-orange al fw-bold fs-18">
-        Al
-      </button>
+  <!-- Al + Sat (her zaman yan yana) -->
+  <div class="d-flex gap-1 gap-sm-0 w-100">
+    <button class="btn-orange al fw-bold fs-18 w-100 ">Al</button>
+    <button class="btn-orange sat fw-bold fs-18 w-100">Sat</button>
+  </div>
 
-      <button class="btn-orange sat fw-bold fs-18">
-        Sat
-      </button>
+  <!-- Blog -->
+  <button class="btn-dark-custom fw-bold fs-18 mt-1 mt-sm-0 ms- ">
+    Blog
+  </button>
 
-      <button class="btn-dark-custom fw-bold fs-18">
-        Blog
-      </button>
-
-      <button class="btn-login ms-2 fw-bold d-flex align-items-center gap-1">
-            <span class="fs-15 fw-semibold">Üye </span>
-            <span class="fs-15 fw-semibold me-1">Girişi</span> 
-            <i class="bi bi-person-circle"></i>
-       </button>
-
+  <!-- Üye Girişi -->
+  <button class="btn-login fw-bold d-flex align-items-center justify-content-between gap-3 mt-1 mt-sm-0 ms-1">
+    <div>
+      <span class="fs-15 fw-semibold">Üye </span>
+    <span class="fs-15 fw-semibold">Girişi</span>
     </div>
+    
+    <i class="bi bi-person-circle"></i>
+  </button>
 
+</div>
   </div>
 </nav>

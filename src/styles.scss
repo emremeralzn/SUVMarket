@@ -8,14 +8,14 @@ body{
    color: #fff;
 }
 .mb-6{
-  margin-bottom: 4rem;
+  margin-bottom: 4rem !important;
 }
 .pt-6{
   padding-top: 4rem;
 }
 @media (min-width: 1200px) {
   .mb-xl-6 {
-    margin-bottom: 4rem; /* veya ihtiyacın olan değer */
+    margin-bottom: 4rem !important; /* istediğin değer */
   }
 }
 .common-color-orange{
