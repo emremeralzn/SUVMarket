@@ -3,7 +3,24 @@
 body{
   font-family: 'Open Sans', sans-serif;
 }
-
+::selection {
+  background:#ff5100;
+   color: #fff;
+}
+.mb-6{
+  margin-bottom: 4rem;
+}
+.pt-6{
+  padding-top: 4rem;
+}
+@media (min-width: 1200px) {
+  .mb-xl-6 {
+    margin-bottom: 4rem; /* veya ihtiyacın olan değer */
+  }
+}
+.common-color-orange{
+  color: #FF5100;
+}
 .fs-10{
   font-size: 10px;
 }
@@ -42,6 +59,9 @@ body{
 }
 .fs-22{
   font-size: 22px;
+}
+.fs-36{
+  font-size: 36px;
 }
 .ls-1 {
   letter-spacing: 1px;

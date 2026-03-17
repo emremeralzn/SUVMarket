@@ -1,0 +1,23 @@
+<div class="swiper-container-wrapper">
+  <swiper-container
+    effect="coverflow"
+    grab-cursor="true"
+    centered-slides="true"
+    slides-per-view="auto"
+    pagination="true"
+    class="mySwiper"
+    [attr.coverflow-effect]="convertToJSON({
+      rotate: 50,
+      stretch: 0,
+      depth: 100,
+      modifier: 1,
+      slideShadows: true
+    })"
+  >
+    @for (img of images; track $index) {
+      <swiper-slide>
+        <img [src]="img" alt="Nature {{ $index + 1 }}" />
+      </swiper-slide>
+    }
+  </swiper-container>
+</div>

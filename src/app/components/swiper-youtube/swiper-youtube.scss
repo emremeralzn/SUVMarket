@@ -1,0 +1,26 @@
+.swiper-container-wrapper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #000; /* Görselleri daha iyi göstermek için */
+}
+
+swiper-container {
+  width: 100%;
+}
+
+swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, #0006);
+}
+
+swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}

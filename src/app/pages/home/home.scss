@@ -1,3 +1,7 @@
+@import 'swiper/css';
+@import 'swiper/css/effect-coverflow';
+@import 'swiper/css/pagination';
+
 .carousel-control-next-icon, .carousel-control-prev-icon {
     display: inline-block;
     width: 78px;
@@ -14,7 +18,6 @@
   border-radius: 50%; /* nokta yapar */
   background-color: #fff;
   opacity: 0.5;
-  margin: 40px 5px;
 }
 
 .carousel-indicators .active {
@@ -27,7 +30,7 @@
   border-radius: 5px;
   border: none !important;
 }
-.btn-orange:hover{
+.btn-orange-absolute:active{
   background:#ff5100;
   color:white;
 }
@@ -35,7 +38,71 @@
 .btn-orange-absolute{
    background:#ff5100;
   color:white;
-  padding: 2px 30px;
    border-radius: 5px;
   border: none !important;
+}
+select,
+select:focus,
+select:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
+.binek-araclar-btn{
+  background-color: #5c5c70;
+  border-radius: 5px;
+}
+.binek-araclar-btn:active{
+  background-color: #5c5c70;
+  border-radius: 5px;
+}
+.btn{
+  outline: none;
+  border: none;
+}
+@media (max-width: 1200px) {
+  #search-form{
+    position: static !important;
+    transform: none !important;
+    left: auto !important;     
+  }
+}
+
+
+
+
+.bg {
+  background-image: url('/popular-search-back.png');
+  background-size: cover;         
+  background-repeat: no-repeat;
+  background-position: center center ;    
+  padding-bottom: 50px;              
+}
+
+
+
+@media (max-width: 576px) {
+    .bg{
+        background-image: none;
+    }
+}
+.row li {
+  margin-bottom: 15px; /* Alt boşluk verir */
+}
+
+
+.mySwiper {
+  width: 100%;
+  height: 400px; // İstersen boyutu değiştir
+}
+
+.mySwiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mySwiper video {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 8px;
 }
