@@ -1,23 +1,38 @@
 <div class="swiper-container-wrapper">
+
   <swiper-container
-    effect="coverflow"
-    grab-cursor="true"
-    centered-slides="true"
-    slides-per-view="auto"
-    pagination="true"
+    #swiperRef
+    init="false"
     class="mySwiper"
-    [attr.coverflow-effect]="convertToJSON({
-      rotate: 50,
-      stretch: 0,
-      depth: 100,
-      modifier: 1,
-      slideShadows: true
-    })"
   >
-    @for (img of images; track $index) {
-      <swiper-slide>
-        <img [src]="img" alt="Nature {{ $index + 1 }}" />
-      </swiper-slide>
-    }
+    <swiper-slide *ngFor="let item of videos; let i = index">
+  <div
+    class="video-card"
+    (click)="openVideo(item.videoId, i)"
+  >
+    <img [src]="item.thumbnail" alt="YouTube Thumbnail" />
+    <!-- sadece aktif slide için play logo göstereceğiz -->
+    <div class="play-icon" *ngIf="activeIndex === i">
+      <svg viewBox="0 0 68 48" width="50" height="35">
+        <path d="M66.52,7.2a8.15,8.15,0,0,0-5.73-5.73C57.27,0,34,0,34,0S10.73,0,7.21,1.47A8.15,8.15,0,0,0,1.48,7.2,84.79,84.79,0,0,0,0,24a84.79,84.79,0,0,0,1.48,16.8,8.15,8.15,0,0,0,5.73,5.73C10.73,48,34,48,34,48s23.27,0,26.79-1.47a8.15,8.15,0,0,0,5.73-5.73A84.79,84.79,0,0,0,68,24,84.79,84.79,0,0,0,66.52,7.2Z" fill="#f00"/>
+        <path d="M 45,24 27,14 27,34" fill="#fff"/>
+      </svg>
+    </div>
+  </div>
+</swiper-slide>
   </swiper-container>
+
+  <div class="custom-pagination"></div>
+
+</div>
+
+<div class="video-modal" *ngIf="selectedVideo" (click)="closeVideo()">
+  <div class="video-content" (click)="$event.stopPropagation()">
+    <iframe
+      [src]="getVideoUrl(selectedVideo!)"
+      frameborder="0"
+      allow="autoplay; encrypted-media"
+      allowfullscreen>
+    </iframe>
+  </div>
 </div>

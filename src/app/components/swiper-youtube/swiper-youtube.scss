@@ -1,26 +1,138 @@
+/* Ana Konteyner Ayarları */
 .swiper-container-wrapper {
   width: 100%;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  background-color: #000; /* Görselleri daha iyi göstermek için */
+  padding: 60px 0;
+  overflow: hidden;
+  background-color: transparent;
 }
 
+/* Swiper Element Stilleri (Senin paylaştığın yapıya uygun) */
 swiper-container {
   width: 100%;
+  height: auto;
 }
 
-swiper-slide {
-  background-position: center;
-  background-size: cover;
-  width: 300px;
-  height: 300px;
-  -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, #0006);
-}
-
-swiper-slide img {
-  display: block;
-  width: 100%;
+/* Senin paylaştığın Wrapper mantığı */
+.swiper-wrapper {
+  box-sizing: initial;
+  display: flex;
   height: 100%;
-  object-fit: cover;
-  border-radius: 8px;
+  position: relative;
+  transition-property: transform;
+  align-items: center; // Dikeyde ortala
+  cursor: grab;
+  z-index: 1;
+}
+
+/* SLIDE GENİŞLİKLERİ */
+/* SLIDE GENİŞLİKLERİ */
+swiper-slide {
+  width: 320px; /* Yanlardaki pasif slide */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* AKTİF (ORTADAKİ) SLIDE */
+swiper-slide.swiper-slide-active {
+  width: 520px; /* Ortadaki slide büyüyor */
+}
+.swiper-slide-active .video-card:hover .play-icon {
+  opacity: 1;
+}
+
+
+/* VİDEO KARTI */
+.video-card {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  cursor: grab;  /* default */
+  opacity: 0.4;
+  transform: scale(0.85);
+  transition: all 0.5s ease;
+  border-radius: 20px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+
+/* AKTİF KARTIN PARLAMASI */
+.swiper-slide-active .video-card {
+  opacity: 1;
+  transform: scale(1);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  cursor: grabbing;
+}
+
+
+/* PLAY ICON */
+.play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none; /* tıklamayı bozmasın */
+  z-index: 5;
+  width: 60px;
+  height: 60px;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+.swiper-slide-active .video-card:hover .play-icon {
+  opacity: 1;
+}
+
+/* PAGINATION */
+.custom-pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+::ng-deep .custom-pagination .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background: #aaa;
+  margin: 0 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+::ng-deep .custom-pagination .swiper-pagination-bullet-active {
+  background: #222;
+  transform: scale(1.3);
+}
+
+/* MODAL */
+.video-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+}
+
+.video-content {
+  width: 95%;
+  max-width: 1000px;
+  aspect-ratio: 16 / 9;
+  iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 12px;
+  }
 }

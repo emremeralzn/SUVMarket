@@ -1,0 +1,49 @@
+.title:hover{
+    font-weight:bold;
+}
+.blank:hover{
+    color: #5c5c70;
+}
+
+.custom-checkbox .form-check-input {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.custom-checkbox .form-check-input:checked {
+  background-color: #FF5100;
+  border-color: #FF5100;
+}
+
+.custom-checkbox .form-check-input:checked::after {
+  filter: brightness(0) invert(1); /* tiki beyaz yapar */
+}
+
+.custom-checkbox .form-check-input:focus {
+  box-shadow: none; /* mavi glow'u kaldırır */
+  outline: none;
+}
+@media (max-width: 575.98px) {
+   .submit{
+    width: 100%;
+   }
+}
+.submit{
+    background-color: #FF5100;
+    border: none;
+}
+.submit:hover{
+    background-color: #e6491c !important;
+}
+.contact-box {
+  background-color: #ff5100;
+  border-radius: 8px;
+  min-height: 120px;
+}
+
+.contact-icon {
+  width: 60px;
+  height: 100px;
+  object-fit: contain;
+}
