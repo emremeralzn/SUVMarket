@@ -38,6 +38,14 @@ export const routes: Routes = [
           description: 'Suv Market hakkında bize ulaşın.'
         },
         loadComponent: () => import('./pages/our-stores/our-stores').then(m => m.OurStores),
+      },
+      {
+        path: 'arac-detay', 
+        data: {
+          title: 'Araç Detay | Suv Market',
+          description: 'Suv Market hakkında bize ulaşın.'
+        },
+        loadComponent: () => import('./pages/car-detail/car-detail').then(m => m.CarDetail),
       }
     ]
   }

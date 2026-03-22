@@ -1,0 +1,64 @@
+.btn-orange{
+  background:#ff5100;
+  color:white;
+  padding:8px 35px;
+  border:none;
+  transition: 0.2s ease;
+
+}
+.navs {
+      background-color: #ff5100;
+
+}
+@media (max-width: 992px) {
+  .navs {
+    background-color: #f2f3f5;
+  }
+}
+.al{
+    border-radius: 5px;
+    height: 50px;
+    margin-right: 1px;
+}
+.btn-orange:hover{
+    opacity: 1;
+}
+.sat{
+    border-radius: 5px;
+    height: 50px;
+    margin-right: 4px;
+}
+.btn-dark-custom{
+  background:#5c5c70;
+  color:white;
+  padding:8px 18px;
+  border-radius:5px;
+  border:none;
+  height: 50px;
+  transition: 0.2s ease;
+
+}
+.btn-orange:hover {
+  background-color: #cc3f18;
+}
+.btn-dark-custom:hover {
+  background-color: #484857; /* daha hafif koyu */
+}
+.sticky-line {
+    width: 3px;
+    height: 30px;
+    background-color: rgba(240, 241, 242, 0.16);
+}
+.nav-link:hover{
+  opacity: 0.6;
+}
+.navbar-toggler {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.navbar-toggler:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
