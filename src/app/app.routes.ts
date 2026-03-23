@@ -46,6 +46,23 @@ export const routes: Routes = [
           description: 'Suv Market hakkında bize ulaşın.'
         },
         loadComponent: () => import('./pages/car-detail/car-detail').then(m => m.CarDetail),
+      },
+      {
+        path: 'sizi-arayalim', 
+        data: {
+          title: 'Sizi Arayalım | Suv Market',
+          description: 'Suv Market hakkında bize ulaşın.'
+        },
+        loadComponent: () => import('./pages/request-a-call/request-a-call').then(m => m.RequestACall),
+      }
+      ,
+      {
+        path: 'aracimi-takasa-vermek-istiyorum', 
+        data: {
+          title: 'Aracimi-Takasa-Vermek-İstiyorum | Suv Market',
+          description: 'Suv Market hakkında bize ulaşın.'
+        },
+        loadComponent: () => import('./pages/trade-in-form/trade-in-form').then(m => m.TradeInForm),
       }
     ]
   }

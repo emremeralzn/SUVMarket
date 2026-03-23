@@ -62,3 +62,11 @@
   outline: none !important;
   box-shadow: none !important;
 }
+.expertise-icon {
+  position: absolute;
+  width: 28px; /* icon boyutu */
+  height: 28px;
+  transform: translate(-50%, -50%); /* ikon ortalanır */
+  cursor: pointer; /* hover efekti için */
+}
+

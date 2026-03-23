@@ -176,7 +176,7 @@
 
   <div class="row row-cols-lg-3 row-cols-sm-2 row-cols-1 g-3">
     <div class="col">
-      <app-card></app-card>
+      <app-card routerLink="/arac-detay"></app-card>
     </div>
     <div class="col">
       <app-card></app-card>
@@ -192,13 +192,14 @@
     </div>
   </div>
 
-  <div class="text-center mt-5 pb-5">
+  <div class="mt-5 pb-5 d-flex justify-content-center align-items-center">
     <button class="btn-orange fw-bold fs-18">TÜM ARAÇLAR</button>
   </div>
   <h3 class="fw-bold text-center fs-36 my-5">Güvenli Alışveriş</h3>
 
   <div class="row justify-content-center g-4">
-    <div class="col-12 col-sm-6 col-lg-4">
+  <div class="col-12 col-sm-6 col-lg-4">
+    <a routerLink="/suv-market" class="text-decoration-none">
       <div class="card h-100 text-center border-0">
         <img
           src="/garantili-ekspertiz.png"
@@ -206,18 +207,19 @@
           style="max-width: 230px"
           alt=""
         />
-
         <div class="card-body">
-          <div class="card-title fw-bold fs-22">Garantili Ekspertiz</div>
-          <p class="card-text fs-15 lh-base">
+          <div class="card-title fw-bold fs-22 text-dark">Garantili Ekspertiz</div>
+          <p class="card-text fs-15 lh-base text-dark">
             Suvmarket’e dahil ettiğimiz tüm araçlar için eksperden onay alıyor, TSE Onaylı Ekspertiz
             Raporu ile güvenle Suv sahibi olmanızı sağlıyoruz.
           </p>
         </div>
       </div>
-    </div>
+    </a>
+  </div>
 
-    <div class="col-12 col-sm-6 col-lg-4">
+  <div class="col-12 col-sm-6 col-lg-4">
+    <a routerLink="/suv-market" class="text-decoration-none">
       <div class="card h-100 text-center border-0">
         <img
           src="/yenilenmis.png"
@@ -225,18 +227,19 @@
           style="max-width: 230px"
           alt=""
         />
-
         <div class="card-body">
-          <div class="card-title fw-bold fs-22">Yenilenmiş Araçlar</div>
-          <p class="card-text fs-15 lh-base">
+          <div class="card-title fw-bold fs-22 text-dark">Yenilenmiş Araçlar</div>
+          <p class="card-text fs-15 lh-base text-dark">
             Suvmarket’te her aracın geçmişini ve kondisyonunu tüm detayları ile inceliyor, satış
             öncesi gerekli tüm bakım onarım işlemleri tamamlandıktan sonra satışa sunuyoruz.
           </p>
         </div>
       </div>
-    </div>
+    </a>
+  </div>
 
-    <div class="col-12 col-sm-6 col-lg-4">
+  <div class="col-12 col-sm-6 col-lg-4">
+    <a routerLink="/suv-market" class="text-decoration-none">
       <div class="card h-100 text-center border-0">
         <img
           src="/degisim-iade.png"
@@ -244,17 +247,17 @@
           style="max-width: 230px"
           alt=""
         />
-
         <div class="card-body">
-          <div class="card-title fw-bold fs-22">Değişim İade</div>
-          <p class="card-text fs-15 lh-base">
+          <div class="card-title fw-bold fs-22 text-dark">Değişim İade</div>
+          <p class="card-text fs-15 lh-base text-dark">
             Suvmarket'ten satın aldığınız SUV'u 7 gün içinde ya da 1.000 km'ye kadar koşulsuz iade
             edebilir veya başka bir Suvmarket aracı ile değiştirebilirsiniz.
           </p>
         </div>
       </div>
-    </div>
+    </a>
   </div>
+</div>
 </div>
 
 <div class="container-fluid my-5">
@@ -378,17 +381,4 @@
       </div>
     </div>
   </div>
-</div>
-<div class="position-fixed bottom-0 end-0 p-3 d-flex flex-column gap-2" style="z-index: 1050">
-  <img
-    src="/home-absolute-icons/phn-icon.png"
-    class="img-fluid cursor-pointer"
-    style="width: 70px; height: 70px"
-  />
-
-  <img
-    src="/home-absolute-icons/wp-icon.png"
-    class="img-fluid cursor-pointer"
-    style="width: 70px; height: 70px"
-  />
 </div>

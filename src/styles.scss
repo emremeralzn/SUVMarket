@@ -27,15 +27,64 @@ body{
 .common-color-orange{
   color: #FF5100;
 }
-.w-60{
-  width: 60%;
+
+.w-50 { width: 50% !important; }
+.w-60 { width: 60% !important; }
+.w-70 { width: 70% !important; }
+.w-80 { width: 80% !important; }
+.w-90 { width: 90% !important; }
+.w-100 { width: 100% !important; }
+
+@media (min-width: 576px) {
+  .w-sm-50 { width: 50% !important; }
+  .w-sm-60 { width: 60% !important; }
+  .w-sm-70 { width: 70% !important; }
+  .w-sm-75 { width: 75% !important; }
+  .w-sm-80 { width: 80% !important; }
+  .w-sm-90 { width: 90% !important; }
+  .w-sm-100 { width: 100% !important; }
 }
-.w-70{
-  width: 70%;
+
+@media (min-width: 768px) {
+  .w-md-50 { width: 50% !important; }
+  .w-md-60 { width: 60% !important; }
+  .w-md-70 { width: 70% !important; }
+  .w-md-75 { width: 75% !important; }
+  .w-md-80 { width: 80% !important; }
+  .w-md-90 { width: 90% !important; }
+  .w-md-100 { width: 100% !important; }
 }
-.w-80{
-  width: 80%;
+
+@media (min-width: 992px) {
+  .w-lg-50 { width: 50% !important; }
+  .w-lg-60 { width: 60% !important; }
+  .w-lg-70 { width: 70% !important; }
+  .w-lg-75 { width: 75% !important; }
+  .w-lg-80 { width: 80% !important; }
+  .w-lg-90 { width: 90% !important; }
+  .w-lg-100 { width: 100% !important; }
 }
+
+@media (min-width: 1200px) {
+  .w-xl-50 { width: 50% !important; }
+  .w-xl-60 { width: 60% !important; }
+  .w-xl-70 { width: 70% !important; }
+  .w-xl-75 { width: 75% !important; }
+  .w-xl-80 { width: 80% !important; }
+  .w-xl-90 { width: 90% !important; }
+  .w-xl-100 { width: 100% !important; }
+}
+
+@media (min-width: 1400px) {
+  .w-xxl-50 { width: 50% !important; }
+  .w-xxl-60 { width: 60% !important; }
+  .w-xxl-70 { width: 70% !important; }
+  .w-xxl-75 { width: 75% !important; }
+  .w-xxl-80 { width: 80% !important; }
+  .w-xxl-90 { width: 90% !important; }
+  .w-xxl-100 { width: 100% !important; }
+}
+
 .gap-6{ gap: 5rem;}
 .gap-7{ gap: 1.75rem;}
 .fs-10{ font-size: 10px; }

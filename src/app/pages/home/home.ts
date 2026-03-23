@@ -3,6 +3,7 @@ import { Card } from '../../components/card/card';
 import Swiper from 'swiper';
 import { Pagination, EffectCoverflow } from 'swiper/modules';
 import { SwiperYoutubeComponent } from '../../components/swiper-youtube/swiper-youtube';
+import { RouterLink } from '@angular/router';
 const swiper = new Swiper('.mySwiper', {
   modules: [Pagination, EffectCoverflow],
 
@@ -18,7 +19,7 @@ const swiper = new Swiper('.mySwiper', {
 });
 @Component({
   selector: 'app-home',
-  imports: [Card,SwiperYoutubeComponent],
+  imports: [Card,SwiperYoutubeComponent,RouterLink],
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })
