@@ -1,15 +1,14 @@
-import { CommonModule } from '@angular/common';
 import { Component, ElementRef } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-contact',
-  imports: [CommonModule,ReactiveFormsModule],
-  templateUrl: './contact.html',
-  styleUrl: './contact.scss',
+  selector: 'app-sign-up',
+  imports: [],
+  templateUrl: './sign-up.html',
+  styleUrl: './sign-up.scss',
 })
-export class Contact {
-  constructor(
+export class SignUp {
+ constructor(
     private fb: FormBuilder,
     private el: ElementRef, // Sayfadaki elementlere erişim için
   ) {}
@@ -24,10 +23,14 @@ ngOnInit() {
   this.myForm = new FormGroup({
     nameSurName: new FormControl('', [Validators.required, Validators.minLength(3)]),
     phone: new FormControl('', [Validators.required, Validators.pattern('^[0-9]{10}$')]),
+    province: new FormControl('', [Validators.required, Validators.pattern('^(?!İl Seçiniz$).*')]),
+    district: new FormControl('', [Validators.required, Validators.pattern('^(?!İlçe Seçiniz$).*')]),
     email: new FormControl('', [Validators.required, Validators.email]),
-    subject: new FormControl('', [Validators.required, Validators.pattern('^(?!Konu Seçiniz$).*')]),
-    message: new FormControl('', [Validators.required, Validators.minLength(10)]),
-    kvkk: new FormControl(false, [Validators.requiredTrue]) 
+    repeatEmail: new FormControl('', [Validators.required, Validators.email]),
+    password: new FormControl('', [Validators.required]),
+    repeatPassword: new FormControl('', [Validators.required]),
+    kvkk1: new FormControl(false, [Validators.requiredTrue]),
+    kvkk2: new FormControl(false, [Validators.requiredTrue]),
   });
 }
   ngAfterViewInit() {

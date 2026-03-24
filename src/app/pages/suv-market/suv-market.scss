@@ -1,7 +1,13 @@
 .title:hover{
     font-weight: bold;
 }
+.title {
+  border-left: 2px solid transparent;
+  transition: 0.3s;
+}
+
 .title.active {
+  border-left: 2px solid #ff6600 !important;
+  color: #ff6600 !important;
   font-weight: bold;
-  color: #ff6600; // örnek highlight
 }

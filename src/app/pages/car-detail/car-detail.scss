@@ -70,3 +70,105 @@
   cursor: pointer; /* hover efekti için */
 }
 
+.navbar-nav .nav-link.active {
+    color: #ff5100 !important;
+    background-color: #f2f3f5; /* Sayfanın arka plan rengiyle aynı yaparsan bütünleşik durur */
+    border-radius: 8px 8px 0 0; /* Sadece üst köşeler yuvarlak */
+    padding-bottom: 15px; /* Alt kısmı biraz daha doldurabilir */
+    margin-bottom: -10px; /* Eğer navbarın alt çizgisi varsa üzerine bindirmek için */
+    display: flex;
+    text-align: center;
+}
+
+.navbar-nav .nav-link.title:hover {
+  opacity: 0.7;
+}
+/* --- Önce genel stiller (Active olmayan haller) --- */
+.navs {
+    background-color: #ff5100;
+}
+
+@media (max-width: 992px) {
+    .navs {
+        background-color: #f2f3f5;
+    }
+}
+@media (min-width: 992px) {
+    
+    .navbar-nav .nav-link {
+        padding-bottom: 8px;
+        color: white !important;
+    }
+    .navbar-nav .nav-link.active {
+        background-color: #f2f3f5 !important; 
+        color: #ff5100 !important;           
+        border-radius: 8px 8px 0 0;          
+        margin-bottom: -10px; 
+    }
+}
+@media (max-width: 991px) {
+    .navbar-nav .nav-link.active {
+        background-color: transparent !important; 
+        color: white !important;
+        font-weight: bold;
+    }
+}
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+.carousel-control-next, .carousel-control-prev {
+    width: 8%;
+}
+.carousel-control-prev:hover{
+  background-color: rgb(19, 14, 14);
+    opacity: 0.6 !important;
+}
+.carousel-control-next:hover{
+  background-color: rgb(19, 14, 14);
+  opacity: 0.6 !important;
+}
+
+.thumbnail-img {
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+  opacity: 0.6; 
+}
+
+.thumbnail-img:hover {
+  opacity: 1;
+}
+
+.thumbnail-img[class*="active"], .thumbnail-img:focus {
+  border-color: #ff5a00; 
+  opacity: 1;
+}
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;   /* ikon boyutu */
+  height: 30px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.next-tumb, .prev-tumb {
+    width: 50px;
+    height: 125px;
+    background-position: 50% 50%;
+    background-size: 16px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+/* Sağ ok */
+.next-tumb {
+    background-image: url(/car-detail/right-arrow.svg);
+}
+
+/* Sol ok */
+.prev-tumb {
+    background-image: url(/car-detail/back.svg);
+}

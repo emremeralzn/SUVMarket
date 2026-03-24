@@ -21,8 +21,8 @@
       <div class="col-lg-9 col-12">
 
         <!-- 1. BLOK -->
-        <div class="row d-flex align-items-center my-5">
-          <div #iadeSection class="col-md-7 col-12 order-2 order-md-1 " style="scroll-margin-top: 150px;">
+        <div style="min-height: 550px;" class="row d-flex align-items-center my-5">
+          <div id="iadeSection" #iadeSection class="col-md-7 col-12 order-2 order-md-1 " style="scroll-margin-top: 150px;">
             <strong class="common-color-orange fw-bold fs-2 mb-md-4 my-3 d-block">Değişim / İade Garantisi</strong>
             <p>
               Verdiğiniz kararda kendinizi güvende hissedebilmeniz için hep yanınızdayız. Suvmarket'ten
@@ -35,9 +35,10 @@
           </div>
         </div>
 
+
         <!-- 2. BLOK -->
-        <div class="row d-flex align-items-center my-5">
-          <div #ekspertizSection class="col-md-7 col-12 order-2 order-md-1 " style="scroll-margin-top: 120px;">
+        <div style="min-height: 550px;" class="row d-flex align-items-center my-5">
+          <div id="ekspertizSection" #ekspertizSection class="col-md-7 col-12 order-2 order-md-1 " style="scroll-margin-top: 120px;">
             <strong class="common-color-orange fw-bold fs-2 mb-md-4 my-3 d-block">Garantili Ekspertiz Raporu</strong>
             <p>
               Her konuya hakim olmanızı kimse sizden bekleyemez. Hele ki konu teknik detaylarsa. İşte bu
@@ -51,8 +52,8 @@
         </div>
 
         <!-- 3. BLOK -->
-        <div class="row d-flex align-items-center my-5">
-          <div #hijyenSection class="col-md-7 col-12 order-2 order-md-1 " style="scroll-margin-top: 120px;">
+        <div style="min-height: 550px;" class="row d-flex align-items-center my-5">
+          <div id="hijyenSection" #hijyenSection class="col-md-7 col-12 order-2 order-md-1 " style="scroll-margin-top: 120px;">
             <strong class="common-color-orange fw-bold fs-2 mb-md-4 my-3 d-block">Hijyenik Temizlik</strong>
             <p>
               Özenle seçiyor, 150’den fazla noktada kondisyon ve teknik detay kontrolü yapıyor, tam gün
@@ -66,8 +67,9 @@
             <img class="img-fluid" src="/suvmarket/06.png" alt="" />
           </div>
         </div>
-        <div class="row d-flex align-items-center my-5 my-5">
-          <div #takasSection class="col-md-7 col-12 order-2 order-md-1 " style="scroll-margin-top: 120px;">
+
+        <div style="min-height: 550px;" class="row d-flex align-items-center my-5 my-5">
+          <div id="takasSection" #takasSection class="col-md-7 col-12 order-2 order-md-1 " style="scroll-margin-top: 120px;">
             <strong class="common-color-orange fw-bold fs-2 mb-md-4 my-3 d-block">Değerinde Takas</strong>
             <p>
               Mevcut otomobilinizi takasa vermeyi veya nakit olarak satmayı düşünüyorsanız Suvmarket
@@ -81,8 +83,8 @@
         </div>
 
         <!-- 5. BLOK -->
-        <div class="row d-flex align-items-center my-5">
-          <div #krediSection class="col-md-7 col-12 order-2 order-md-1" style="scroll-margin-top: 120px;">
+        <div style="min-height: 550px;" class="row d-flex align-items-center my-5">
+          <div id="krediSection" #krediSection class="col-md-7 col-12 order-2 order-md-1" style="scroll-margin-top: 120px;">
             <strong class="common-color-orange fw-bold fs-2 mb-md-4 my-3 d-block">Avantajlı Kredi İmkanı</strong>
             <p>
               Doğan Trend güvencesiyle Suvmarket’te bir araya getirdiğimiz SUV’lara sahip olabilmek için
@@ -94,35 +96,31 @@
           </div>
         </div>
 
+
       </div>
 
       <!-- SAĞ MENÜ -->
       <div class="col-3 d-lg-block d-none mt-5">
         <div class="d-flex flex-column gap-3 mt-5" style="border-left: 2px solid #e9ecef; position: sticky; top: 100px;">
           
-          <a class="fs-16 text-decoration-none ps-2 title text-dark" style="cursor: pointer;"
-             (click)="iadeSection.scrollIntoView({ behavior: 'smooth' })">
-             DEĞİŞİM / İADE GARANTİSİ
+          <a id="link-iade" class="title ps-2 text-decoration-none text-dark cursor-pointer" (click)="scrollTo('iadeSection')">
+            DEĞİŞİM / İADE GARANTİSİ
           </a>
-          
-          <a class="fs-16 text-decoration-none ps-2 title text-dark" style="cursor: pointer;"
-             (click)="ekspertizSection.scrollIntoView({ behavior: 'smooth' })">
-             GARANTİLİ EKSPERTİZ RAPORU
+
+          <a id="link-ekspertiz" class="title ps-2 text-decoration-none text-dark cursor-pointer" (click)="scrollTo('ekspertizSection')">
+            GARANTİLİ EKSPERTİZ RAPORU
           </a>
-          
-          <a class="fs-16 text-decoration-none ps-2 title text-dark" style="cursor: pointer;"
-             (click)="hijyenSection.scrollIntoView({ behavior: 'smooth' })">
-             HİJYENİK TEMİZLİK
+
+          <a id="link-hijyen" class="title ps-2 text-decoration-none text-dark cursor-pointer" (click)="scrollTo('hijyenSection')">
+            HİJYENİK TEMİZLİK
           </a>
-          
-          <a class="fs-16 text-decoration-none ps-2 title text-dark" style="cursor: pointer;"
-             (click)="takasSection.scrollIntoView({ behavior: 'smooth' })">
-             DEĞERİNDE TAKAS
+
+          <a id="link-takas" class="title ps-2 text-decoration-none text-dark cursor-pointer" (click)="scrollTo('takasSection')">
+            DEĞERİNDE TAKAS
           </a>
-          
-          <a class="fs-16 text-decoration-none ps-2 title text-dark" style="cursor: pointer;"
-             (click)="krediSection.scrollIntoView({ behavior: 'smooth' })">
-             AVANTAJLI KREDİ İMKANI
+
+          <a id="link-kredi" class="title ps-2 text-decoration-none text-dark cursor-pointer" (click)="scrollTo('krediSection')">
+            AVANTAJLI KREDİ İMKANI
           </a>
 
         </div>

@@ -2,53 +2,140 @@
 
   <div class="container bg-white p-sm-5 p-3">
     <div class="row align-items-center">
-  <h1 class="common-color-orange display-6 fw-bold">
-    Formu Doldurun, Sizi Arayalım
-  </h1>
 
   <!-- FORM -->
-  <div class="col-12 col-md-9">
-    <div class="row d-flex justify-content-center mt-4 g-4">
-      <div class="col-md-6 col-12">
-        <input type="text" class="form-control" placeholder="Adınız Soyadınız *">
-      </div>
+  <div class="container bg-white p-sm-5 p-3">
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+      <div class="row align-items-center">
+        <h1 id="iletisimForm" class="common-color-orange display-6 fw-bold">Formu Doldurun, Sizi Arayalım</h1>
 
-      <div class="col-md-6 col-12">
-        <div class="input-group">
-          <span class="input-group-text bg-light">+90</span>
-          <input type="text" class="form-control">
+        <div class="col-12 col-md-9">
+          <div class="row d-flex justify-content-center mt-4 g-4">
+            <div class="col-md-6 col-12">
+              <input type="text" formControlName="nameSurName" class="form-control" placeholder="Adınız Soyadınız *"
+                     [class.is-invalid]="nameSurName?.invalid && nameSurName?.touched">
+                   <div class="d-block text-danger fw-semibold fs-13 validation-message-slot mt-1">
+                      @if(nameSurName?.touched && nameSurName?.errors?.['required']) {
+                          <small class="fs-12 lh-16 fw-semibold text-danger">
+                          *Lütfen bu alanı doldurunuz.
+                          </small>
+                      }
+                      @if(nameSurName?.touched && nameSurName?.errors?.['minlength'])
+                      {
+                          <small class="fs-12 lh-16 fw-semibold text-danger">
+                              *En az {{ nameSurName?.errors?.['minlength']?.requiredLength }} karakter girmelisiniz.
+                          </small>
+                      }
+                      @if(nameSurName?.touched && nameSurName?.errors?.['maxlength'])
+                      {
+                          <small class="fs-12 lh-16 fw-semibold text-danger">
+                              *En fazla {{ nameSurName?.errors?.['maxlength']?.requiredLength }} karakter girebilirsiniz.
+                          </small>
+                      }
+                  </div>
+            </div>
+
+            <div class="col-md-6 col-12">
+              <div class="input-group">
+                <span class="input-group-text bg-light">+90</span>
+                <input type="text" formControlName="phone" class="form-control" placeholder="5xx xxx xxxx *"
+                       [class.is-invalid]="phone?.invalid && phone?.touched">
+              </div>
+              <div class="d-block text-danger fw-semibold fs-13 validation-message-slot mt-1">
+                @if(phone?.touched && phone?.errors?.['required']) {
+                  <small class="fs-12 lh-16 fw-semibold text-danger">*Telefon numarası zorunludur.</small>
+                }
+                @if(phone?.touched && phone?.errors?.['pattern']) {
+                  <small class="fs-12 lh-16 fw-semibold text-danger">*Başında 0 olmadan 10 hane giriniz.</small>
+                }
+              </div>
+            </div>
+
+            <div class="col-md-6 col-12">
+              <input type="email" formControlName="email" class="form-control" placeholder="E-Posta *"
+                     [class.is-invalid]="email?.invalid && email?.touched">
+              <div class="d-block text-danger fw-semibold fs-13 validation-message-slot mt-1">
+                @if(email?.touched && email?.errors?.['required']) {
+                  <small class="fs-12 lh-16 fw-semibold text-danger">*E-posta adresi zorunludur.</small>
+                }
+                @if(email?.touched && email?.errors?.['email']) {
+                  <small class="fs-12 lh-16 fw-semibold text-danger">*Geçerli bir e-posta adresi giriniz.</small>
+                }
+              </div>
+            </div>
+
+            <div class="col-md-6 col-12">
+          <select formControlName="subject" class="form-select" [class.is-invalid]="subject?.invalid && subject?.touched">
+          <option value="" disabled selected>Konu Seçiniz *</option>
+          <option value="bilgi">Bilgi</option>
+          <option value="oneri">Dilek / Öneri</option>
+          <option value="sikayet">Şikayet</option>
+          </select>
+
+          <div class="d-block text-danger fw-semibold fs-13 validation-message-slot mt-1">
+          @if(subject?.touched && subject?.errors?.['required']) {
+            <small class="fs-12 lh-16 fw-semibold text-danger">*Lütfen bir konu seçiniz.</small>
+          }
+          </div>
+          </div>
+
+            <div class="col-12">
+              <textarea formControlName="message" style="height: 150px;" placeholder="Mesajınız *" class="form-control"
+                        [class.is-invalid]="message?.invalid && message?.touched"></textarea>
+              <div class="d-block text-danger fw-semibold fs-13 validation-message-slot mt-1">
+                @if(message?.touched && message?.errors?.['required']) {
+                  <small class="fs-12 lh-16 fw-semibold text-danger">*Mesaj alanı boş bırakılamaz.</small>
+                }
+                @if(message?.touched && message?.errors?.['minlength']) {
+                  <small class="fs-12 lh-16 fw-semibold text-danger">*Mesajınız en az {{ message?.errors?.['minlength']?.requiredLength }} karakter olmalıdır.</small>
+                }
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-3 d-none d-md-block">
+          <div class="d-flex align-items-center" style="border-left: 2px solid #ff5100; position: sticky; top: 100px; height: 48px;">
+            <a id="link-iletisim" class="fs-17 text-decoration-none common-color-orange title ps-2 cursor-pointer ms-2" (click)="scrollTo('iletisimForm')">İletişim Formu</a>
+          </div>
         </div>
       </div>
 
-      <div class="col-md-6 col-12">
-        <input type="email" class="form-control" placeholder="E-Posta *">
-      </div>
+      <div class="row d-flex justify-content-center align-items-center gy-3">
+        <div class="col-12 mt-5">
+          <p class="fs-14">İletişim formu sürecinde işlenen kişisel verilerinize ilişkin aydınlatma metnine 
+            <a href="https://www.suvmarket.com/kvk#3" target="_blank" class="common-color-orange fw-bold text-decoration-none">buradan</a> ulaşabilirsiniz.
+          </p>
+        </div>
 
-      <div class="col-md-6 col-12">
-        <select class="form-select">
-          <option selected>Konu Seçiniz</option>
-          <option value="1">Bilgi</option>
-          <option value="2">Dilek/Öneri</option>
-          <option value="3">Şikayet</option>
-        </select>
-      </div>
+        <div class="col-12">
+          <div class="form-check custom-checkbox">
+            <input formControlName="kvkk" class="form-check-input" type="checkbox" id="kvkkCheck"
+                   [class.is-invalid]="kvkk?.invalid && kvkk?.touched">
+            <label class="form-check-label fs-14 cursor-pointer pt-1 user-select-none" for="kvkkCheck">
+              Otomobilite Motorlu Araçlar Ticaret ve Hizmetleri A.Ş.’den E-posta ve SMS yoluyla ticari elektronik ileti almayı kabul ediyorum.
+            </label>
+          </div>
+        </div>
 
-      <div class="col-12">
-        <textarea style="height: 150px;" placeholder="Mesajınız *" class="form-control"></textarea>
+        <div class="col-sm-12">
+          <button type="submit" class="btn btn-primary px-5 p-2 fw-bold submit mt-3">GÖNDER</button>
+        </div>
       </div>
-      
+    </form>
+    
+    <div class="col-sm-12 mt-5">
+      <h1 class="common-color-orange display-6 fw-bold">Bize Ulaşın</h1>
+    </div>
+    <div style="min-height: 450px" class="col-xl-5 col-lg-6 col-md-8 my-5">
+      <div class="contact-box d-flex align-items-center p-4 py-5">
+        <img src="/iletisim/call.svg" alt="call" class="contact-icon me-3">
+        <p class="mb-0 text-white fs-20">
+          Bize <a href="tel:4442494" class="text-white text-decoration-none fw-semibold">444 24 94</a> numaralı çağrı merkezimiz aracılığıyla ulaşabilirsiniz.
+        </p>
+      </div>
     </div>
   </div>
-
-  <!-- SAĞ TARAF -->
-  <div class="col-3 d-none d-md-block">
-    <div class="d-flex align-items-center"
-         style="border-left: 2px solid #ff5100; position: sticky; top: 100px; height: 48px;">
-      <a class="fs-17 text-decoration-none common-color-orange title ps-2 cursor-pointer ms-2">
-        İletişim
-      </a>
-    </div>
-  </div>
+</div>
 </div>
 <div class="row d-flex justify-content-center align-items-center gy-3">
     <div class="col-12 mt-5">
@@ -98,4 +185,3 @@
   </div>
 </div>
   </div>
-</div>

@@ -63,7 +63,15 @@ export const routes: Routes = [
           description: 'Suv Market hakkında bize ulaşın.'
         },
         loadComponent: () => import('./pages/trade-in-form/trade-in-form').then(m => m.TradeInForm),
-      }
+      },
+      {
+        path: 'uye-ol', 
+        data: {
+          title: 'Üye Ol | Suv Market',
+          description: 'Suv Market hakkında bize ulaşın.'
+        },
+        loadComponent: () => import('./pages/sign-up/sign-up').then(m => m.SignUp),
+      },
     ]
   }
 ];

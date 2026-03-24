@@ -47,7 +47,26 @@
   height: 100px;
   object-fit: contain;
 }
-.title.active {
-  color: #ff6600 !important;
+.captcha-box {
+  background: repeating-linear-gradient(
+    45deg,
+    #f2f3f5,
+    #f2f3f5 8px,
+    #e0e0e0 8px,
+    #e0e0e0 16px
+  );
+  padding: 6px 18px;
   font-weight: bold;
+  letter-spacing: 3px;
+  border-radius: 6px;
+  text-decoration: line-through;
+}
+
+.refresh-icon {
+  color: #e6491c;
+  font-size: 30px;
+  cursor: pointer;
+}
+.nav-tabs {
+  border-bottom: none !important;
 }
