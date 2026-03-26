@@ -1,0 +1,19 @@
+<div class="card h-100 border-0 shadow-sm position-relative overflow-hidden text-white cursor-pointer">
+  
+  @if (type === 'takas') {
+    <img src="/car-list/Takas.jpg" class="card-img h-100 w-100 d-block" alt="Takas" style="object-fit: cover; min-height: 250px;">
+  } @else {
+    <img src="/car-list/Yeni-Arac.jpg" class="card-img h-100 w-100 d-block" alt="Yeni Araç" style="object-fit: cover; min-height: 250px;">
+  }
+
+  <div class="position-absolute top-50 start-50 translate-middle text-center w-100 px-3">
+    @if (type === 'yeni') {
+      <h5 class="fw-bold mb-3 display-6">Aracınızı takasa mı vermek istiyorsunuz?</h5>
+      <a href="#" class="px-4 fs-19 text-white">TEKLİF ALIN</a>
+    } @else {
+      <h5 class="fw-bold mb-3 display-6">Aracınızı satmak mı istiyorsunuz?</h5>
+      <a href="#" class="px-4 fs-19 text-white">TEKLİF ALIN</a>
+    }
+  </div>
+
+</div>

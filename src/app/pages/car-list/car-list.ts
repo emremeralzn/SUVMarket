@@ -1,0 +1,14 @@
+import { Component } from '@angular/core';
+import { Card } from '../../components/card/card';
+import { SwapCard } from '../../components/swap-card/swap-card';
+import { RouterLink } from '@angular/router';
+
+@Component({
+  selector: 'app-car-list',
+  imports: [Card,SwapCard,RouterLink],
+  templateUrl: './car-list.html',
+  styleUrl: './car-list.scss',
+})
+export class CarList {
+
+}

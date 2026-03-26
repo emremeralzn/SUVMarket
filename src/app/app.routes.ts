@@ -72,6 +72,14 @@ export const routes: Routes = [
         },
         loadComponent: () => import('./pages/sign-up/sign-up').then(m => m.SignUp),
       },
+      {
+        path: 'ikinci-el', 
+        data: {
+          title: '2. El SUV Modelleri | Suv Market',
+          description: 'Suv Market hakkında bize ulaşın.'
+        },
+        loadComponent: () => import('./pages/car-list/car-list').then(m => m.CarList),
+      },
     ]
   }
 ];

@@ -1,6 +1,7 @@
-.card{
-        box-shadow:0 2px 18px -8px rgb(0 0 0 / 36%) ;
+.card-home{
+      box-shadow:0 2px 18px -8px rgb(0 0 0 / 36%) ;
 }
+
 .btn{
     text-align: center;
     line-height: 40px;
@@ -17,4 +18,24 @@
 }
 .bg-card-grey{
     background-color: #F4F4F4 !important;
+}
+.icon {
+  width: 28px;
+  height: 28px;
+  fill: #999;
+  opacity: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.icon:hover {
+  fill: #FF5100;
+  opacity: 100%;
+}
+
+.card-list{
+   transition: all 0.3s ease;
+}
+.card-list:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }

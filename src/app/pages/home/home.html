@@ -157,11 +157,13 @@
         >
           <div
             style="height: 50px"
+            routerLink="/ikinci-el"
             class="btn btn-orange-absolute fw-bold fs-18 d-flex align-items-center justify-content-center p-2"
           >
             Listele (215)
           </div>
           <div
+          routerLink="/ikinci-el"
             style="height: 50px"
             class="btn binek-araclar-btn fw-bold fs-17 d-flex align-items-center justify-content-center p-2 text-white"
           >
@@ -176,24 +178,24 @@
 
   <div class="row row-cols-lg-3 row-cols-sm-2 row-cols-1 g-3">
     <div class="col">
-      <app-card routerLink="/arac-detay"></app-card>
+      <app-card [type]="'home'" routerLink="/arac-detay"></app-card>
     </div>
     <div class="col">
-      <app-card></app-card>
+      <app-card [type]="'home'" routerLink="/arac-detay"></app-card>
     </div>
     <div class="col">
-      <app-card></app-card>
+      <app-card [type]="'home'" routerLink="/arac-detay"></app-card>
     </div>
     <div class="col">
-      <app-card></app-card>
+      <app-card [type]="'home'" routerLink="/arac-detay"></app-card>
     </div>
     <div class="col">
-      <app-card></app-card>
+      <app-card [type]="'home'" routerLink="/arac-detay"></app-card>
     </div>
   </div>
 
   <div class="mt-5 pb-5 d-flex justify-content-center align-items-center">
-    <button class="btn-orange fw-bold fs-18">TÜM ARAÇLAR</button>
+    <button routerLink="/ikinci-el" class="btn-orange fw-bold fs-18">TÜM ARAÇLAR</button>
   </div>
   <h3 class="fw-bold text-center fs-36 my-5">Güvenli Alışveriş</h3>
 

@@ -36,15 +36,44 @@
   Blog
 </a>
 
-  <!-- Üye Girişi -->
-  <button class="btn-login fw-bold d-flex align-items-center justify-content-between gap-3 mt-1 mt-sm-0 ms-1">
+ <div class="dropdown mt-1 mt-sm-0 ms-1">
+  <button class="btn-login fw-bold d-flex align-items-center justify-content-between gap-3 dropdown-toggle" 
+          type="button" 
+          id="loginDropdown" 
+          data-bs-toggle="dropdown" 
+          aria-expanded="false">
     <div>
       <span class="fs-15 fw-semibold">Üye </span>
-    <span class="fs-15 fw-semibold">Girişi</span>
+      <span class="fs-15 fw-semibold">Girişi</span>
     </div>
-    
-    <i class="bi bi-person-circle"></i>
+    <i class="bi bi-person-circle fs-4"></i>
   </button>
+
+  <div class="dropdown-menu dropdown-menu-end p-0 border-0 custom-login-box" aria-labelledby="loginDropdown">
+    <div class="login-form-content py-4 px-4">
+      <div class="mb-2 mt-4 position-relative">
+        <i class="bi bi-person login-icon"></i>
+        <input type="text" class="form-control custom-input" placeholder="Kullanıcı Adı ve E-Mail">
+      </div>
+      <div class="mb-2 position-relative">
+        <i class="bi bi-lock login-icon"></i>
+        <input type="password" class="form-control custom-input" placeholder="Şifre">
+      </div>
+      <div class="text-center mb-2">
+        <a href="#" class="text-decoration-none fs-13 forget-passw">Şifremi Unuttum</a>
+      </div>
+      <div class="d-flex justify-content-center align-items-center">
+      <button class="btn border-2 border-white w-80 text-white py-2 btn-giris fw-medium">Giriş</button>
+      </div>
+    </div>
+    <a href="#" class="btn-uye-ol d-flex justify-content-between align-items-center px-4 py-3 text-decoration-none fw-medium">
+  <span>Üye Ol</span>
+  <svg class="btn-uye-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="20" height="20">
+    <path d="M566.6 342.6C579.1 330.1 579.1 309.8 566.6 297.3L406.6 137.3C394.1 124.8 373.8 124.8 361.3 137.3C348.8 149.8 348.8 170.1 361.3 182.6L466.7 288L96 288C78.3 288 64 302.3 64 320C64 337.7 78.3 352 96 352L466.7 352L361.3 457.4C348.8 469.9 348.8 490.2 361.3 502.7C373.8 515.2 394.1 515.2 406.6 502.7L566.6 342.7z"/>
+  </svg>
+</a>
+  </div>
+</div>
 
 </div>
   </div>

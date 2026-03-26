@@ -92,3 +92,75 @@
       width: 100% !important;
     }
 }
+/* Dropdown'ın ok işaretini gizle */
+.dropdown-toggle::after {
+    display: none;
+}
+
+.custom-login-box {
+    width: 280px;
+    background-color: #FF5500; /* Görseldeki turuncu tonu */
+    overflow: hidden;
+}
+
+.custom-input {
+    padding-left: 40px;
+    height: 45px;
+    border-radius: 4px;
+    border: none;
+    outline: none !important;
+}
+
+.login-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+    z-index: 5;
+}
+
+.btn-uye-ol {
+    background-color: #555870;
+    color: white !important;
+    font-weight: bold;
+    transition: background 0.3s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white !important;
+}
+
+.btn-uye-svg {
+    transition: transform 0.3s;
+}
+.btn-uye-svg path {
+  fill: #ffffff; /* istediğin renk kodunu buraya yaz */
+}
+.btn-uye-ol:hover{
+    background-color: #43454f; /* hover’da biraz daha koyu ton */
+
+}
+/* Hover olunca SVG sağa kayacak */
+.btn-uye-ol:hover .btn-uye-svg {
+    transform: translateX(6px);
+}
+/* Bootstrap default boşluklarını temizleyelim */
+.dropdown-menu {
+    margin-top: 0px !important;
+}
+
+.btn-giris:hover{
+  background-color: #e6491c !important;
+}
+.dropdown-menu {
+  border-radius: 5px 0 5px 5px !important;
+}
+.forget-passw {
+  color: #ffffff; /* normal durum */
+  transition: color 0.3s;
+}
+
+.forget-passw:hover {
+  color: rgba(255, 255, 255, 0.6) !important; /* hover’da soluk beyaz */
+}

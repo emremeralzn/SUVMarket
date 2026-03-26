@@ -1,0 +1,156 @@
+/* 1. Dropdown Buton Alanı (Sıralama Seçiniz kısmı) */
+.custom-sort-dropdown .btn.dropdown-toggle {
+    background-color: transparent !important;
+    border: none !important;
+    color: #666 !important; /* Gri yazı rengi */
+    font-size: 14px;
+    padding-right: 0;
+}
+
+/* Sağdaki turuncu ok simgesi */
+.custom-sort-dropdown .btn.dropdown-toggle::after {
+    vertical-align: middle;
+    font-size: 20px;
+    margin-left: 4px;
+}
+
+/* Butona tıklandığında oluşan mavi gölgeyi (focus-ring) kaldırır */
+.custom-sort-dropdown .btn:focus, 
+.custom-sort-dropdown .btn:active {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* 2. Açılır Menü Konteynerı */
+.custom-sort-dropdown .dropdown-menu {
+    background-color: #ff5400 !important; /* Ana Turuncu */
+    border: none !important;
+    border-radius: 10px;
+    padding: 0;
+    margin-top: 8px !important;
+    overflow: hidden;
+    min-width: 240px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* 3. Menü Elemanları (Linkler) */
+.custom-sort-dropdown .dropdown-item {
+    color: white !important;
+    background-color: transparent !important; /* O beyaz blok hatasını bu engeller */
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15); /* Aradaki ince çizgiler */
+    transition: all 0.2s ease;
+}
+
+/* 4. Hover ve Aktif Durum Yönetimi */
+/* Üzerine gelindiğinde veya tıklandığında (focus) */
+.custom-sort-dropdown .dropdown-item:hover, 
+.custom-sort-dropdown .dropdown-item:focus, 
+.custom-sort-dropdown .dropdown-item:active {
+    background-color: #e64d00 !important; /* Hafif koyu turuncu hover */
+    color: #ffffff !important;
+    outline: none;
+}
+
+/* Listedeki son elemanın altındaki çizgiyi kaldır */
+.custom-sort-dropdown li:last-child .dropdown-item {
+    border-bottom: none !important;
+}
+
+/* Mobil cihazlarda veya hızlı kaydırmada oluşan gri/mavi efekti temizle */
+.custom-sort-dropdown .dropdown-item:active {
+    background-color: #cc4500 !important;
+}
+
+/* Liste öğeleri için hover ayarları */
+.custom-tree-list li > div, 
+.custom-tree-list li > ul > li {
+    cursor: pointer;
+    transition: all 0.2s ease; /* Yumuşak geçiş için */
+}
+
+/* Üzerine gelindiğinde renk FF5100 ve kalın font */
+.custom-tree-list li > div:hover span,
+.custom-tree-list li > ul > li:hover span{
+    color: #FF5100; /* Metin rengi */
+    font-weight: 700 !important;
+}
+
+/* Üzerine gelindiğinde sayıların rengini de korumak için */
+.custom-tree-list li > div:hover span,
+.custom-tree-list li > ul > li:hover span {
+    color: #FF5100 !important;
+    font-weight: 700 !important;
+}
+.navbar-toggler {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.navbar-toggler:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+}
+#filterCollapse {
+    position: sticky;
+    top: 0;
+    max-height: calc(100vh - 50px); /* viewport yüksekliğine göre */
+}
+.accordion-button:not(.collapsed) {
+    background-color: #f4f4f4 !important; /* Açık header arka planı */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); /* Sadece açık olduğunda gölge */
+}
+
+/* Kapalı header default bg */
+.accordion-button.collapsed {
+    background-color: #f4f4f4 !important;
+    box-shadow: none;
+}
+
+
+
+/* Accordion container scroll */
+#accordionDesktop,
+#accordionMobile {
+    max-height: 420px; /* 8 accordion gözükür */
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+/* Accordion body içindeki listeler */
+.accordion-body ul {
+    max-height: 200px;  /* 8 li gözükür */
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+/* Scrollbar normal görünüm */
+#accordionDesktop::-webkit-scrollbar,
+#accordionMobile::-webkit-scrollbar,
+.accordion-body ul::-webkit-scrollbar {
+    width: 8px; /* normal kalınlık */
+    background-color: rgba(0,0,0,0.05); /* çok açık arka plan */
+}
+
+/* Scrollbar thumb (tutulan kısmın rengi) */
+#accordionDesktop::-webkit-scrollbar-thumb,
+#accordionMobile::-webkit-scrollbar-thumb,
+.accordion-body ul::-webkit-scrollbar-thumb {
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 3px;
+    transition: all 0.2s ease;
+}
+
+/* Hover olduğunda kalınlaşsın ve renk koyulaşsın */
+#accordionDesktop::-webkit-scrollbar-thumb:hover,
+#accordionMobile::-webkit-scrollbar-thumb:hover,
+.accordion-body ul::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(58, 53, 53, 0.5);
+    width: 10px; /* hoverda kalınlık */
+}
