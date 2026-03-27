@@ -10,5 +10,7 @@ import { RouterLink } from '@angular/router';
   styleUrl: './car-list.scss',
 })
 export class CarList {
-
+ngOnInit() {
+  window.scrollTo(0, 0);
+}
 }

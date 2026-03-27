@@ -2,18 +2,21 @@
   <div class="container p-4">
     <h3 class="text-center fw-bold fs-4">Seçtiğiniz araç ile ilgili</h3>
     <h1 class="text-center fw-bold display-4 d-block">Sizi Arayalım</h1>
-    <div class="d-flex justify-content-center align-items-center"></div>
   </div>
 
   <div class="container bg-white p-sm-5 p-3">
-    <div class="row align-items-center">
-      <h3 style="border-top: 1px solid #f0f1f2" class="common-color-orange fs-21 fw-bold pt-4">
-        İletişim Bilgileriniz
-      </h3>
+    <div style="border-top: 1px solid #f0f1f2;"></div>
+    <div class="row">
+      
+      <!-- SOL 8 COL -->
+      <div class="col-12 col-lg-8 px-lg-5">
 
-      <!-- FORM -->
-      <div class="col-12 col-md-8">
-        <div class="row d-flex mt-0 g-4">
+        <h3 class="common-color-orange fs-21 fw-bold pt-4">
+          İletişim Bilgileriniz
+        </h3>
+
+        <!-- FORM -->
+        <div class="row g-4 mt-2">
           <div class="col-md-4 col-12">
             <input type="text" class="form-control" placeholder="Adınız Soyadınız *" />
           </div>
@@ -28,9 +31,11 @@
           <div class="col-md-4 col-12">
             <input type="email" class="form-control" placeholder="E-Posta Adresiniz*" />
           </div>
+
           <div class="col-md-4 col-12">
             <input type="text" class="form-control" placeholder="Doğrulama Kodu" />
           </div>
+
           <div class="col-md-4 col-12">
             <div class="d-flex align-items-center gap-2">
               <div class="captcha-box">30SLF7</div>
@@ -38,23 +43,22 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="row d-flex align-items-center gy-3">
-      <div class="col-12 col-md-8 mt-5">
-        <p class="fs-14">
-          <a
-            href="https://www.suvmarket.com/kvk#3"
-            target="_blank"
-            class="common-color-orange fw-bold blank text-decoration-none"
-          >
-            Aydınlatma metnini
-          </a>
-          okudum, kişisel verilerimin yukarıda yer alan prensipler uyarınca işlendiğini anladım.
-          ulaşabilirsiniz.
-        </p>
-      </div>
-      <div class="col-12 col-md-8">
+
+        <!-- KVKK -->
+        <div class="mt-5">
+          <p class="fs-14">
+            <a
+              href="https://www.suvmarket.com/kvk#3"
+              target="_blank"
+              class="common-color-orange fw-bold text-decoration-none"
+            >
+              Aydınlatma metnini
+            </a>
+            okudum, kişisel verilerimin yukarıda yer alan prensipler uyarınca işlendiğini anladım.
+          </p>
+        </div>
+
+        <!-- CHECKBOX -->
         <div class="form-check custom-checkbox">
           <input class="form-check-input" type="checkbox" id="kvkkCheck" />
           <label
@@ -65,11 +69,24 @@
             elektronik ileti almayı kabul ediyorum.
           </label>
         </div>
+
+        <!-- BUTTON -->
+        <button class="btn btn-primary px-5 p-2 fw-bold submit mt-3 mb-3">
+          GÖNDER
+        </button>
+
       </div>
-      <div class="col-sm-12 col-md-8">
-        <button class="btn btn-primary px-5 p-2 fw-bold submit mt-3 mb-3">GÖNDER</button>
+
+      <!-- SAĞ 4 COL (boş - sen dolduracaksın) -->
+        <div style="background-color: #f2f3f5" class="col-lg-4 col-12 p-sm-5 p-4 custom-right-box mx-auto mt-lg-0 mt-4">
+          <h3 class="text-center fs-19 pb-3">Seçtiğiniz Araç Bilgileri</h3>
+
+          <app-card type="car-list" [showLike]="false" [showShare]="false"></app-card>
+
       </div>
-      <div style="border-top: 1px solid #f0f1f2; height: 50px"></div>
+
     </div>
+
+    <div style="border-top: 1px solid #f0f1f2;"></div>
   </div>
 </div>

@@ -80,6 +80,22 @@ export const routes: Routes = [
         },
         loadComponent: () => import('./pages/car-list/car-list').then(m => m.CarList),
       },
+      {
+        path: 'sifremi-unuttum', 
+        data: {
+          title: 'Şifremi Unuttum',
+          description: 'Suv Market hakkında bize ulaşın.'
+        },
+        loadComponent: () => import('./pages/forget-password/forget-password').then(m => m.ForgetPassword),
+      },
+      {
+        path: '**',  // diğer tüm eşleşmeyen URL’ler için
+        data: {
+          title: 'Sayfa Bulunamadı | Suv Market',
+          description: 'Aradığınız sayfa bulunamadı.'
+        },
+        loadComponent: () => import('./pages/not-found/not-found').then(m => m.NotFound)
+      }
     ]
   }
 ];

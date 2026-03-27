@@ -8,4 +8,6 @@ import { Component, Input } from '@angular/core';
 })
 export class Card {
 @Input() type: 'home' | 'car-list' = 'car-list';
+  @Input() showShare: boolean = true;
+  @Input() showLike: boolean = true;
 }

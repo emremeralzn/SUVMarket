@@ -55,7 +55,7 @@
 </div>
 }
 @if (type == 'car-list') {
-  <div class="card card-list cursor-pointer">
+  <div  class="card card-list cursor-pointer">
   <img style="border-bottom:5px solid #FF5100" src="/MG-HS-1.5T-GDiLuxury-0-8_orta.jpg" class="card-img-top" alt="..." />
 
   <div class="card-body position-relative p-4 ">
@@ -63,15 +63,21 @@
       <div class="position-absolute bottom-0 end-0 m-2 d-flex flex-column gap-3 mb-4 me-3 icon-group">
 
   <!-- SHARE -->
-  <svg class="icon share" viewBox="0 0 640 640">
+   @if(showShare)
+   {
+ <svg class="icon share" viewBox="0 0 640 640">
     <path d="M448 256C501 256 544 213 544 160C544 107 501 64 448 64C395 64 352 107 352 160C352 165.4 352.5 170.8 353.3 176L223.6 248.1C206.7 233.1 184.4 224 160 224C107 224 64 267 64 320C64 373 107 416 160 416C184.4 416 206.6 406.9 223.6 391.9L353.3 464C352.4 469.2 352 474.5 352 480C352 533 395 576 448 576C501 576 544 533 544 480C544 427 501 384 448 384C423.6 384 401.4 393.1 384.4 408.1L254.7 336C255.6 330.8 256 325.5 256 320C256 314.5 255.5 309.2 254.7 304L384.4 231.9C401.3 246.9 423.6 256 448 256z"/>
   </svg>
-
+   }
+   
   <!-- LIKE -->
+ @if(showLike)
+ {
   <svg class="icon like" viewBox="0 0 640 640">
     <path d="M305 151.1L320 171.8L335 151.1C360 116.5 400.2 96 442.9 96C516.4 96 576 155.6 576 229.1L576 231.7C576 343.9 436.1 474.2 363.1 529.9C350.7 539.3 335.5 544 320 544C304.5 544 289.2 539.4 276.9 529.9C203.9 474.2 64 343.9 64 231.7L64 229.1C64 155.6 123.6 96 197.1 96C239.8 96 280 116.5 305 151.1z"/>
   </svg>
-
+ }
+  
 </div>
 
     <p class="fs-17">Suzuki Vitara MILD HYBRID 1.4 129 GL ELEGANCE 4x2 AT TEK RENK MK</p>

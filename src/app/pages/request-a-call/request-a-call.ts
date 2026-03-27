@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { Card } from '../../components/card/card';
 
 @Component({
   selector: 'app-request-a-call',
-  imports: [],
+  imports: [Card],
   templateUrl: './request-a-call.html',
   styleUrl: './request-a-call.scss',
 })

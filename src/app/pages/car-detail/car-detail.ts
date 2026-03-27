@@ -71,7 +71,15 @@ ngAfterViewInit() {
   ];
 
   window.addEventListener('scroll', () => {
-  const scrollPos = window.scrollY + 50;
+  const scrollPos = window.scrollY + 100;
+
+  // 🔥 EN ÜSTTEYKEN HİÇBİRİNİ AKTİF YAPMA
+  if (window.scrollY < 50) {
+    document.querySelectorAll('.title').forEach(item => item.classList.remove('active'));
+    return;
+  }
+
+  let activeFound = false;
 
   sections.forEach(sec => {
     const el = document.getElementById(sec.id);
@@ -84,12 +92,18 @@ ngAfterViewInit() {
     if (scrollPos >= top && scrollPos < bottom) {
       document.querySelectorAll('.title').forEach(item => item.classList.remove('active'));
       link.classList.add('active');
-    }
-    if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 10) {
-      document.querySelectorAll('.title').forEach(item => item.classList.remove('active'));
-      document.getElementById('link-benzer')?.classList.add('active');
+      activeFound = true;
     }
   });
+
+  if (!activeFound) {
+    document.querySelectorAll('.title').forEach(item => item.classList.remove('active'));
+  }
+
+  if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 10) {
+    document.querySelectorAll('.title').forEach(item => item.classList.remove('active'));
+    document.getElementById('link-benzer')?.classList.add('active');
+  }
 });
 }
 

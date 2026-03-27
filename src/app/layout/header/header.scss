@@ -164,3 +164,7 @@
 .forget-passw:hover {
   color: rgba(255, 255, 255, 0.6) !important; /* hover’da soluk beyaz */
 }
+.custom-input:focus {
+  box-shadow: none !important;
+  border-color: inherit; /* veya istediğin renk */
+}
