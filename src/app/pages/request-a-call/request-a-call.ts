@@ -8,5 +8,7 @@ import { Card } from '../../components/card/card';
   styleUrl: './request-a-call.scss',
 })
 export class RequestACall {
-
+ngOnInit() {
+  window.scrollTo(0, 0);
+}
 }

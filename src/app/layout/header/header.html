@@ -23,7 +23,7 @@
 
   <!-- Al + Sat (her zaman yan yana) -->
   <div class="d-flex gap-1 gap-sm-0 w-100 ms-lg-3 w-lg-50">
-    <button class="btn-orange al fw-bold fs-18 w-100 w-lg-50">Al</button>
+    <button routerLink="/ikinci-el" class="btn-orange al fw-bold fs-18 w-100 w-lg-50">Al</button>
     <button class="btn-orange sat fw-bold fs-18 w-100 w-lg-50">Sat</button>
   </div>
 
@@ -62,7 +62,7 @@
           <input formControlName ="password" type="password" class="form-control custom-input" placeholder="Şifre"  [class.is-invalid]="password?.invalid && password?.touched">
         </div>
         <div class="text-center mb-2">
-          <a href="#" class="text-decoration-none fs-13 forget-passw">Şifremi Unuttum</a>
+          <a routerLink="/sifremi-unuttum" onclick="bootstrap.Dropdown.getInstance(document.getElementById('loginDropdown'))?.hide()"  class="text-decoration-none fs-13 forget-passw">Şifremi Unuttum</a>
         </div>
         <div class="d-flex justify-content-center align-items-center">
         <button type="submit" (click)="onSubmit($event)" class="btn border-2 border-white w-80 text-white py-2 btn-giris fw-medium">Giriş</button>

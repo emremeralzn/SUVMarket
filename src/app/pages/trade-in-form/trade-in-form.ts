@@ -7,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './trade-in-form.scss',
 })
 export class TradeInForm {
-
+ngOnInit() {
+  window.scrollTo(0, 0);
+}
 }
