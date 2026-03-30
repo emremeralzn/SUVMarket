@@ -37,13 +37,21 @@
   color:white;
   
 }
+/* no-hover class’lı selectler hover/focus efekti almaz */
+select.no-hover:hover,
+select.no-hover:focus {
+  border-color: #ccc !important; /* default border */
+  box-shadow: none !important;   /* hiç yanmasın */
+  color: #333 !important;        /* yazı normal kalsın */
+  outline: none !important;
+}
 
 .btn-orange-absolute{
    background:#ff5100;
   color:white;
    border-radius: 5px;
   border: none !important;
-    white-space: nowrap; /* Metnin alt satıra geçmesini engeller */
+    white-space: nowrap; 
 
 }
 select,
@@ -55,7 +63,7 @@ select:focus-visible {
 .binek-araclar-btn{
   background-color: #5c5c70;
   border-radius: 5px;
-    white-space: nowrap; /* Metnin alt satıra geçmesini engeller */
+    white-space: nowrap; 
 
 }
 .binek-araclar-btn:active{

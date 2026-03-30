@@ -67,3 +67,7 @@
   font-size: 30px;
   cursor: pointer;
 }
+
+.focusborderleft:focus {
+  border-left: none !important;
+}

@@ -151,16 +151,16 @@
   width: 30px;   /* ikon boyutu */
   height: 30px;
   cursor: pointer;
-  z-index: 10;
 }
 
 .next-tumb, .prev-tumb {
-    width: 50px;
-    height: 125px;
     background-position: 50% 50%;
     background-size: 16px;
     background-repeat: no-repeat;
-    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.next-tumb:hover, .prev-tumb:hover {
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 /* Sağ ok */
@@ -172,38 +172,6 @@
 .prev-tumb {
     background-image: url(/car-detail/back.svg);
 }
-.thumbnail-carousel-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-
-  .thumbnail-swiper {
-    width: 80%;
-  }
-
-  .thumbnail-img {
-    cursor: pointer;
-    border: 2px solid transparent;
-    border-radius: 5px;
-    transition: border 0.2s;
-  }
-
-  .active-thumb {
-    border-color: #ff5100;
-  }
-
-  .prev-tumb,
-  .next-tumb {
-    width: 30px;
-    height: 30px;
-    background-color: #ccc;
-    border-radius: 50%;
-    cursor: pointer;
-  }
-}
-
-
 
 .teknik-veri > .col-xl-3, 
 .teknik-veri > .col-lg-4, 
@@ -223,40 +191,38 @@
     border-right: none; /* Her 4. sütunun sağ border'ı yok */
   }
 }
-
-
 /* LG 992px-1199px, 3 sütun */
 @media (min-width: 992px) and (max-width: 1199.98px) {
   .teknik-veri > .col-lg-4:nth-child(3n) {
     border-right: none;
   }
 }
-
 /* MD 768px-991px, 2 sütun */
 @media (min-width: 768px) and (max-width: 991.98px) {
   .teknik-veri > .col-md-6:nth-child(2n) {
     border-right: none;
   }
 }
-
 /* SM <768px, tek sütun */
 @media (max-width: 767.98px) {
   .teknik-veri > .col-12 {
     border-right: none;
   }
 }
-
 @media (max-width: 767.98px) {
   .fsfs{
     font-size: 14px !important;
   }
   }
+  
 
+.overlay {
+  opacity: 0;
+  transition: 0.3s ease;
+  pointer-events: none; /* overlay hover'ı etkilemesin */
+}
 
-
-
-
-
-
-
-
+/* SADECE swiper hover olunca aç */
+.ornek swiper-container:hover ~ .overlay {
+  opacity: 1;
+}

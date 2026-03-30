@@ -3,7 +3,8 @@ import {
   CUSTOM_ELEMENTS_SCHEMA,
   AfterViewInit,
   ElementRef,
-  ViewChild
+  ViewChild,
+  ChangeDetectorRef
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
@@ -23,7 +24,7 @@ export class SwiperYoutubeComponent implements AfterViewInit {
 
   @ViewChild('swiperRef', { read: ElementRef }) swiperRef!: ElementRef;
 
-  constructor(private sanitizer: DomSanitizer) {}
+  constructor(private sanitizer: DomSanitizer,private cdr: ChangeDetectorRef) {}
 
   activeIndex = 1;
   selectedVideo: string | null = null;
@@ -90,6 +91,7 @@ export class SwiperYoutubeComponent implements AfterViewInit {
     on: {
       slideChange: (swiper: any) => {
         this.activeIndex = swiper.activeIndex;
+        this.cdr.detectChanges();
       }
     }
   });

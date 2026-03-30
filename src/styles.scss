@@ -228,3 +228,121 @@ body{
 .cursor-grab{
   cursor: grab;
 }
+
+
+
+
+/* Genel input override */
+.container .form-control {
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 14px;
+  color: #FF5100;
+  background-color: #fff;
+}
+
+/* Input focus efekti */
+.container .form-control:hover {
+  border-color: #FF5100;
+  box-shadow: 0 0 5px rgba(255, 81, 0, 0.3);
+}
+.container .form-control:focus {
+  border-color: #FF5100;
+  box-shadow: 0 0 5px rgba(255, 81, 0, 0.3);
+}
+/* Input veya +90 hover/focus olduğunda tüm input-group yanacak */
+.input-group:hover .input-group-text,
+.input-group:focus-within .input-group-text,
+.input-group:hover input.form-control,
+.input-group:focus-within input.form-control {
+    border-color: #FF5100;
+    box-shadow: 0 0 5px rgba(255, 81, 0, 0.3);
+}ı
+/* Captcha kutusu */
+.captcha-box {
+  padding: 10px 15px;
+  background-color: #e9ecef;
+  border-radius: 8px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  border: 1px solid #ccc;
+}
+
+/* Container tüm grup */
+.phone-group {
+  display: flex;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* +90 kısmı */
+.phone-group .input-group-text {
+  background-color: #f8f8f8;
+  border: none;
+  position: relative;
+  z-index: 2;
+  color: #333; /* default metin rengi */
+}
+
+/* Ayırıcı çizgi */
+.phone-group .input-group-text::after {
+  content: '';
+  position: absolute;
+  top: 8%;
+  right: 0;
+  height: 84%;
+  width: 1px;
+  background-color: #ccc; /* çizgi rengi */
+  z-index: 3;
+}
+
+/* Input kısmı */
+.phone-group input.form-control {
+  border: none;
+  border-radius: 0;
+  flex: 1;
+  padding-left: 12px;
+  color: #333; /* default yazı rengi */
+}
+
+/* Hover / focus */
+.phone-group:hover,
+.phone-group:focus-within {
+  border-color: #FF5100;
+  box-shadow: 0 0 5px rgba(255, 81, 0, 0.3);
+}
+
+/* Hover/focus olduğunda yazı rengini turuncu yap */
+.phone-group:focus-within input.form-control {
+  color: #FF5100;
+}
+
+/* Placeholder rengini değiştirmemek için */
+.phone-group input.form-control::placeholder {
+  color: #999;
+}
+
+/* Ortak form elementleri için stil */
+.custom-form-element {
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  padding: 10px 12px;
+  transition: all 0.3s ease;
+  color: #333; /* default yazı rengi */
+  background-color: #fff;
+}
+
+/* Hover ve focus efekti */
+.custom-form-element:hover,
+.custom-form-element:focus {
+  border-color: #FF5100;
+  box-shadow: 0 0 5px rgba(255, 81, 0, 0.3);
+  outline: none;
+}
+
+/* Placeholder rengini bozmayalım */
+.custom-form-element option[disabled] {
+  color: #999;
+}

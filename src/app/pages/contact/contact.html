@@ -37,7 +37,7 @@
 
             <div class="col-md-6 col-12">
               <div class="input-group">
-                <span class="input-group-text bg-light">+90</span>
+                <span style="background-color: #cfd1d3;color: #818181;" class="input-group-text phone-group">+90</span>
                 <input type="text" formControlName="phone" class="form-control" placeholder="5xx xxx xxxx *"
                        [class.is-invalid]="phone?.invalid && phone?.touched">
               </div>
@@ -65,7 +65,7 @@
             </div>
 
             <div class="col-md-6 col-12">
-          <select formControlName="subject" class="form-select" [class.is-invalid]="subject?.invalid && subject?.touched">
+          <select formControlName="subject" class="form-select custom-form-element" [class.is-invalid]="subject?.invalid && subject?.touched">
           <option value="" disabled selected>Konu Seçiniz *</option>
           <option value="bilgi">Bilgi</option>
           <option value="oneri">Dilek / Öneri</option>
