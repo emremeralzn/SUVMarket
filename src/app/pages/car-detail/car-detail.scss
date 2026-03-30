@@ -226,3 +226,25 @@
 .ornek swiper-container:hover ~ .overlay {
   opacity: 1;
 }
+
+
+
+.mobile-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #ff5100;
+  z-index: 9999;
+
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: all 0.25s ease;
+}
+
+.mobile-menu.open {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}

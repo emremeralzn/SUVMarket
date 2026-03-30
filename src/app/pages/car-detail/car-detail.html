@@ -2,12 +2,15 @@
   <div class="container">
     <h2 class="fs-13 cursor-pointer pt-2 ps-lg-1"> 2. El SUV İlanları > İkinci El Suzuki > Vitara > MILD HYBRID 1.4 129 GL ELEGANCE 4x2 AT ÇİFT RENK M > 35498</h2>
     <div class="row">
-      <div class="col-lg-6 pe-xl-5 pe-3 order-lg-1 order-1">
+      <div class="col-lg-6 col-md-10 pe-xl-5 pe-3 order-lg-1 order-1 mx-md-auto mx-lg-0">
         <div class="position-relative overflow-hidden cursor-pointer ornek">
            <swiper-container #mainSwiper>
     @for (img of carImages; track $index) {
       <swiper-slide >
-        <img [src]="img" class="d-block w-100">
+        <div class="ratio ratio-4x3">
+        <img [src]="img" class="w-100 object-fit-cover">
+
+        </div>
       </swiper-slide>
     }
   </swiper-container>
@@ -66,8 +69,8 @@
       </div>
 
       <div class="col-12 mb-lg-5 order-lg-3 order-2 d-sm-block d-none">
-        <div class="d-flex justify-content-center mt-xl-4">
-          <div class="prev-tumb cursor-pointer p-3 px-4"></div>
+        <div class="d-flex justify-content-center mt-lg-4 mt-sm-3">
+          <div class="prev-tumb cursor-pointer p-3 px-4"  (click)="prevThumb()"></div>
 
           <div class="w-80 ">
             <swiper-container #mainSwiper (slidechange)="onSlideChange($event)" space-between="0">
@@ -86,68 +89,99 @@
       </swiper-container>
           </div>
 
-          <div class="next-tumb cursor-pointer p-3 px-4"></div>
+          <div class="next-tumb cursor-pointer p-3 px-4" (click)="nextThumb()"></div>
         </div>
       </div>
     </div>
   </div>
 </div>
-<nav style="background-color: #f2f3f5" class="navbar navbar-expand-lg bg-body-tertiary p-0 sticky-lg-top">
-  <div class="container-fluid navs p-lg-2 pt-5">
-    <div class="container-lg">
-      <!-- tekrar px-0 kaldırdık -->
+<nav style="background-color: #f2f3f5" class="navbar navbar-expand-lg p-0 sticky-lg-top ">
+  <div class="container-fluid navs p-lg-2 pt-5 ">
 
-      <div class="d-flex align-items-center justify-content-between w-100">
-        <!-- MOBILE HEADER -->
-        <div class="d-lg-none w-100">
-          <div class="d-flex align-items-center shadow-sm rounded overflow-hidden bg-white">
-            <!-- TURUNCU -->
-            <button
-              class="navbar-toggler border-0 rounded-0 px-4 py-3"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarTogglerDemo01"
-              style="background: #ff5a00"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
+    <div class="container-lg position-relative px-0">
 
-            <!-- YAZI -->
-            <div class="px-3 py-2 fw-medium">Araç Özellikleri</div>
-          </div>
+      <!-- MOBILE HEADER -->
+      <div class="d-lg-none w-100">
+        <div class="d-flex align-items-center shadow-sm rounded overflow-hidden bg-white">
+
+          <button
+            class="navbar-toggler border-0 rounded-0 px-4 py-3"
+            type="button"
+            (click)="menuOpen = !menuOpen"
+            style="background: #ff5a00"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="px-3 py-2 fw-medium">Araç Özellikleri</div>
         </div>
       </div>
 
-      <!-- DESKTOP & COLLAPSE -->
-      <div
-        class="collapse navbar-collapse justify-content-center mt-lg-0 mt-3 "
-        id="navbarTogglerDemo01"
-      >
+      <!-- 🔥 ABSOLUTE MENU (MOBILE) -->
+      <div class="mobile-menu d-lg-none" [class.open]="menuOpen">
+        <ul class="navbar-nav fw-bold text-center">
+
+          <li class="nav-item cursor-pointer">
+            <a class="nav-link text-white py-3 cursor-pointer" (click)="scrollTo('teknikSection')">TEKNİK VERİLER</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link text-white py-3 cursor-pointer" (click)="scrollTo('donanimSection')">DONANIMLAR</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link text-white py-3 cursor-pointer" (click)="scrollTo('ekspertizSection')">EKSPERTİZ BİLGİSİ</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link text-white py-3 cursor-pointer" (click)="scrollTo('saticiSection')">YETKİLİ SATICI</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link text-white py-3 cursor-pointer" (click)="scrollTo('benzerSection')">BENZER OTOMOBİLLER</a>
+          </li>
+
+        </ul>
+      </div>
+
+      <!-- DESKTOP MENU (Aynı kalıyor) -->
+      <div class="d-none d-lg-flex justify-content-center">
         <ul
-        style="background-color: #ff5100"
-        class="navbar-nav fw-bold cursor-pointer d-flex justify-content-center align-items-center gap-lg-5 "
-      >
-        <li class="nav-item">
-          <a  id="link-teknik" class="nav-link text-white title py-3 " (click)="scrollTo('teknikSection')">TEKNİK VERİLER</a>
-        </li>
-        <div class="sticky-line d-lg-inline d-none"></div>
-        <li class="nav-item">
-          <a id="link-donanım" class="nav-link text-white title py-3" (click)="scrollTo('donanimSection')">DONANIMLAR</a>
-        </li>
-        <div class="sticky-line d-lg-block d-none"></div>
-        <li class="nav-item">
-          <a id="link-ekspertiz" class="nav-link text-white title py-3" (click)="scrollTo('ekspertizSection')">EKSPERTİZ BİLGİSİ</a>
-        </li>
-        <div class="sticky-line d-lg-block d-none"></div>
-        <li class="nav-item">
-          <a id="link-satici" class="nav-link text-white title py-3" (click)="scrollTo('saticiSection')">YETKİLİ SATICI</a>
-        </li>
-        <div class="sticky-line d-lg-block d-none"></div>
-        <li class="nav-item">
-          <a id="link-benzer" class="nav-link text-white title py-3" (click)="scrollTo('benzerSection')">BENZER OTOMOBİLLER</a>
-        </li>
-      </ul>
-            </div>
+          style="background-color: #ff5100"
+          class="navbar-nav fw-bold d-flex justify-content-center align-items-center gap-lg-5"
+        >
+
+          <li class="nav-item">
+            <a id="link-teknik" class="nav-link text-white title cursor-pointer" (click)="scrollTo('teknikSection')">TEKNİK VERİLER</a>
+          </li>
+
+          <div class="sticky-line"></div>
+
+          <li class="nav-item">
+            <a id="link-donanım" class="nav-link text-white title cursor-pointer" (click)="scrollTo('donanimSection')">DONANIMLAR</a>
+          </li>
+
+          <div class="sticky-line"></div>
+
+          <li class="nav-item">
+            <a id="link-ekspertiz" class="nav-link text-white title cursor-pointer" (click)="scrollTo('ekspertizSection')">EKSPERTİZ BİLGİSİ</a>
+          </li>
+
+          <div class="sticky-line"></div>
+
+          <li class="nav-item">
+            <a id="link-satici" class="nav-link text-white title cursor-pointer" (click)="scrollTo('saticiSection')">YETKİLİ SATICI</a>
+          </li>
+
+          <div class="sticky-line"></div>
+
+          <li class="nav-item">
+            <a id="link-benzer" class="nav-link text-white title cursor-pointer" (click)="scrollTo('benzerSection')">BENZER OTOMOBİLLER</a>
+          </li>
+
+        </ul>
+      </div>
+
     </div>
   </div>
 </nav>

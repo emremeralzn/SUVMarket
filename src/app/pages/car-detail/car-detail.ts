@@ -15,7 +15,7 @@ register(); // Swiper web bileşenlerini kaydeder
 })
 export class CarDetail implements OnInit, AfterViewInit {
   constructor(private cd: ChangeDetectorRef) {}
-
+menuOpen = false;
   activeIndex = 0;
 
   @ViewChild('mainSwiper') mainSwiper!: ElementRef;
@@ -54,6 +54,13 @@ onSlideChange(event: any) {
   }
     this.cd.detectChanges();
 
+}
+nextThumb() {
+  this.thumbSwiper.nativeElement.swiper.slideNext();
+}
+
+prevThumb() {
+  this.thumbSwiper.nativeElement.swiper.slidePrev();
 }
 
   nextSlide() {
