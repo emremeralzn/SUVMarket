@@ -4,19 +4,19 @@
     <div class="row">
       <div class="col-lg-6 col-md-10 pe-xl-5 pe-3 order-lg-1 order-1 mx-md-auto mx-lg-0">
         <div class="position-relative overflow-hidden cursor-pointer ornek">
-           <swiper-container #mainSwiper>
-    @for (img of carImages; track $index) {
-      <swiper-slide >
-        <div class="ratio ratio-4x3">
-        <img [src]="img" class="w-100 object-fit-cover">
+           <swiper-container (click)="openLightbox()" #mainSwiper>
+              @for (img of carImages; track $index) {
+                <swiper-slide >
+                  <div class="ratio ratio-4x3">
+                  <img [src]="img" class="w-100 object-fit-cover">
 
-        </div>
-      </swiper-slide>
-    }
-  </swiper-container>
+                  </div>
+                </swiper-slide>
+              }
+           </swiper-container>
 
              <!-- Overlay -->
-         <div class="overlay position-absolute top-0 start-0 w-100 h-100 
+         <div  class="overlay d-lg-flex d-none position-absolute top-0 start-0 w-100 h-100 
               d-flex align-items-center justify-content-center
               bg-dark bg-opacity-50 z-1">
     <i class="fa-solid fa-expand fa-2xl text-white"></i>
@@ -54,9 +54,10 @@
               <svg class="cursor-pointer" xmlns="http://www.w3.org/2000/svg" height="30" width="30" viewBox="0 0 640 640"><path d="M192 64C156.7 64 128 92.7 128 128L128 544C128 555.5 134.2 566.2 144.2 571.8C154.2 577.4 166.5 577.3 176.4 571.4L320 485.3L463.5 571.4C473.4 577.3 485.7 577.5 495.7 571.8C505.7 566.1 512 555.5 512 544L512 128C512 92.7 483.3 64 448 64L192 64z"/></svg>
               <a class="text-decoration-none fs-14 text-dark" href="">Favorilere Ekle</a>
             </div>
-            <div class="d-flex gap-lg-2 gap-1 justify-content-center align-items-center">
+            <div (click)="printPage()" class="d-flex gap-lg-2 gap-1 justify-content-center align-items-center cursor-pointer">
+              <app-print-template class="d-none" id="printComponent"></app-print-template>
               <svg class="cursor-pointer" xmlns="http://www.w3.org/2000/svg" height="30" width="30" viewBox="0 0 640 640"><path d="M128 128C128 92.7 156.7 64 192 64L405.5 64C422.5 64 438.8 70.7 450.8 82.7L493.3 125.2C505.3 137.2 512 153.5 512 170.5L512 208L128 208L128 128zM64 320C64 284.7 92.7 256 128 256L512 256C547.3 256 576 284.7 576 320L576 416C576 433.7 561.7 448 544 448L512 448L512 512C512 547.3 483.3 576 448 576L192 576C156.7 576 128 547.3 128 512L128 448L96 448C78.3 448 64 433.7 64 416L64 320zM192 480L192 512L448 512L448 416L192 416L192 480zM520 336C520 322.7 509.3 312 496 312C482.7 312 472 322.7 472 336C472 349.3 482.7 360 496 360C509.3 360 520 349.3 520 336z"/></svg>
-              <a class="text-decoration-none fs-14 text-dark" href="">Yazdır</a>
+              <a class="text-decoration-none fs-14 text-dark ">Yazdır</a>
             </div>
           </div>
 
@@ -191,114 +192,114 @@
       <div class="row m-0 p-0 bg-white teknik-veri">
         <div class="col-xl-3 col-lg-4 col-md-6 col-12 d-flex justify-content-between p-sm-4 px-sm-5 p-4 align-items-center">
           <div>
-            <p class="fs-13 common-color-orange mb-0">MOTOR HACMİ / MOTOR GÜCÜ</p>
-            <p class="fs-16">1.373 cc / 140 hp 104 kw</p>
+            <p class="fs-13 common-color-orange mb-0 lh-grid">MOTOR HACMİ / MOTOR GÜCÜ</p>
+            <p class="fs-16">cc / hp kw</p>
           </div>
           <img
-            style="width: 65px; height: 61px"
+            style="width: 65px; height: 60px"
             src="https://www.suvmarket.com/Content/images/car-detail-icon-1.png"
             alt=""
           />
         </div>
         <div class="col-xl-3 col-lg-4 col-md-6 col-12 d-flex justify-content-between p-sm-4 px-sm-5 p-4 align-items-center">
           <div>
-            <p class="fs-13 common-color-orange mb-0">ŞANZIMAN</p>
+            <p class="fs-13 common-color-orange mb-0 lh-grid">ŞANZIMAN</p>
             <p class="fs-16">Otomatik</p>
           </div>
           <img
-            style="width: 65px; height: 61px"
+            style="width: 65px; height: 60px"
             src="https://www.suvmarket.com/Content/images/car-detail-icon-2.png"
             alt=""
           />
         </div>
         <div class="col-xl-3 col-lg-4 col-md-6 col-12 d-flex justify-content-between p-sm-4 px-sm-5 p-4 align-items-center ">
           <div>
-            <p class="fs-13 common-color-orange mb-0">YAKIT TİPİ</p>
+            <p class="fs-13 common-color-orange mb-0 lh-grid">YAKIT TİPİ</p>
             <p class="fs-16">Benzinli</p>
           </div>
           <img
-            style="width: 65px; height: 61px"
+            style="width: 65px; height: 60px"
             src="https://www.suvmarket.com/Content/images/car-detail-icon-3.png"
             alt=""
           />
         </div>
         <div class="col-xl-3 col-lg-4 col-md-6 col-12 d-flex justify-content-between p-sm-4 px-sm-5 p-4 align-items-center ">
           <div>
-            <p class="fs-13 common-color-orange mb-0">KM</p>
+            <p class="fs-13 common-color-orange mb-0 lh-grid">KM</p>
             <p class="fs-16">36.972 Km</p>
           </div>
           <img
-            style="width: 65px; height: 61px"
+            style="width: 65px; height: 60px"
             src="https://www.suvmarket.com/Content/images/car-detail-icon-4.png"
             alt=""
           />
         </div>
         <div class="col-xl-3 col-lg-4 col-md-6 col-12 d-flex justify-content-between p-sm-4 px-sm-5 p-4 align-items-center ">
           <div>
-            <p class="fs-13 common-color-orange mb-0">MODEL YILI</p>
+            <p class="fs-13 common-color-orange mb-0 lh-grid">MODEL YILI</p>
             <p class="fs-16">2019</p>
           </div>
           <img
-            style="width: 65px; height: 61px"
+            style="width: 65px; height: 60px"
             src="https://www.suvmarket.com/Content/images/car-detail-icon-5.png"
             alt=""
           />
         </div>
         <div class="col-xl-3 col-lg-4 col-md-6 col-12 d-flex justify-content-between p-sm-4 px-sm-5 p-4 align-items-center ">
           <div>
-            <p class="fs-13 common-color-orange mb-0">ŞASİ NO</p>
+            <p class="fs-13 common-color-orange mb-0 lh-grid">ŞASİ NO</p>
             <p class="fs-16">TSMLYDA1S00******</p>
           </div>
           <img
-            style="width: 65px; height: 61px"
+            style="width: 65px; height: 60px"
             src="https://www.suvmarket.com/Content/images/car-detail-icon-6.png"
             alt=""
           />
         </div>
         <div class="col-xl-3 col-lg-4 col-md-6 col-12 d-flex justify-content-between p-sm-4 px-sm-5 p-4 align-items-center " >
           <div>
-            <p class="fs-13 common-color-orange mb-0">RENK</p>
+            <p class="fs-13 common-color-orange mb-0 lh-grid">RENK</p>
             <p class="fs-16">Sarı</p>
           </div>
           <img
-            style="width: 65px; height: 61px"
+            style="width: 65px; height: 60px"
             src="https://www.suvmarket.com/Content/images/car-detail-icon-7.png"
             alt=""
           />
         </div>
         <div class="col-xl-3 col-lg-4 col-md-6 col-12 d-flex justify-content-between p-sm-4 px-sm-5 p-4 align-items-center ">
           <div>
-            <p class="fs-13 common-color-orange mb-0">MOTOR NO</p>
+            <p class="fs-13 common-color-orange mb-0 lh-grid">MOTOR NO</p>
             <p class="fs-16">K14C1******</p>
           </div>
         </div>
         <div class="col-xl-3 col-lg-4 col-md-6 col-12 d-flex justify-content-between p-sm-4 px-sm-5 p-4 align-items-center ">
           <div>
-            <p class="fs-13 common-color-orange mb-0">REHİN</p>
+            <p class="fs-13 common-color-orange mb-0 lh-grid">REHİN</p>
             <p class="fs-16">Yok</p>
           </div>
         </div>
         <div class="col-xl-3 col-lg-4 col-md-6 col-12 d-flex justify-content-between p-sm-4 px-sm-5 p-4 align-items-center ">
           <div>
-            <p class="fs-13 common-color-orange mb-0">REHİN SORGU TARİHİ</p>
+            <p class="fs-13 common-color-orange mb-0 lh-grid">REHİN SORGU TARİHİ</p>
             <p class="fs-16">18.03.2026</p>
           </div>
         </div>
         <div class="col-xl-3 col-lg-4 col-md-6 col-12 d-flex justify-content-between p-sm-4 px-sm-5 p-4 align-items-center ">
           <div>
-            <p class="fs-13 common-color-orange mb-0">HACİZ</p>
+            <p class="fs-13 common-color-orange mb-0 lh-grid">HACİZ</p>
             <p class="fs-16">Yok</p>
           </div>
         </div>
-        <div class="col-xl-3 col-lg-4 col-md-6 col-12 d-flex justify-content-between p-sm-4 px-sm-5 p-4 ">
+        <div class="col-xl-3 col-lg-4 col-md-6 col-12 d-flex justify-content-between p-sm-4 px-sm-5 p-4 align-items-center ">
           <div>
-            <p class="fs-13 common-color-orange mb-0">HACİZ SORGU TARİHİ</p>
+            <p class="fs-13 common-color-orange mb-0 lh-grid">HACİZ SORGU TARİHİ</p>
             <p class="fs-16">18.03.2026</p>
           </div>
         </div>
         <div class="col-xl-3 col-lg-4 col-md-6 col-12 d-flex justify-content-between p-sm-4 px-sm-5 p-4 align-items-center " >
           <div>
-            <p class="fs-13 common-color-orange mb-0">YEDEK ANAHTAR</p>
+            <p class="fs-13 common-color-orange mb-0 lh-grid">YEDEK ANAHTAR</p>
             <p class="fs-16">Yok</p>
           </div>
         </div>
@@ -318,7 +319,7 @@
           <div class="bg-white p-3 px-lg-5 mb-lg-4 mb-3">
             <div class="row d-flex flex-lg-row flex-column">
               <div class="col-lg-4 d-flex align-items-center">
-                <p class="fs-13 common-color-orange mb-0 pe-4">TRAMER BİLGİSİ</p>
+                <p class="fs-13 common-color-orange mb-0 lh-grid pe-4">TRAMER BİLGİSİ</p>
                 <img
                   src="https://image2url.com/r2/default/images/1774247791751-0f92eb3f-a55a-4b5e-93ea-380d35246d55.png"
                   style="width: 63px; height: 63px"
@@ -340,7 +341,7 @@
             class="text-decoration-none text-dark"
           >
             <div class="bg-white cursor-pointer">
-              <div class="d-flex flex-sm-row flex-column align-items-center">
+              <div class="d-flex flex-sm-row flex-column align-items-center mb-3 mb-lg-0">
                 <img style="height: 95px" src="/car-detail/tse-logo.png" alt="TSE Logo" />
                 <p class="fs-15 mb-1 ms-sm-2 mt-2 mt-sm-0">
                   Onaylı Ekspertiz Raporu'nu indir.
@@ -385,7 +386,7 @@
                   </div>
                 </div>
 
-                <div class="row g-3 mt-3 ps-2">
+                <div class="row g-3 ps-2 mt-0">
                   <div
                     class="col-12 d-flex justify-content-between align-items-center border-bottom fs-6 fsfs"
                   >
@@ -602,7 +603,7 @@
     <div class="container pb-5">
             <h4 id="benzerSection" class="fw-bold pb-3 text-lg-start text-center py-5">BENZER ARAÇLAR</h4>
 
-      <div class="row row-cols-lg-3 row-cols-sm-2 row-cols-1">
+      <div class="row row-cols-lg-3 row-cols-sm-2 row-cols-1 g-3">
         <div class="col">
           <app-card type="car-list" [showLike]="false" [showShare]="false"></app-card>
         </div>
@@ -616,3 +617,49 @@
     </div>
   </div>
 </div>
+
+@if (isLightboxOpen) {
+  <div class="lightbox-backdrop" (click)="closeLightbox()">
+    <div class="lightbox-dialog d-lg-block d-none" (click)="$event.stopPropagation()">
+      
+      <button class="lb-close" (click)="closeLightbox()">&times;</button>
+
+        <div class="position-relative overflow-hidden ">
+           <swiper-container #lbmainSwiper (slidechange)="onLbSlideChange($event)">
+          @for (img of carImages; track $index) {
+            <swiper-slide >
+              <img [src]="img" class="w-100 object-fit-cover ratio-4x3">
+
+            </swiper-slide>
+          }
+  </swiper-container>
+          <button class="carousel-control-prev z-2" type="button" (click)="lbPrevSlide()">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+
+          <button class="carousel-control-next z-2" type="button" (click)="lbNextSlide()">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+
+        <div class="thumbs-container mt-3">
+          <div class="d-flex justify-content-center">
+            <div class="w-100 position-relative">
+              <div class="prev-tumb position-absolute start-0 top-0 h-100 d-flex align-items-center px-4 z-1 cursor-pointer" (click)="lbPrevThumb()"></div>
+              <swiper-container #lbthumbSwiper slides-per-view="5" space-between="10" class="mx-5">
+                @for (img of carImages; track $index) {
+                  <swiper-slide>
+                    <img [src]="img" class="img-fluid lb-thumbnail-img user-select-none" [class.active-thumb]="activeIndex === $index" (click)="setIndex($index)">
+                  </swiper-slide>
+                }
+              </swiper-container>
+              <div class="next-tumb position-absolute end-0 top-0 h-100 d-flex align-items-center px-4 z-1 cursor-pointer" (click)="lbNextThumb()"></div>
+            </div>
+          </div>
+        </div>
+
+    </div>
+  </div>
+}

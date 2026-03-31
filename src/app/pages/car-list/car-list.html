@@ -1,498 +1,735 @@
-<div style="background-color: #f4f4f4;" class="container-fluid">
-     <div class="d-lg-none d-block w-100 pt-4">
-                <div class="d-flex align-items-center shadow-sm rounded overflow-hidden bg-white">
-                    <button
-                    class="navbar-toggler navbar-dark border-0 rounded-0 px-3 py-3"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#mobileCollapse"
-                    style="background: #ff5a00"
-                    >
-                    <span class="navbar-toggler-icon"></span>
-                    </button>
+<div style="background-color: #f4f4f4" class="container-fluid">
+  <div class="d-lg-none d-block w-100 pt-4">
+    <div class="d-flex align-items-center shadow-sm rounded overflow-hidden bg-white">
+      <button
+        class="navbar-toggler navbar-dark border-0 rounded-0 px-3 py-3"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#mobileCollapse"
+        style="background: #ff5a00"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-                    <!-- YAZI -->
-                    <div class="px-3 py-2 fw-medium">Araç Özellikleri</div>
-                </div>
-                </div>
-    <div class="row">
-       
-        <div id="filterCollapse" class="col-lg-2 col-12 d-lg-block d-none px-0 collapse" >
-
-                <div class="accordion accordion-flush" id="accordionDesktop">
-                    <div class="accordion-item border-0"> <h2 class="accordion-header">
-                        <button class="accordion-button fs-18" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMarka">
-                            Marka
-                        </button>
-                    </h2>
-                    <div id="collapseMarka" class="accordion-collapse collapse show">
-                    <div class="accordion-body p-3">
-                        <ul class="list-unstyled mb-0 custom-tree-list">
-                            
-                            <li class="mb-2">
-                                <div class="d-flex gap-2 align-items-center ">
-                                    <span class="fw-medium fs-14">Ford</span>
-                                    <span class="fw-medium fs-14">2</span>
-                                </div>
-                                <ul class="list-unstyled ms-4 mt-1 text-secondary">
-                                    <li class="py-1 d-flex gap-2 align-items-center">
-                                        <span class="fs-14 fw-medium">EcoSport</span>
-                                        <span class="fs-14 fw-medium">1</span>
-                                    </li>
-                                    <li class="py-1 d-flex gap-2 align-items-center ">
-                                        <span class="fs-14 fw-medium">Kuga</span>
-                                        <span class="fw-medium fs-14">1</span>
-                                    </li>
-                                </ul>
-                            </li>
-
-                            <li class="mb-2">
-                                <div class="d-flex gap-2 align-items-center fs-14">
-                                    <span class="fw-medium fs-14">Hyundai</span>
-                                    <span class="fs-14 fw-medium">1</span>
-                                </div>
-                                <ul class="list-unstyled ms-4 mt-1 text-secondary">
-                                    <li class="py-1 d-flex gap-2 align-items-center">
-                                        <span class="fs-14 fw-medium">Bayon</span>
-                                        <span class="fw-medium fs-14">1</span>
-                                    </li>
-                                </ul>
-                            </li>
-
-                        </ul>
-                    </div>
-                </div>
-                </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                        <button class="accordion-button collapsed fs-18" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                            Model Yılı
-                        </button>
-                        </h2>
-                        <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionDesktop">
-                        <div class="accordion-body">
-                            <div class="row">
-                                <div class="col-6">
-                                    <label class="fs-14" for="">Min</label>
-                                    <input class="form-control fs-14" type="text" placeholder="Min Yıl">
-                                </div>
-                                <div class="col-6">
-                                    <label class="fs-14" for="">Max</label>
-                                    <input class="form-control fs-14" type="text" placeholder="Max Yıl"></div>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                        <button class="accordion-button collapsed fs-18" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                            Yakıt
-                        </button>
-                        </h2>
-                        <div id="flush-collapseThree" class="accordion-collapse collapse " data-bs-parent="#accordionDesktop">
-                        <div class="accordion-body">
-                            <ul class="list-unstyled">
-                                <li class="py-2 fs-13">Benzinli</li>
-                                <li class="py-2 fs-13">Benzinli/LPG</li>
-                                <li class="py-2 fs-13">Dizel</li>
-                                <li class="py-2 fs-13">Elektrik</li>
-                                <li class="py-2 fs-13">Hybrid</li>
-                                <li class="py-2 fs-13">Plug-in Hybrid</li>
-                            </ul>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                        <button class="accordion-button collapsed fs-18" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
-                            Vites
-                        </button>
-                        </h2>
-                        <div id="flush-collapseFour" class="accordion-collapse collapse " data-bs-parent="#accordionDesktop">
-                            <div class="accordion-body">
-                            <ul class="list-unstyled">
-                                <li class="py-2 fs-13">Manuel</li>
-                                <li class="py-2 fs-13">Otomatik</li>
-                               
-                            </ul>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                        <button class="accordion-button collapsed fs-18 " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
-                            KM Aralığı
-                        </button>
-                        </h2>
-                        <div id="flush-collapseFive" class="accordion-collapse collapse " data-bs-parent="#accordionDesktop">
-                            <div class="accordion-body">
-                            <div class="row">
-                                <div class="col-6">
-                                    <label class="fs-14" for="">Min</label>
-                                    <input class="form-control fs-14" type="text" placeholder="Min Km">
-                                </div>
-                                <div class="col-6">
-                                    <label class="fs-14" for="">Max</label>
-                                    <input class="form-control fs-14" type="text" placeholder="Max Km"></div>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                        <button class="accordion-button collapsed fs-18" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
-                            Renk
-                        </button>
-                        </h2>
-                        <div id="flush-collapseSix" class="accordion-collapse collapse " data-bs-parent="#accordionDesktop">
-                            <div class="accordion-body">
-                                <ul class="list-unstyled">
-                                    <li class="py-2 fs-13">Beyaz</li>
-                                    <li class="py-2 fs-13">Siyah</li>
-                                    <li class="py-2 fs-13">Gri</li>
-                                    <li class="py-2 fs-13">Kırmızı</li>
-                                    <li class="py-2 fs-13">Mavi</li>
-                                    <li class="py-2 fs-13">Yeşil</li>
-                                    <li class="py-2 fs-13">Sarı</li>
-                                    <li class="py-2 fs-13">Turuncu</li>
-                                    <li class="py-2 fs-13">Mor</li>
-                                    <li class="py-2 fs-13">Pembe</li>
-                                    <li class="py-2 fs-13">Kahverengi</li>
-                                    <li class="py-2 fs-13">Bej</li>
-                                    <li class="py-2 fs-13">Bordo</li>
-                                    <li class="py-2 fs-13">Lacivert</li>
-                                    <li class="py-2 fs-13">Açık Mavi</li>
-                                    <li class="py-2 fs-13">Koyu Yeşil</li>
-                                    <li class="py-2 fs-13">Altın</li>
-                                    <li class="py-2 fs-13">Gümüş</li>
-                                    <li class="py-2 fs-13">Krem</li>
-                                    <li class="py-2 fs-13">Şampanya</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                        <button class="accordion-button collapsed fs-18" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
-                            Fiyat Aralığı
-                        </button>
-                        </h2>
-                        <div id="flush-collapseSeven" class="accordion-collapse collapse " data-bs-parent="#accordionDesktop">
-                        <div class="accordion-body">
-                            <div class="row">
-                                <div class="col-6">
-                                    <label class="fs-14" for="">Min</label>
-                                    <input class="form-control fs-14" type="text" placeholder="Min Fiyat">
-                                </div>
-                                <div class="col-6">
-                                    <label class="fs-14" for="">Max</label>
-                                    <input class="form-control fs-14" type="text" placeholder="Max Fiyat"></div>
-                            </div>
-                            
-                        </div>                  
-                   </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                        <button class="accordion-button collapsed fs-18" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
-                            Lokasyon
-                        </button>
-                        </h2>
-                        <div id="flush-collapseEight" class="accordion-collapse collapse " data-bs-parent="#accordionDesktop">
-                            <div class="accordion-body">
-                                <ul class="list-unstyled">
-                                    <li class="py-2 fs-13">Suvmarket Basın Ekspres</li>
-                                    <li class="py-2 fs-13">Suvmarket Kartal</li>
-                                    <li class="py-2 fs-13">Suvmarket Koşuyolu</li>
-                                    <li class="py-2 fs-13">Suvmarket İzmir</li>
-                                </ul>
-                            </div>       
-                       </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                        <button class="accordion-button collapsed fs-18" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">
-                            Plaka
-                        </button>
-                        </h2>
-                        <div id="flush-collapseNine" class="accordion-collapse collapse " data-bs-parent="#accordionDesktop">
-                        <div class="accordion-body">
-                            <input type="text" class="form-control fs-14" placeholder="Plaka">
-                        </div>
-                        </div>
-                    </div>
-            </div>
-
-            <div  class="forms">
-            <div style="background-color: #FF5100;" class=" rounded-1 fs-15 text-center fw-bold p-3 text-white cursor-pointer mt-4 mx-3">FİLTRELERİ UYGULA</div>
-            <div>
-                <p style="margin-top: 85px;" class="fs-14 text-dark mb-0 fw-bold text-center">ARADIĞINIZ SUV'UNUZU BULAMADINIZ MI?</p>
-                <div style="background-color: #FF5100;" class=" rounded-1 fs-15 text-center fw-bold p-3 text-white cursor-pointer mt-2 mx-3">HEMEN TIKLAYIN</div>
-            </div>
-            <div>
-                <p class="fs-14 text-dark mb-0 fw-bold text-center mt-1">İSTEDİĞİNİZ SUV'U SİZİN İÇİN BULALIM</p>
-                <div style="background-color: #5a5a74;" class=" rounded-1 fs-15 text-center fw-bold p-3 text-white cursor-pointer mt-1 mx-3">BİNEK ARAÇLAR</div>
-            </div>
-
-        </div>
-
-
-
-
-
-
-        </div>
-
-
-         <div id="mobileCollapse" class="col-lg-2 col-12 px-0 d-lg-none collapse">
-                <div class="accordion accordion-flush" id="accordionMobile">
-                    <div class="accordion-item border-0"> <h2 class="accordion-header">
-                        <button class="accordion-button collapsed fs-18" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMarkaMobile">
-                            Marka
-                        </button>
-                    </h2>
-                    <div id="collapseMarkaMobile" class="accordion-collapse collapse">
-                    <div class="accordion-body p-3">
-                        <ul class="list-unstyled mb-0 custom-tree-list">
-                            
-                            <li class="mb-2">
-                                <div class="d-flex gap-2 align-items-center ">
-                                    <span class="fw-medium fs-14">Ford</span>
-                                    <span class="fw-medium fs-14">2</span>
-                                </div>
-                                <ul class="list-unstyled ms-4 mt-1 text-secondary">
-                                    <li class="py-1 d-flex gap-2 align-items-center">
-                                        <span class="fs-14 fw-medium">EcoSport</span>
-                                        <span class="fs-14 fw-medium">1</span>
-                                    </li>
-                                    <li class="py-1 d-flex gap-2 align-items-center ">
-                                        <span class="fs-14 fw-medium">Kuga</span>
-                                        <span class="fw-medium fs-14">1</span>
-                                    </li>
-                                </ul>
-                            </li>
-
-                            <li class="mb-2">
-                                <div class="d-flex gap-2 align-items-center fs-14">
-                                    <span class="fw-medium fs-14">Hyundai</span>
-                                    <span class="fs-14 fw-medium">1</span>
-                                </div>
-                                <ul class="list-unstyled ms-4 mt-1 text-secondary">
-                                    <li class="py-1 d-flex gap-2 align-items-center">
-                                        <span class="fs-14 fw-medium">Bayon</span>
-                                        <span class="fw-medium fs-14">1</span>
-                                    </li>
-                                </ul>
-                            </li>
-
-                        </ul>
-                    </div>
-                </div>
-                </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                        <button class="accordion-button collapsed fs-18" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwoMobile" aria-expanded="false" aria-controls="flush-collapseTwoMobile">
-                            Model Yılı
-                        </button>
-                        </h2>
-                        <div id="flush-collapseTwoMobile" class="accordion-collapse collapse" data-bs-parent="#accordionMobile">
-                        <div class="accordion-body">
-                            <div class="row">
-                                <div class="col-6">
-                                    <label class="fs-14" for="">Min</label>
-                                    <input class="form-control fs-14" type="text" placeholder="Min Yıl">
-                                </div>
-                                <div class="col-6">
-                                    <label  class="fs-14"for="">Max</label>
-                                    <input class="form-control fs-14" type="text" placeholder="Max Yıl"></div>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                        <button class="accordion-button collapsed fs-18" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThreeMobile" aria-expanded="false" aria-controls="flush-collapseThreeMobile">
-                            Yakıt
-                        </button>
-                        </h2>
-                        <div id="flush-collapseThreeMobile" class="accordion-collapse collapse " data-bs-parent="#accordionMobile">
-                        <div class="accordion-body">
-                            <ul class="list-unstyled">
-                                <li class="py-2 fs-13">Benzinli</li>
-                                <li class="py-2 fs-13">Benzinli/LPG</li>
-                                <li class="py-2 fs-13">Dizel</li>
-                                <li class="py-2 fs-13">Elektrik</li>
-                                <li class="py-2 fs-13">Hybrid</li>
-                                <li class="py-2 fs-13">Plug-in Hybrid</li>
-                            </ul>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                        <button class="accordion-button collapsed fs-18" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFourMobile" aria-expanded="false" aria-controls="flush-collapseFourMobile">
-                            Vites
-                        </button>
-                        </h2>
-                        <div id="flush-collapseFourMobile" class="accordion-collapse collapse " data-bs-parent="#accordionMobile">
-                            <div class="accordion-body">
-                            <ul class="list-unstyled">
-                                <li class="py-2 fs-13">Manuel</li>
-                                <li class="py-2 fs-13">Otomatik</li>
-                               
-                            </ul>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                        <button class="accordion-button collapsed fs-18" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFiveMobile" aria-expanded="false" aria-controls="flush-collapseFiveMobile">
-                            KM Aralığı
-                        </button>
-                        </h2>
-                        <div id="flush-collapseFiveMobile" class="accordion-collapse collapse " data-bs-parent="#accordionMobile">
-                            <div class="accordion-body">
-                            <div class="row">
-                                <div class="col-6">
-                                    <label class="fs-14" for="">Min</label>
-                                    <input class="form-control fs-14" type="text" placeholder="Min Km">
-                                </div>
-                                <div class="col-6">
-                                    <label class="fs-14"for="">Max</label>
-                                    <input class="form-control fs-14" type="text" placeholder="Max Km"></div>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                        <button class="accordion-button collapsed fs-18" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSixMobile" aria-expanded="false" aria-controls="flush-collapseSixMobile">
-                            Renk
-                        </button>
-                        </h2>
-                        <div id="flush-collapseSixMobile" class="accordion-collapse collapse" data-bs-parent="#accordionMobile">
-                            <div class="accordion-body">
-                                <ul class="list-unstyled">
-                                    <li class="py-2 fs-13">Beyaz</li>
-                                    <li class="py-2 fs-13">Siyah</li>
-                                    <li class="py-2 fs-13">Gri</li>
-                                    <li class="py-2 fs-13">Kırmızı</li>
-                                    <li class="py-2 fs-13">Mavi</li>
-                                    <li class="py-2 fs-13">Yeşil</li>
-                                    <li class="py-2 fs-13">Sarı</li>
-                                    <li class="py-2 fs-13">Turuncu</li>
-                                    <li class="py-2 fs-13">Mor</li>
-                                    <li class="py-2 fs-13">Pembe</li>
-                                    <li class="py-2 fs-13">Kahverengi</li>
-                                    <li class="py-2 fs-13">Bej</li>
-                                    <li class="py-2 fs-13">Bordo</li>
-                                    <li class="py-2 fs-13">Lacivert</li>
-                                    <li class="py-2 fs-13">Açık Mavi</li>
-                                    <li class="py-2 fs-13">Koyu Yeşil</li>
-                                    <li class="py-2 fs-13">Altın</li>
-                                    <li class="py-2 fs-13">Gümüş</li>
-                                    <li class="py-2 fs-13">Krem</li>
-                                    <li class="py-2 fs-13">Şampanya</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                        <button class="accordion-button collapsed fs-18" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSevenMobile" aria-expanded="false" aria-controls="flush-collapseSevenMobile">
-                            Fiyat Aralığı
-                        </button>
-                        </h2>
-                        <div id="flush-collapseSevenMobile" class="accordion-collapse collapse " data-bs-parent="#accordionMobile">
-                        <div class="accordion-body">
-                            <div class="row">
-                                <div class="col-6">
-                                    <label class="fs-14" for="">Min</label>
-                                    <input class="form-control fs-14" type="text" placeholder="Min Fiyat">
-                                </div>
-                                <div class="col-6">
-                                    <label class="fs-14" for="">Max</label>
-                                    <input class="form-control fs-14" type="text" placeholder="Max Fiyat"></div>
-                            </div>
-                            
-                        </div>                  
-                   </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                        <button class="accordion-button collapsed fs-18" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEightMobile" aria-expanded="false" aria-controls="flush-collapseEightMobile">
-                            Lokasyon
-                        </button>
-                        </h2>
-                        <div id="flush-collapseEightMobile" class="accordion-collapse collapse " data-bs-parent="#accordionMobile">
-                            <div class="accordion-body">
-                                <ul class="list-unstyled">
-                                    <li class="py-2 fs-13">Suvmarket Basın Ekspres</li>
-                                    <li class="py-2 fs-13">Suvmarket Kartal</li>
-                                    <li class="py-2 fs-13">Suvmarket Koşuyolu</li>
-                                    <li class="py-2 fs-13">Suvmarket İzmir</li>
-                                </ul>
-                            </div>       
-                       </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                        <button class="accordion-button collapsed fs-18" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseNineMobile" aria-expanded="false" aria-controls="flush-collapseNineMobile">
-                            Plaka
-                        </button>
-                        </h2>
-                        <div id="flush-collapseNineMobile" class="accordion-collapse collapse " data-bs-parent="#accordionMobile">
-                        <div class="accordion-body">
-                            <input type="text" class="form-control fs-14" placeholder="Plaka">
-                        </div>
-                        </div>
-                    </div>
-            </div>
-
-            <div  class="forms">
-            <div style="background-color: #FF5100;" class=" rounded-1 fs-15 text-center fw-bold p-3 text-white cursor-pointer mt-4 mx-3">FİLTRELERİ UYGULA</div>
-            <div>
-                <p style="margin-top: 85px;" class="fs-14 text-dark mb-0 fw-bold text-center">ARADIĞINIZ SUV'UNUZU BULAMADINIZ MI?</p>
-                <div style="background-color: #FF5100;" class=" rounded-1 fs-15 text-center fw-bold p-3 text-white cursor-pointer mt-2 mx-3">HEMEN TIKLAYIN</div>
-            </div>
-            <div>
-                <p class="fs-14 text-dark mb-0 fw-bold text-center mt-1">İSTEDİĞİNİZ SUV'U SİZİN İÇİN BULALIM</p>
-                <div style="background-color: #5a5a74;" class=" rounded-1 fs-15 text-center fw-bold p-3 text-white cursor-pointer mt-1 mx-3">BİNEK ARAÇLAR</div>
-            </div>
-
-        </div>
-
-        </div>
-        <div class="col-lg-10 col-12">
-            <div class="d-flex flex-lg-row justify-content-lg-between flex-column justify-content-center gap-lg-0 gap-3 align-items-center p-3 pe-lg-4 pt-lg-3">
-                <div class="fs-13">İkinci El Satılık SUV Araçlarımız</div>
-
-                <div class="dropdown custom-sort-dropdown">
-                    <a class="btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Sıralama Seçiniz
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-end">
-                        <li><a class="dropdown-item" href="#">Model Yılına Göre Artan</a></li>
-                        <li><a class="dropdown-item" href="#">Model Yılına Göre Azalan</a></li>
-                        <li><a class="dropdown-item" href="#">Kilometreye Göre Artan</a></li>
-                        <li><a class="dropdown-item" href="#">Kilometreye Göre Azalan</a></li>
-                        <li><a class="dropdown-item" href="#">Fiyata Göre Artan</a></li>
-                        <li><a class="dropdown-item" href="#">Fiyata Göre Azalan</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row row-cols-md-3 row-cols-sm-2 row-cols-1 g-3 gy-md-4 px-3 mb-5">
-                <app-card routerLink="/arac-detay" [type]="'car-list'"></app-card>
-                <app-card routerLink="/arac-detay" [type]="'car-list'"></app-card>
-                <app-card routerLink="/arac-detay" [type]="'car-list'"></app-card>
-                <app-swap-card [type] = "'takas'"></app-swap-card>
-                <app-card routerLink="/arac-detay" [type]="'car-list'"></app-card>
-                <app-card routerLink="/arac-detay" [type]="'car-list'"></app-card>
-                <app-card routerLink="/arac-detay" [type]="'car-list'"></app-card>
-                <app-card routerLink="/arac-detay" [type]="'car-list'"></app-card>
-               <app-swap-card [type] = "'yeni'"></app-swap-card>
-            </div>
-
-        </div>
+      <!-- YAZI -->
+      <div class="px-3 py-2 fw-medium">Araç Özellikleri</div>
     </div>
+  </div>
+  <div class="row">
+    <div id="filterCollapse" class="col-lg-2 col-12 d-lg-block d-none px-0 collapse">
+      <div class="accordion accordion-flush" id="accordionDesktop">
+        <div class="accordion-item border-0">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button fs-18"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseMarka"
+            >
+              Marka
+            </button>
+          </h2>
+          <div id="collapseMarka" class="accordion-collapse collapse show">
+            <div class="accordion-body p-3">
+              <ul class="list-unstyled mb-0 custom-tree-list">
+                <li class="mb-2">
+                  <div class="d-flex gap-2 align-items-center">
+                    <span class="fw-medium fs-14">Ford</span>
+                    <span class="fw-medium fs-14">2</span>
+                  </div>
+                  <ul class="list-unstyled ms-4 mt-1 text-secondary">
+                    <li class="py-1 d-flex gap-2 align-items-center">
+                      <span class="fs-14 fw-medium">EcoSport</span>
+                      <span class="fs-14 fw-medium">1</span>
+                    </li>
+                    <li class="py-1 d-flex gap-2 align-items-center">
+                      <span class="fs-14 fw-medium">Kuga</span>
+                      <span class="fw-medium fs-14">1</span>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="mb-2">
+                  <div class="d-flex gap-2 align-items-center fs-14">
+                    <span class="fw-medium fs-14">Hyundai</span>
+                    <span class="fs-14 fw-medium">1</span>
+                  </div>
+                  <ul class="list-unstyled ms-4 mt-1 text-secondary">
+                    <li class="py-1 d-flex gap-2 align-items-center">
+                      <span class="fs-14 fw-medium">Bayon</span>
+                      <span class="fw-medium fs-14">1</span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed fs-18"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseTwo"
+              aria-expanded="false"
+              aria-controls="flush-collapseTwo"
+            >
+              Model Yılı
+            </button>
+          </h2>
+          <div
+            id="flush-collapseTwo"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionDesktop"
+          >
+            <div class="accordion-body">
+              <div class="row">
+                <div class="col-6">
+                  <label class="fs-14" for="">Min</label>
+                  <input class="form-control fs-14" type="text" placeholder="Min Yıl" />
+                </div>
+                <div class="col-6">
+                  <label class="fs-14" for="">Max</label>
+                  <input class="form-control fs-14" type="text" placeholder="Max Yıl" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed fs-18"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseThree"
+              aria-expanded="false"
+              aria-controls="flush-collapseThree"
+            >
+              Yakıt
+            </button>
+          </h2>
+          <div
+            id="flush-collapseThree"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionDesktop"
+          >
+            <div class="accordion-body">
+              <ul class="list-unstyled">
+                <li class="py-2 fs-13">Benzinli</li>
+                <li class="py-2 fs-13">Benzinli/LPG</li>
+                <li class="py-2 fs-13">Dizel</li>
+                <li class="py-2 fs-13">Elektrik</li>
+                <li class="py-2 fs-13">Hybrid</li>
+                <li class="py-2 fs-13">Plug-in Hybrid</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed fs-18"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseFour"
+              aria-expanded="false"
+              aria-controls="flush-collapseFour"
+            >
+              Vites
+            </button>
+          </h2>
+          <div
+            id="flush-collapseFour"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionDesktop"
+          >
+            <div class="accordion-body">
+              <ul class="list-unstyled">
+                <li class="py-2 fs-13">Manuel</li>
+                <li class="py-2 fs-13">Otomatik</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed fs-18"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseFive"
+              aria-expanded="false"
+              aria-controls="flush-collapseFive"
+            >
+              KM Aralığı
+            </button>
+          </h2>
+          <div
+            id="flush-collapseFive"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionDesktop"
+          >
+            <div class="accordion-body">
+              <div class="row">
+                <div class="col-6">
+                  <label class="fs-14" for="">Min</label>
+                  <input class="form-control fs-14" type="text" placeholder="Min Km" />
+                </div>
+                <div class="col-6">
+                  <label class="fs-14" for="">Max</label>
+                  <input class="form-control fs-14" type="text" placeholder="Max Km" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed fs-18"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseSix"
+              aria-expanded="false"
+              aria-controls="flush-collapseSix"
+            >
+              Renk
+            </button>
+          </h2>
+          <div
+            id="flush-collapseSix"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionDesktop"
+          >
+            <div class="accordion-body">
+              <ul class="list-unstyled">
+                <li class="py-2 fs-13">Beyaz</li>
+                <li class="py-2 fs-13">Siyah</li>
+                <li class="py-2 fs-13">Gri</li>
+                <li class="py-2 fs-13">Kırmızı</li>
+                <li class="py-2 fs-13">Mavi</li>
+                <li class="py-2 fs-13">Yeşil</li>
+                <li class="py-2 fs-13">Sarı</li>
+                <li class="py-2 fs-13">Turuncu</li>
+                <li class="py-2 fs-13">Mor</li>
+                <li class="py-2 fs-13">Pembe</li>
+                <li class="py-2 fs-13">Kahverengi</li>
+                <li class="py-2 fs-13">Bej</li>
+                <li class="py-2 fs-13">Bordo</li>
+                <li class="py-2 fs-13">Lacivert</li>
+                <li class="py-2 fs-13">Açık Mavi</li>
+                <li class="py-2 fs-13">Koyu Yeşil</li>
+                <li class="py-2 fs-13">Altın</li>
+                <li class="py-2 fs-13">Gümüş</li>
+                <li class="py-2 fs-13">Krem</li>
+                <li class="py-2 fs-13">Şampanya</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed fs-18"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseSeven"
+              aria-expanded="false"
+              aria-controls="flush-collapseSeven"
+            >
+              Fiyat Aralığı
+            </button>
+          </h2>
+          <div
+            id="flush-collapseSeven"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionDesktop"
+          >
+            <div class="accordion-body">
+              <div class="row">
+                <div class="col-6">
+                  <label class="fs-14" for="">Min</label>
+                  <input class="form-control fs-14" type="text" placeholder="Min Fiyat" />
+                </div>
+                <div class="col-6">
+                  <label class="fs-14" for="">Max</label>
+                  <input class="form-control fs-14" type="text" placeholder="Max Fiyat" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed fs-18"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseEight"
+              aria-expanded="false"
+              aria-controls="flush-collapseEight"
+            >
+              Lokasyon
+            </button>
+          </h2>
+          <div
+            id="flush-collapseEight"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionDesktop"
+          >
+            <div class="accordion-body">
+              <ul class="list-unstyled">
+                <li class="py-2 fs-13">Suvmarket Basın Ekspres</li>
+                <li class="py-2 fs-13">Suvmarket Kartal</li>
+                <li class="py-2 fs-13">Suvmarket Koşuyolu</li>
+                <li class="py-2 fs-13">Suvmarket İzmir</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed fs-18"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseNine"
+              aria-expanded="false"
+              aria-controls="flush-collapseNine"
+            >
+              Plaka
+            </button>
+          </h2>
+          <div
+            id="flush-collapseNine"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionDesktop"
+          >
+            <div class="accordion-body">
+              <input type="text" class="form-control fs-14" placeholder="Plaka" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="forms">
+        <div
+          style="background-color: #ff5100"
+          class="rounded-1 fs-15 text-center fw-bold p-3 text-white cursor-pointer mt-4 mx-3"
+        >
+          FİLTRELERİ UYGULA
+        </div>
+        <div>
+          <p style="margin-top: 85px" class="fs-14 text-dark mb-0 fw-bold text-center">
+            ARADIĞINIZ SUV'UNUZU BULAMADINIZ MI?
+          </p>
+          <div
+            style="background-color: #ff5100"
+            class="rounded-1 fs-15 text-center fw-bold p-3 text-white cursor-pointer mt-2 mx-3"
+          >
+            HEMEN TIKLAYIN
+          </div>
+        </div>
+        <div>
+          <p class="fs-14 text-dark mb-0 fw-bold text-center mt-1">
+            İSTEDİĞİNİZ SUV'U SİZİN İÇİN BULALIM
+          </p>
+          <div
+            style="background-color: #5a5a74"
+            class="rounded-1 fs-15 text-center fw-bold p-3 text-white cursor-pointer mt-1 mx-3"
+          >
+            BİNEK ARAÇLAR
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="mobileCollapse" class="col-lg-2 col-12 px-0 d-lg-none collapse">
+      <div class="accordion accordion-flush" id="accordionMobile">
+        <div class="accordion-item border-0">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed fs-18"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseMarkaMobile"
+            >
+              Marka
+            </button>
+          </h2>
+          <div id="collapseMarkaMobile" class="accordion-collapse collapse">
+            <div class="accordion-body p-3">
+              <ul class="list-unstyled mb-0 custom-tree-list">
+                <li class="mb-2">
+                  <div class="d-flex gap-2 align-items-center">
+                    <span class="fw-medium fs-14">Ford</span>
+                    <span class="fw-medium fs-14">2</span>
+                  </div>
+                  <ul class="list-unstyled ms-4 mt-1 text-secondary">
+                    <li class="py-1 d-flex gap-2 align-items-center">
+                      <span class="fs-14 fw-medium">EcoSport</span>
+                      <span class="fs-14 fw-medium">1</span>
+                    </li>
+                    <li class="py-1 d-flex gap-2 align-items-center">
+                      <span class="fs-14 fw-medium">Kuga</span>
+                      <span class="fw-medium fs-14">1</span>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="mb-2">
+                  <div class="d-flex gap-2 align-items-center fs-14">
+                    <span class="fw-medium fs-14">Hyundai</span>
+                    <span class="fs-14 fw-medium">1</span>
+                  </div>
+                  <ul class="list-unstyled ms-4 mt-1 text-secondary">
+                    <li class="py-1 d-flex gap-2 align-items-center">
+                      <span class="fs-14 fw-medium">Bayon</span>
+                      <span class="fw-medium fs-14">1</span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed fs-18"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseTwoMobile"
+              aria-expanded="false"
+              aria-controls="flush-collapseTwoMobile"
+            >
+              Model Yılı
+            </button>
+          </h2>
+          <div
+            id="flush-collapseTwoMobile"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionMobile"
+          >
+            <div class="accordion-body">
+              <div class="row">
+                <div class="col-6">
+                  <label class="fs-14" for="">Min</label>
+                  <input class="form-control fs-14" type="text" placeholder="Min Yıl" />
+                </div>
+                <div class="col-6">
+                  <label class="fs-14" for="">Max</label>
+                  <input class="form-control fs-14" type="text" placeholder="Max Yıl" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed fs-18"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseThreeMobile"
+              aria-expanded="false"
+              aria-controls="flush-collapseThreeMobile"
+            >
+              Yakıt
+            </button>
+          </h2>
+          <div
+            id="flush-collapseThreeMobile"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionMobile"
+          >
+            <div class="accordion-body">
+              <ul class="list-unstyled">
+                <li class="py-2 fs-13">Benzinli</li>
+                <li class="py-2 fs-13">Benzinli/LPG</li>
+                <li class="py-2 fs-13">Dizel</li>
+                <li class="py-2 fs-13">Elektrik</li>
+                <li class="py-2 fs-13">Hybrid</li>
+                <li class="py-2 fs-13">Plug-in Hybrid</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed fs-18"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseFourMobile"
+              aria-expanded="false"
+              aria-controls="flush-collapseFourMobile"
+            >
+              Vites
+            </button>
+          </h2>
+          <div
+            id="flush-collapseFourMobile"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionMobile"
+          >
+            <div class="accordion-body">
+              <ul class="list-unstyled">
+                <li class="py-2 fs-13">Manuel</li>
+                <li class="py-2 fs-13">Otomatik</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed fs-18"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseFiveMobile"
+              aria-expanded="false"
+              aria-controls="flush-collapseFiveMobile"
+            >
+              KM Aralığı
+            </button>
+          </h2>
+          <div
+            id="flush-collapseFiveMobile"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionMobile"
+          >
+            <div class="accordion-body">
+              <div class="row">
+                <div class="col-6">
+                  <label class="fs-14" for="">Min</label>
+                  <input class="form-control fs-14" type="text" placeholder="Min Km" />
+                </div>
+                <div class="col-6">
+                  <label class="fs-14" for="">Max</label>
+                  <input class="form-control fs-14" type="text" placeholder="Max Km" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed fs-18"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseSixMobile"
+              aria-expanded="false"
+              aria-controls="flush-collapseSixMobile"
+            >
+              Renk
+            </button>
+          </h2>
+          <div
+            id="flush-collapseSixMobile"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionMobile"
+          >
+            <div class="accordion-body">
+              <ul class="list-unstyled">
+                <li class="py-2 fs-13">Beyaz</li>
+                <li class="py-2 fs-13">Siyah</li>
+                <li class="py-2 fs-13">Gri</li>
+                <li class="py-2 fs-13">Kırmızı</li>
+                <li class="py-2 fs-13">Mavi</li>
+                <li class="py-2 fs-13">Yeşil</li>
+                <li class="py-2 fs-13">Sarı</li>
+                <li class="py-2 fs-13">Turuncu</li>
+                <li class="py-2 fs-13">Mor</li>
+                <li class="py-2 fs-13">Pembe</li>
+                <li class="py-2 fs-13">Kahverengi</li>
+                <li class="py-2 fs-13">Bej</li>
+                <li class="py-2 fs-13">Bordo</li>
+                <li class="py-2 fs-13">Lacivert</li>
+                <li class="py-2 fs-13">Açık Mavi</li>
+                <li class="py-2 fs-13">Koyu Yeşil</li>
+                <li class="py-2 fs-13">Altın</li>
+                <li class="py-2 fs-13">Gümüş</li>
+                <li class="py-2 fs-13">Krem</li>
+                <li class="py-2 fs-13">Şampanya</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed fs-18"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseSevenMobile"
+              aria-expanded="false"
+              aria-controls="flush-collapseSevenMobile"
+            >
+              Fiyat Aralığı
+            </button>
+          </h2>
+          <div
+            id="flush-collapseSevenMobile"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionMobile"
+          >
+            <div class="accordion-body">
+              <div class="row">
+                <div class="col-6">
+                  <label class="fs-14" for="">Min</label>
+                  <input class="form-control fs-14" type="text" placeholder="Min Fiyat" />
+                </div>
+                <div class="col-6">
+                  <label class="fs-14" for="">Max</label>
+                  <input class="form-control fs-14" type="text" placeholder="Max Fiyat" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed fs-18"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseEightMobile"
+              aria-expanded="false"
+              aria-controls="flush-collapseEightMobile"
+            >
+              Lokasyon
+            </button>
+          </h2>
+          <div
+            id="flush-collapseEightMobile"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionMobile"
+          >
+            <div class="accordion-body">
+              <ul class="list-unstyled">
+                <li class="py-2 fs-13">Suvmarket Basın Ekspres</li>
+                <li class="py-2 fs-13">Suvmarket Kartal</li>
+                <li class="py-2 fs-13">Suvmarket Koşuyolu</li>
+                <li class="py-2 fs-13">Suvmarket İzmir</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed fs-18"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseNineMobile"
+              aria-expanded="false"
+              aria-controls="flush-collapseNineMobile"
+            >
+              Plaka
+            </button>
+          </h2>
+          <div
+            id="flush-collapseNineMobile"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionMobile"
+          >
+            <div class="accordion-body">
+              <input type="text" class="form-control fs-14" placeholder="Plaka" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="forms">
+        <div
+          style="background-color: #ff5100"
+          class="rounded-1 fs-15 text-center fw-bold p-3 text-white cursor-pointer mt-4 mx-3"
+        >
+          FİLTRELERİ UYGULA
+        </div>
+        <div>
+          <p style="margin-top: 85px" class="fs-14 text-dark mb-0 fw-bold text-center">
+            ARADIĞINIZ SUV'UNUZU BULAMADINIZ MI?
+          </p>
+          <div
+            style="background-color: #ff5100"
+            class="rounded-1 fs-15 text-center fw-bold p-3 text-white cursor-pointer mt-2 mx-3"
+          >
+            HEMEN TIKLAYIN
+          </div>
+        </div>
+        <div>
+          <p class="fs-14 text-dark mb-0 fw-bold text-center mt-1">
+            İSTEDİĞİNİZ SUV'U SİZİN İÇİN BULALIM
+          </p>
+          <div
+            style="background-color: #5a5a74"
+            class="rounded-1 fs-15 text-center fw-bold p-3 text-white cursor-pointer mt-1 mx-3"
+          >
+            BİNEK ARAÇLAR
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-10 col-12">
+      <div
+        class="d-flex flex-lg-row justify-content-lg-between flex-column justify-content-center gap-lg-0 gap-3 align-items-center p-3 pe-lg-4 pt-lg-3"
+      >
+        <div class="fs-13">İkinci El Satılık SUV Araçlarımız</div>
+
+        <div class="dropdown custom-sort-dropdown">
+          <a
+            class="btn dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Sıralama Seçiniz
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="#">Model Yılına Göre Artan</a></li>
+            <li><a class="dropdown-item" href="#">Model Yılına Göre Azalan</a></li>
+            <li><a class="dropdown-item" href="#">Kilometreye Göre Artan</a></li>
+            <li><a class="dropdown-item" href="#">Kilometreye Göre Azalan</a></li>
+            <li><a class="dropdown-item" href="#">Fiyata Göre Artan</a></li>
+            <li><a class="dropdown-item" href="#">Fiyata Göre Azalan</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row row-cols-md-3 row-cols-sm-2 row-cols-1 g-3 gy-md-4 px-3 mb-5">
+        <div class="col">
+          <app-card routerLink="/arac-detay" [type]="'car-list'"></app-card>
+        </div>
+        <div class="col">
+          <app-card routerLink="/arac-detay" [type]="'car-list'"></app-card>
+        </div>
+        <div class="col">
+          <app-card routerLink="/arac-detay" [type]="'car-list'"></app-card>
+        </div>
+        <div class="col">
+          <app-swap-card [type]="'takas'"></app-swap-card>
+        </div>
+        <div class="col">
+          <app-card routerLink="/arac-detay" [type]="'car-list'"></app-card>
+        </div>
+        <div class="col">
+          <app-card routerLink="/arac-detay" [type]="'car-list'"></app-card>
+        </div>
+        <div class="col">
+          <app-card routerLink="/arac-detay" [type]="'car-list'"></app-card>
+        </div>
+        <div class="col">
+          <app-card routerLink="/arac-detay" [type]="'car-list'"></app-card>
+        </div>
+        <div class="col">
+          <app-swap-card [type]="'yeni'"></app-swap-card>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

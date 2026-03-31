@@ -1,0 +1,16 @@
+.thumbnail-img {
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+  opacity: 0.6; 
+}
+
+.thumbnail-img:hover {
+  opacity: 1;
+}
+
+.thumbnail-img[class*="active"], .thumbnail-img:focus {
+  border-color: #ff5a00; 
+  opacity: 1;
+}

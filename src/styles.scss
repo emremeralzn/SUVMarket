@@ -10,6 +10,9 @@ body{
 .mb-6{
   margin-bottom: 4rem !important;
 }
+.lh-grid{
+  line-height: 13px !important;
+}
 
 /* DEFAULT */
 .p-6 { padding: 4rem !important; }
@@ -337,6 +340,7 @@ body{
 /* Hover ve focus efekti */
 .custom-form-element:hover,
 .custom-form-element:focus {
+cursor: pointer;
   border-color: #FF5100;
   box-shadow: 0 0 5px rgba(255, 81, 0, 0.3);
   outline: none;

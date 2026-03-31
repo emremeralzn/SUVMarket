@@ -144,6 +144,26 @@
   border-color: #ff5a00; 
   opacity: 1;
 }
+
+
+.lb-thumbnail-img {
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+  opacity: 0.6; 
+  height: 100px;
+  object-fit: cover;
+}
+
+.lb-thumbnail-img:hover {
+  opacity: 1;
+}
+
+.lb-thumbnail-img[class*="active"], .lb-thumbnail-img:focus {
+  border-color: #ff5a00; 
+  opacity: 1;
+}
 .carousel-arrow {
   position: absolute;
   top: 50%;
@@ -215,7 +235,6 @@
   }
   }
   
-
 .overlay {
   opacity: 0;
   transition: 0.3s ease;
@@ -226,8 +245,6 @@
 .ornek swiper-container:hover ~ .overlay {
   opacity: 1;
 }
-
-
 
 .mobile-menu {
   position: absolute;
@@ -248,3 +265,40 @@
   transform: translateY(0);
   pointer-events: auto;
 }
+
+.lightbox-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+background-color: rgba(0, 0, 0, 0.8);  z-index: 10000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox-dialog {
+  padding: 25px;
+  position: relative;
+  background-color: white;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  aspect-ratio: 16 / 9;
+}
+/* Kapat Butonu */
+.lb-close {
+  position: absolute;
+  top: -20px;
+  right: -40px;
+  background: none;
+  border: none;
+  color: #ff5100;
+  font-size: 50px;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 10001;
+}
+.lightbox-nav button:first-child { left: -60px; }
+.lightbox-nav button:last-child { right: -60px; }
