@@ -42,7 +42,9 @@ openLightbox() {
         slidesPerView: 5,
         breakpoints: {
           992: { slidesPerView: 3 },
-          1200: { slidesPerView: 6 },
+          1100: { slidesPerView: 4 },
+          1200: { slidesPerView: 4 },
+          1800: { slidesPerView:5 },
         },
       };
       Object.assign(this.lbThumbSwiper.nativeElement, thumbParams);
@@ -56,11 +58,6 @@ closeLightbox() {
   this.isLightboxOpen = false;
   document.body.style.overflow = 'auto';
 }
-
-
-
-
-
   @ViewChild('lbmainSwiper') lbmainSwiper!: ElementRef;
   @ViewChild('lbthumbSwiper') lbThumbSwiper!: ElementRef;
 
@@ -69,6 +66,7 @@ closeLightbox() {
 
   carImages: string[] = [
     '/MG-HS-1.5T-GDiLuxury-0-8_orta.jpg',
+    '/Suzuki-Vitara-MiLDHYBRiD1.4129GLELEGANCE4x2ATTEKRENKMK-0-10_buyuk.jpg',
     '/bmw.jpg',
     '/MG-HS-1.5T-GDiLuxury-0-8_orta.jpg',
     '/bmw.jpg',

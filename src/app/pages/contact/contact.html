@@ -10,7 +10,7 @@
         <h1 id="iletisimForm" class="common-color-orange display-6 fw-bold">Formu Doldurun, Sizi Arayalım</h1>
 
         <div class="col-12 col-md-9">
-          <div class="row d-flex justify-content-center mt-4 g-4">
+          <div class="row d-flex justify-content-center mt-4 g-3">
             <div class="col-md-6 col-12">
               <input type="text" formControlName="nameSurName" class="form-control" placeholder="Adınız Soyadınız *"
                      [class.is-invalid]="nameSurName?.invalid && nameSurName?.touched">
@@ -94,7 +94,9 @@
           </div>
         </div>
         <div class="col-3 d-none d-md-block">
-          <div class="d-flex align-items-center" style="border-left: 2px solid #ff5100; position: sticky; top: 100px; height: 48px;">
+          <div class="d-flex justify-content-center align-items-center" style="position: sticky; top: 100px; height: 48px;">
+              <div style="width:2px; height:48px; background:#ff5100;"></div>
+
             <a id="link-iletisim" class="fs-17 text-decoration-none common-color-orange title ps-2 cursor-pointer ms-2" (click)="scrollTo('iletisimForm')">İletişim Formu</a>
           </div>
         </div>

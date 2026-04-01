@@ -16,24 +16,61 @@
         </h3>
 
         <!-- FORM -->
-        <div class="row g-4 mt-2">
+         <form  [formGroup]="myForm" (ngSubmit)="onSubmit()">
+        <div class="row g-3 mt-2">
           <div class="col-md-4 col-12">
-            <input type="text" class="form-control" placeholder="Adınız Soyadınız *" />
+            <input type="text" class="form-control" placeholder="Adınız Soyadınız *" formControlName="name" [class.is-invalid]="name?.invalid && name?.touched"/>
+            <div class="d-block text-danger fw-semibold fs-13 validation-message-slot mt-1">
+                        @if(name?.touched && name?.errors?.['required']) {
+                            <small class="fs-12 lh-16 fw-semibold text-danger">
+                            *Lütfen bu alanı doldurunuz.  
+                            </small>
+                        }
+                 </div>
           </div>
+          
+
 
           <div class="col-md-4 col-12">
-            <div class="input-group phone-group">
+            <div class="input-group ">
             <span class="input-group-text phone-group">+90</span>
-            <input type="text" class="form-control" placeholder="Telefon No*" />
+            <input type="text" class="form-control" placeholder="Telefon No*" formControlName="phone" [class.is-invalid]="phone?.invalid && phone?.touched"/>
+            
           </div>
+          <div class="d-block text-danger fw-semibold fs-13 validation-message-slot mt-1">
+                        @if(phone?.touched && phone?.errors?.['required']) {
+                            <small class="fs-12 lh-16 fw-semibold text-danger">
+                            *Lütfen bu alanı doldurunuz.  
+                            </small>
+                        }
+                 </div>
           </div>
 
           <div class="col-md-4 col-12">
-            <input type="email" class="form-control" placeholder="E-Posta Adresiniz*" />
+            <input type="email" class="form-control" placeholder="E-Posta Adresiniz*" formControlName="email" [class.is-invalid]="email?.invalid && email?.touched"/>
+            <div class="d-block text-danger fw-semibold fs-13 validation-message-slot mt-1">
+                        @if(email?.touched && email?.errors?.['required']) {
+                            <small class="fs-12 lh-16 fw-semibold text-danger">
+                            *Lütfen bu alanı doldurunuz.  
+                            </small>
+                        }
+                         @if(email?.touched && email?.errors?.['email']) {
+                            <small class="fs-12 lh-16 fw-semibold text-danger">
+                                *Lütfen geçerli bir e-posta adresi giriniz.
+                            </small>
+                        }
+            </div>
           </div>
 
           <div class="col-md-4 col-12">
-            <input type="text" class="form-control" placeholder="Doğrulama Kodu" />
+            <input type="text" class="form-control" placeholder="Doğrulama Kodu" formControlName="verificationCode" [class.is-invalid]="verificationCode?.invalid && verificationCode?.touched"/>
+            <div class="d-block text-danger fw-semibold fs-13 validation-message-slot mt-1">
+                        @if(verificationCode?.touched && verificationCode?.errors?.['required']) {
+                            <small class="fs-12 lh-16 fw-semibold text-danger">
+                            *Lütfen bu alanı doldurunuz.  
+                            </small>
+                        }
+                 </div>
           </div>
 
           <div class="col-md-4 col-12">
@@ -60,7 +97,7 @@
 
         <!-- CHECKBOX -->
         <div class="form-check custom-checkbox">
-          <input class="form-check-input" type="checkbox" id="kvkkCheck" />
+          <input class="form-check-input" type="checkbox" id="kvkkCheck" formControlName="kvkk" [class.is-invalid]="kvkk?.invalid && kvkk?.touched"/>
           <label
             class="form-check-label fs-14 cursor-pointer pt-1 user-select-none"
             for="kvkkCheck"
@@ -74,6 +111,7 @@
         <button class="btn btn-primary px-5 p-2 fw-bold submit mt-3 mb-3">
           GÖNDER
         </button>
+        </form>
 
       </div>
 

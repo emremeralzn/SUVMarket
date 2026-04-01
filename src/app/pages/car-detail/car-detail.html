@@ -118,7 +118,7 @@
         </div>
       </div>
 
-      <!-- 🔥 ABSOLUTE MENU (MOBILE) -->
+      <!--  ABSOLUTE MENU (MOBILE) -->
       <div class="mobile-menu d-lg-none" [class.open]="menuOpen">
         <ul class="navbar-nav fw-bold text-center">
 
@@ -620,7 +620,7 @@
 
 @if (isLightboxOpen) {
   <div class="lightbox-backdrop" (click)="closeLightbox()">
-    <div class="lightbox-dialog d-lg-block d-none" (click)="$event.stopPropagation()">
+    <div class="lightbox-dialog w-xxl-40 w-60  d-lg-block d-none" (click)="$event.stopPropagation()">
       
       <button class="lb-close" (click)="closeLightbox()">&times;</button>
 

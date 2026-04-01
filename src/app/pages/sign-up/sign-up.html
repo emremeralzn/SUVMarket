@@ -9,119 +9,209 @@
     </ul>
 
     <div class="p-lg-5 p-4" style="border: 1px solid #f0f1f2; border-radius: 6px">
+
       <div class="row">
         <!-- SOL: FORM -->
         <div class="col-12 col-lg-8 order-1 order-lg-1">
-          <div class="row g-4">
-            <div class="col-md-6 col-12">
-              <input type="text" class="form-control" placeholder="Adınız Soyadınız *" />
-            </div>
-
-            <div class="col-md-6 col-12">
-              <div class="input-group">
-                <span style="background-color: #cfd1d3;color: #818181;" class="input-group-text phone-group">+90</span>
-                <input type="text" class="form-control" placeholder="Telefon No*" />
+         <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+            <div class="row g-3">
+              <div class="col-md-6 col-12">
+                <input formControlName="nameUserName" type="text" class="form-control" placeholder="Adınız Soyadınız *"  [class.is-invalid]="nameUserName?.invalid && nameUserName?.touched"/>
+                  <div class="d-block text-danger fw-semibold fs-13 validation-message-slot mt-1">
+                        @if(nameUserName?.touched && nameUserName?.errors?.['required']) {
+                            <small class="fs-12 lh-16 fw-semibold text-danger">
+                            *Lütfen bu alanı doldurunuz.  
+                            </small>
+                        }
+                        @if(nameUserName?.touched && nameUserName?.errors?.['minlength'])
+                        {
+                            <small class="fs-12 lh-16 fw-semibold text-danger">
+                                *En az {{ nameUserName?.errors?.['minlength']?.requiredLength }} karakter girmelisiniz.
+                            </small>
+                        }
+                    </div>
               </div>
-            </div>
 
-            <div class="col-md-6 col-12">
-              <select class="form-select custom-form-element">
-                <option disabled selected>İl Seçiniz *</option>
-                <option>İstanbul</option>
-                <option>Ankara</option>
-                <option>İzmir</option>
-              </select>
-            </div>
-
-            <div class="col-md-6 col-12">
-              <select class="form-select custom-form-element">
-                <option disabled selected>İlçe Seçiniz *</option>
-                <option>Başakşehir</option>
-                <option>Beşiktaş</option>
-                <option>Beylikdüzü</option>
-              </select>
-            </div>
-
-            <div class="col-md-6 col-12">
-              <input type="email" class="form-control" placeholder="E-Posta Adresiniz*" />
-            </div>
-
-            <div class="col-md-6 col-12">
-              <input type="email" class="form-control" placeholder="E-Posta Adresiniz Tekrar*" />
-            </div>
-
-            <div class="col-md-6 col-12">
-              <input type="password" class="form-control" placeholder="Şifre *" />
-            </div>
-
-            <div class="col-md-6 col-12">
-              <input type="password" class="form-control" placeholder="Şifre Tekrar *" />
-            </div>
-
-            <div class="col-md-6 col-12">
-              <div class="d-flex align-items-center gap-2">
-                <input type="text" class="form-control" placeholder="Doğrulama Kodu *" />
-                <div class="captcha-box">30SLF7</div>
-                <i class="fa-solid fa-rotate-right refresh-icon"></i>
+              <div class="col-md-6 col-12">
+                <div class="input-group">
+                  <span  style="background-color: #cfd1d3;color: #818181;" class="input-group-text phone-group">+90</span>
+                  <input formControlName="phone" type="text" class="form-control" placeholder="Telefon No*" [class.is-invalid]="phone?.invalid && phone?.touched" />
+                </div>
+                <div class="d-block text-danger fw-semibold fs-13 validation-message-slot mt-1">
+                        @if(phone?.touched && phone?.errors?.['required']) {
+                            <small class="fs-12 lh-16 fw-semibold text-danger">
+                            *Lütfen bu alanı doldurunuz.  
+                            </small>
+                        }
+                        @if(phone?.touched && phone?.errors?.['minlength'])
+                        {
+                            <small class="fs-12 lh-16 fw-semibold text-danger">
+                                *En az {{ phone?.errors?.['minlength']?.requiredLength }} karakter girmelisiniz.
+                            </small>
+                        }
+                    </div>
               </div>
-            </div>
 
-            <!-- checkboxlar -->
-            <div class="col-12">
-              <div class="form-check custom-checkbox">
-                <input class="form-check-input" type="checkbox" id="kvkkCheck1" />
-                <label
-                  class="form-check-label fs-14 cursor-pointer pt-1 user-select-none"
-                  for="kvkkCheck1"
-                >
-                  <a
-                    href="#"
-                    class="text-decoration-none fw-bold common-color-orange"
-                    target="_blank"
+              <div class="col-md-6 col-12">
+                <select formControlName="province" class="form-select custom-form-element" [class.is-invalid]="province?.invalid && province?.touched">
+               <option value="" disabled selected>İl Seçiniz *</option>
+                  <option>İstanbul</option>
+                  <option>Ankara</option>
+                  <option>İzmir</option>
+                </select>
+                <div class="d-block text-danger fw-semibold fs-13 validation-message-slot mt-1">
+                        @if(province?.touched && province?.errors?.['required']) {
+                            <small class="fs-12 lh-16 fw-semibold text-danger">
+                            *Lütfen bu alanı doldurunuz.  
+                            </small>
+                        }
+              </div>
+              </div>
+
+              <div class="col-md-6 col-12">
+                <select formControlName="district" class="form-select custom-form-element" [class.is-invalid]="district?.invalid && district?.touched">
+                  <option value="" disabled selected>İlçe Seçiniz *</option>
+                  <option>Başakşehir</option>
+                  <option>Beşiktaş</option>
+                  <option>Beylikdüzü</option>
+                </select>
+                <div class="d-block text-danger fw-semibold fs-13 validation-message-slot mt-1">
+                        @if(district?.touched && district?.errors?.['required']) {
+                            <small class="fs-12 lh-16 fw-semibold text-danger">
+                            *Lütfen bu alanı doldurunuz.  
+                            </small>
+                        }
+              </div>
+              </div>
+
+              <div class="col-md-6 col-12">
+                <input formControlName="email" type="email" class="form-control" placeholder="E-Posta Adresiniz*" [class.is-invalid]="email?.invalid && email?.touched" />
+                <div class="d-block text-danger fw-semibold fs-13 validation-message-slot mt-1">
+                        @if(email?.touched && email?.errors?.['required']) {
+                            <small class="fs-12 lh-16 fw-semibold text-danger">
+                            *Lütfen bu alanı doldurunuz.  
+                            </small>
+                        }
+                        @if(email?.touched && email?.errors?.['email'])
+                        {
+                            <small class="fs-12 lh-16 fw-semibold text-danger">
+                                *Lütfen geçerli bir e-posta adresi giriniz.
+                            </small>
+                        }
+                    </div>
+              </div>
+
+              <div class="col-md-6 col-12">
+                <input formControlName="repeatEmail" type="email" class="form-control" placeholder="E-Posta Adresiniz Tekrar*" [class.is-invalid]="repeatEmail?.invalid && repeatEmail?.touched" />
+                <div class="d-block text-danger fw-semibold fs-13 validation-message-slot mt-1">
+                        @if(repeatEmail?.touched && repeatEmail?.errors?.['required']) {
+                            <small class="fs-12 lh-16 fw-semibold text-danger">
+                            *Lütfen bu alanı doldurunuz.  
+                            </small>
+                        }
+                        @if(repeatEmail?.touched && repeatEmail?.errors?.['email'])
+                        {
+                            <small class="fs-12 lh-16 fw-semibold text-danger">
+                                *Lütfen geçerli bir e-posta adresi giriniz.
+                            </small>
+                        }
+                    </div>
+              </div>
+
+              <div class="col-md-6 col-12">
+                <input formControlName="password" type="password" class="form-control" placeholder="Şifre *" [class.is-invalid]="password?.invalid && password?.touched" />
+                <div class="d-block text-danger fw-semibold fs-13 validation-message-slot mt-1">
+                        @if(password?.touched && password?.errors?.['required']) {
+                            <small class="fs-12 lh-16 fw-semibold text-danger">
+                            *Lütfen bu alanı doldurunuz.  
+                            </small>
+                        }
+                    </div>
+              </div>
+
+              <div class="col-md-6 col-12">
+                <input formControlName="repeatPassword" type="password" class="form-control" placeholder="Şifre Tekrar *" [class.is-invalid]="repeatPassword?.invalid && repeatPassword?.touched" />
+                <div class="d-block text-danger fw-semibold fs-13 validation-message-slot mt-1">
+                        @if(repeatPassword?.touched && repeatPassword?.errors?.['required']) {
+                            <small class="fs-12 lh-16 fw-semibold text-danger">
+                            *Lütfen bu alanı doldurunuz.  
+                            </small>
+                        }
+                    </div>
+              </div>
+
+              <div class="col-md-6 col-12">
+                <div class="d-flex align-items-center gap-2">
+                  <input formControlName="verificationCode" type="text" class="form-control" placeholder="Doğrulama Kodu *" [class.is-invalid]="verificationCode?.invalid && verificationCode?.touched" />
+                  <div class="captcha-box">30SLF7</div>
+                  <i class="fa-solid fa-rotate-right refresh-icon"></i>
+                </div>
+                <div class="d-block text-danger fw-semibold fs-13 validation-message-slot mt-1">
+                        @if(verificationCode?.touched && verificationCode?.errors?.['required']) {
+                            <small class="fs-12 lh-16 fw-semibold text-danger">
+                            *Lütfen bu alanı doldurunuz.  
+                            </small>
+                        }
+                 </div>
+              </div>
+
+              <!-- checkboxlar -->
+              <div class="col-12">
+                <div class="form-check custom-checkbox">
+                  <input formControlName="kvkk1" class="form-check-input" type="checkbox" id="kvkkCheck1"  [class.is-invalid]="kvkk1?.invalid && kvkk1?.touched"/>
+                  <label
+                    class="form-check-label fs-14 cursor-pointer pt-1 user-select-none"
+                    for="kvkkCheck1"
                   >
-                    Üyelik Sözleşmesini
-                  </a>
-                  okudum ve kabul ediyorum.
-                </label>
+                    <a
+                      href="#"
+                      class="text-decoration-none fw-bold common-color-orange"
+                      target="_blank"
+                    >
+                      Üyelik Sözleşmesini
+                    </a>
+                    okudum ve kabul ediyorum.
+                  </label>
+                </div>
               </div>
-            </div>
 
-            <div class="col-12">
-              <div class="form-check custom-checkbox">
-                <label class="form-check-label fs-14 pt-1 user-select-none">
-                  <a
-                    href="#"
-                    class="text-decoration-none fw-bold common-color-orange"
-                    target="_blank"
+              <div class="col-12">
+                <div class="form-check custom-checkbox">
+                  <label class="form-check-label fs-14 pt-1 user-select-none">
+                    <a
+                      href="#"
+                      class="text-decoration-none fw-bold common-color-orange"
+                      target="_blank"
+                    >
+                      Aydınlatma metnini
+                    </a>
+                    okudum, kişisel verilerimin yukarıda yer alan prensipler uyarınca işlendiğini
+                    anladım.
+                  </label>
+                </div>
+              </div>
+
+              <div class="col-12">
+                <div class="form-check custom-checkbox">
+                  <input formControlName="kvkk2" class="form-check-input" type="checkbox" id="kvkkCheck3" [class.is-invalid]="kvkk2?.invalid && kvkk2?.touched" />
+                  <label
+                    class="form-check-label fs-14 cursor-pointer user-select-none"
+                    for="kvkkCheck3"
                   >
-                    Aydınlatma metnini
-                  </a>
-                  okudum, kişisel verilerimin yukarıda yer alan prensipler uyarınca işlendiğini
-                  anladım.
-                </label>
+                    Otomobilite Motorlu Araçlar Ticaret ve Hizmetleri A.Ş.’den E-posta ve SMS yoluyla
+                    ticari elektronik ileti almayı kabul ediyorum.
+                  </label>
+                </div>
               </div>
             </div>
-
-            <div class="col-12">
-              <div class="form-check custom-checkbox">
-                <input class="form-check-input" type="checkbox" id="kvkkCheck3" />
-                <label
-                  class="form-check-label fs-14 cursor-pointer user-select-none"
-                  for="kvkkCheck3"
-                >
-                  Otomobilite Motorlu Araçlar Ticaret ve Hizmetleri A.Ş.’den E-posta ve SMS yoluyla
-                  ticari elektronik ileti almayı kabul ediyorum.
-                </label>
-              </div>
-            </div>
-          </div>
 
           <!-- BUTON (formun içinde kaldı) -->
           <div class="mt-4">
             <button type="submit" class="btn btn-primary px-5 p-2 fw-bold submit">GÖNDER</button>
           </div>
-        </div>
+          </form>
 
+        </div>
         <!-- SAĞ BLOK -->
         <div class="col-12 col-lg-4 order-2 order-lg-2">
           <div

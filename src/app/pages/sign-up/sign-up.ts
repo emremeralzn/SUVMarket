@@ -1,16 +1,16 @@
 import { Component, ElementRef } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-sign-up',
-  imports: [],
+  imports: [ReactiveFormsModule],
   templateUrl: './sign-up.html',
   styleUrl: './sign-up.scss',
 })
 export class SignUp {
  constructor(
     private fb: FormBuilder,
-    private el: ElementRef, // Sayfadaki elementlere erişim için
+    private el: ElementRef,
   ) {}
 myForm!:FormGroup;
 
@@ -20,17 +20,18 @@ scrollTo(section: string) {
 }
 ngOnInit() {
   window.scrollTo(0, 0);
-  this.myForm = new FormGroup({
-    nameSurName: new FormControl('', [Validators.required, Validators.minLength(3)]),
-    phone: new FormControl('', [Validators.required, Validators.pattern('^[0-9]{10}$')]),
-    province: new FormControl('', [Validators.required, Validators.pattern('^(?!İl Seçiniz$).*')]),
-    district: new FormControl('', [Validators.required, Validators.pattern('^(?!İlçe Seçiniz$).*')]),
-    email: new FormControl('', [Validators.required, Validators.email]),
-    repeatEmail: new FormControl('', [Validators.required, Validators.email]),
-    password: new FormControl('', [Validators.required]),
-    repeatPassword: new FormControl('', [Validators.required]),
-    kvkk1: new FormControl(false, [Validators.requiredTrue]),
-    kvkk2: new FormControl(false, [Validators.requiredTrue]),
+  this.myForm = this.fb.group({
+    nameUserName: ['', [Validators.required, Validators.minLength(3)]],
+    phone: ['', [Validators.required, Validators.pattern('^[0-9]{10}$')]],
+    province: ['', [Validators.required]],
+    district: ['', [Validators.required]],
+    email: ['', [Validators.required, Validators.email]],
+    repeatEmail: ['', [Validators.required, Validators.email]],
+    password: ['', [Validators.required]],
+    repeatPassword: ['', [Validators.required]],
+    verificationCode: ['', [Validators.required]],
+    kvkk1: [false, [Validators.requiredTrue]],
+    kvkk2: [false, [Validators.requiredTrue]],
   });
 }
   ngAfterViewInit() {
@@ -62,19 +63,18 @@ ngOnInit() {
   });
   
 }
-scrollToFirstInvalidControl() {
-    const firstInvalidControl: HTMLElement = this.el.nativeElement.querySelector('form .ng-invalid');
-    if (firstInvalidControl) {
-      firstInvalidControl.focus();
-      firstInvalidControl.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }
-  }
-get nameSurName() { return this.myForm.get('nameSurName'); }
-get phone() { return this.myForm.get('phone'); }
-get email() { return this.myForm.get('email'); }
-get subject() { return this.myForm.get('subject'); }
-get message() { return this.myForm.get('message'); }
-get kvkk() { return this.myForm.get('kvkk'); }
+
+  get nameUserName() { return this.myForm.get('nameUserName'); }
+  get phone() { return this.myForm.get('phone'); }
+  get province() { return this.myForm.get('province'); }
+  get district() { return this.myForm.get('district'); }
+  get email() { return this.myForm.get('email'); }
+  get repeatEmail() { return this.myForm.get('repeatEmail'); }
+  get password() { return this.myForm.get('password'); }
+  get repeatPassword() { return this.myForm.get('repeatPassword'); }
+  get verificationCode() { return this.myForm.get('verificationCode'); }
+  get kvkk1() { return this.myForm.get('kvkk1'); }
+  get kvkk2() { return this.myForm.get('kvkk2'); }
 
   onSubmit() {
     if (this.myForm.valid) {
@@ -84,4 +84,11 @@ get kvkk() { return this.myForm.get('kvkk'); }
       this.scrollToFirstInvalidControl();
     }
 }
+scrollToFirstInvalidControl() {
+    const firstInvalidControl: HTMLElement = this.el.nativeElement.querySelector('form .ng-invalid');
+    if (firstInvalidControl) {
+      firstInvalidControl.focus();
+      firstInvalidControl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }
 }

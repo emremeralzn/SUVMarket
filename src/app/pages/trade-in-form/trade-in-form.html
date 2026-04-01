@@ -6,6 +6,7 @@
   </div>
 
   <div class="container bg-white p-sm-5 p-3">
+    <form action="" [formGroup]="myForm" (ngSubmit)="onSubmit()">
     <div class="row align-items-center">
       <h3 class="common-color-orange fs-24 fw-normal pt-4">
         Kişisel Bilgileriniz
@@ -13,18 +14,39 @@
 
       <!-- FORM -->
       <div class="col-12 ">
-        <div class="row d-flex mt-0 g-4">
+        <div class="row d-flex mt-0 g-3">
           <div class="col-md-3 col-12">
-            <input type="text" class="form-control" placeholder="Adınız Soyadınız*" />
+            <input type="text" class="form-control" placeholder="Adınız Soyadınız*" formControlName="name" [class.is-invalid]="name?.invalid && name?.touched"/>
+             <div class="d-block text-danger fw-semibold fs-13 validation-message-slot mt-1">
+                        @if(name?.touched && name?.errors?.['required']) {
+                            <small class="fs-12 lh-16 fw-semibold text-danger">
+                            *Lütfen bu alanı doldurunuz.  
+                            </small>
+                        }
+                 </div>
           </div>
           <div class="col-md-3 col-12">
-            <input type="email" class="form-control" placeholder="E-Posta*" />
+            <input type="email" class="form-control" placeholder="E-Posta*" formControlName="email" [class.is-invalid]="email?.invalid && email?.touched"/>
+             <div class="d-block text-danger fw-semibold fs-13 validation-message-slot mt-1">
+                        @if(email?.touched && email?.errors?.['required']) {
+                            <small class="fs-12 lh-16 fw-semibold text-danger">
+                            *Lütfen bu alanı doldurunuz.  
+                            </small>
+                        }
+                 </div>
           </div>
           <div class="col-md-3 col-12">
             <div class="input-group">
               <span style="background-color: #cfd1d3;color: #818181;" class="input-group-text phone-group focusborderleft ">+90</span>
-              <input type="text" class="form-control" placeholder="Telefon Numaranız*" />
+              <input type="text" class="form-control" placeholder="Telefon Numaranız*" formControlName="phone"/>
             </div>
+             <div class="d-block text-danger fw-semibold fs-13 validation-message-slot mt-1">
+                          @if(phone?.touched && phone?.errors?.['required']) {
+                              <small class="fs-12 lh-16 fw-semibold text-danger">
+                              *Lütfen bu alanı doldurunuz.  
+                              </small>
+                          }
+                  </div>
           </div>
           
         </div>
@@ -33,45 +55,154 @@
         Araç Bilgileri
       </h3>
        <div class="col-12">
-        <div class="row d-flex mt-0 g-4">
+        <div class="row d-flex mt-0 g-3">
           <div class="col-md-3 col-12">
-            <input type="text" class="form-control" placeholder="Plaka*" />
+            <input type="text" class="form-control" placeholder="Plaka*" formControlName="numberPlate" [class.is-invalid]="numberPlate?.invalid && numberPlate?.touched"/>
+             <div class="d-block text-danger fw-semibold fs-13 validation-message-slot mt-1">
+                        @if(numberPlate?.touched && numberPlate?.errors?.['required']) {
+                            <small class="fs-12 lh-16 fw-semibold text-danger">
+                            *Lütfen bu alanı doldurunuz.  
+                            </small>
+                        }
+                 </div>
+          </div>
+          <div class="col-md-3 col-12">
+             <select class="form-select custom-form-element" formControlName="brand" [class.is-invalid]="brand?.invalid && brand?.touched">
+               <option value="" disabled selected>Marka *</option>
+                  <option>İstanbul</option>
+                  <option>Ankara</option>
+                  <option>İzmir</option>
+                </select>
+                <div class="d-block text-danger fw-semibold fs-13 validation-message-slot mt-1">
+                        @if(brand?.touched && brand?.errors?.['required']) {
+                            <small class="fs-12 lh-16 fw-semibold text-danger">
+                            *Lütfen bu alanı doldurunuz.  
+                            </small>
+                        }
+                 </div>
+          </div>
+          <div class="col-md-3 col-12">
+             <select class="form-select custom-form-element" formControlName="model" [class.is-invalid]="model?.invalid && model?.touched">
+               <option value="" disabled selected>Model *</option>
+                  <option>İstanbul</option>
+                  <option>Ankara</option>
+                  <option>İzmir</option>
+                </select>
+                <div class="d-block text-danger fw-semibold fs-13 validation-message-slot mt-1">
+                        @if(model?.touched && model?.errors?.['required']) {
+                            <small class="fs-12 lh-16 fw-semibold text-danger">
+                            *Lütfen bu alanı doldurunuz.  
+                            </small>
+                        }
+                 </div>
+          </div>
+         <div class="col-md-3 col-12">
+             <select class="form-select custom-form-element" formControlName="version" [class.is-invalid]="version?.invalid && version?.touched">
+               <option value="" disabled selected>Versiyon *</option>
+                  <option>İstanbul</option>
+                  <option>Ankara</option>
+                  <option>İzmir</option>
+                </select>
+                <div class="d-block text-danger fw-semibold fs-13 validation-message-slot mt-1">
+                        @if(version?.touched && version?.errors?.['required']) {
+                            <small class="fs-12 lh-16 fw-semibold text-danger">
+                            *Lütfen bu alanı doldurunuz.  
+                            </small>
+                        }
+                 </div>
+          </div>
+          <div class="col-md-3 col-12">
+             <select class="form-select custom-form-element" formControlName="modelYear" [class.is-invalid]="modelYear?.invalid && modelYear?.touched">
+               <option value="" disabled selected>Model Yılı *</option>
+                  <option>İstanbul</option>
+                  <option>Ankara</option>
+                  <option>İzmir</option>
+                </select>
+                <div class="d-block text-danger fw-semibold fs-13 validation-message-slot mt-1">
+                        @if(modelYear?.touched && modelYear?.errors?.['required']) {
+                            <small class="fs-12 lh-16 fw-semibold text-danger">
+                            *Lütfen bu alanı doldurunuz.  
+                            </small>
+                        }
+                 </div>
+          </div>
+          <div class="col-md-3 col-12">
+             <select class="form-select custom-form-element" formControlName="fuelType" [class.is-invalid]="fuelType?.invalid && fuelType?.touched">
+               <option value="" disabled selected>Yakıt Tipi *</option>
+                  <option>İstanbul</option>
+                  <option>Ankara</option>
+                  <option>İzmir</option>
+                </select>
+                <div class="d-block text-danger fw-semibold fs-13 validation-message-slot mt-1">
+                        @if(fuelType?.touched && fuelType?.errors?.['required']) {
+                            <small class="fs-12 lh-16 fw-semibold text-danger">
+                            *Lütfen bu alanı doldurunuz.  
+                            </small>
+                        }
+                 </div>
+          </div>
+          <div class="col-md-3 col-12">
+             <select class="form-select custom-form-element" formControlName="gearType" [class.is-invalid]="gearType?.invalid && gearType?.touched">
+               <option value="" disabled selected>Vites Tipi *</option>
+                  <option>İstanbul</option>
+                  <option>Ankara</option>
+                  <option>İzmir</option>
+                </select>
+                <div class="d-block text-danger fw-semibold fs-13 validation-message-slot mt-1">
+                        @if(gearType?.touched && gearType?.errors?.['required']) {
+                            <small class="fs-12 lh-16 fw-semibold text-danger">
+                            *Lütfen bu alanı doldurunuz.  
+                            </small>
+                        }
+                 </div>
+          </div>
+          <div class="col-md-3 col-12">
+             <select class="form-select custom-form-element" formControlName="bodyType" [class.is-invalid]="bodyType?.invalid && bodyType?.touched">
+               <option value="" disabled selected>Kasa Tipi *</option>
+                  <option>İstanbul</option>
+                  <option>Ankara</option>
+                  <option>İzmir</option>
+                </select>
+                <div class="d-block text-danger fw-semibold fs-13 validation-message-slot mt-1">
+                        @if(bodyType?.touched && bodyType?.errors?.['required']) {
+                            <small class="fs-12 lh-16 fw-semibold text-danger">
+                            *Lütfen bu alanı doldurunuz.  
+                            </small>
+                        }
+                 </div>
+
+          </div>
+          <div class="col-md-3 col-12">
+            <input type="text" class="form-control" placeholder="KM*" formControlName="kilometer" [class.is-invalid]="kilometer?.invalid && kilometer?.touched"/>
+              <div class="d-block text-danger fw-semibold fs-13 validation-message-slot mt-1">
+                          @if(kilometer?.touched && kilometer?.errors?.['required']) {
+                              <small class="fs-12 lh-16 fw-semibold text-danger">
+                              *Lütfen bu alanı doldurunuz.  
+                              </small>
+                          }
+                  </div>
           </div>
           <div class="col-md-3 col-12">
             <div class="input-group">
-              <input type="text" class="form-control" placeholder="Marka*" />
+              <input type="text" class="form-control" placeholder="Talep Edilen Fiyat" formControlName="expectedWage" [class.is-invalid]="expectedWage?.invalid && expectedWage?.touched"/>
             </div>
+            <div class="d-block text-danger fw-semibold fs-13 validation-message-slot mt-1">
+                          @if(expectedWage?.touched && expectedWage?.errors?.['required']) {
+                              <small class="fs-12 lh-16 fw-semibold text-danger">
+                              *Lütfen bu alanı doldurunuz.  
+                              </small>
+                          }
+                  </div>
           </div>
           <div class="col-md-3 col-12">
-            <input type="email" class="form-control" placeholder="Model*" />
-          </div>
-          <div class="col-md-3 col-12">
-            <input type="email" class="form-control" placeholder="Versiyon" />
-          </div>
-          <div class="col-md-3 col-12">
-            <input type="text" class="form-control" placeholder="Model Yılı*" />
-          </div>
-          <div class="col-md-3 col-12">
-            <div class="input-group">
-              <input type="text" class="form-control" placeholder="Yakıt Tipi*" />
-            </div>
-          </div>
-          <div class="col-md-3 col-12">
-            <input type="email" class="form-control" placeholder="Vites Tipi*" />
-          </div>
-          <div class="col-md-3 col-12">
-            <input type="email" class="form-control" placeholder="Kasa Tipi*" />
-          </div>
-          <div class="col-md-3 col-12">
-            <input type="text" class="form-control" placeholder="KM*" />
-          </div>
-          <div class="col-md-3 col-12">
-            <div class="input-group">
-              <input type="text" class="form-control" placeholder="Talep Edilen Fiyat" />
-            </div>
-          </div>
-          <div class="col-md-3 col-12">
-            <input type="text" class="form-control" placeholder="Doğrulama Kodu*" />
+            <input type="text" class="form-control" placeholder="Doğrulama Kodu*" formControlName="verificationCode" [class.is-invalid]="verificationCode?.invalid && verificationCode?.touched"/>
+              <div class="d-block text-danger fw-semibold fs-13 validation-message-slot mt-1">
+                          @if(verificationCode?.touched && verificationCode?.errors?.['required']) {
+                              <small class="fs-12 lh-16 fw-semibold text-danger">
+                              *Lütfen bu alanı doldurunuz.  
+                              </small>
+                          }
+                  </div>
           </div>
           <div class="col-md-3 col-12">
             <div class="d-flex align-items-center gap-2">
@@ -98,7 +229,7 @@
       </div>
       <div class="col-12 col-md-8">
         <div class="form-check custom-checkbox">
-          <input class="form-check-input" type="checkbox" id="kvkkCheck" />
+          <input class="form-check-input" formControlName="kvkk" type="checkbox" id="kvkkCheck" [class.is-invalid]="kvkk?.invalid && kvkk?.touched"/>
           <label
             class="form-check-label fs-14 cursor-pointer pt-1 user-select-none"
             for="kvkkCheck"
@@ -112,5 +243,6 @@
         <button class="btn btn-primary px-5 p-2 fw-bold submit mt-3 mb-3">GÖNDER</button>
       </div>
     </div>
+    </form>
   </div>
 </div>

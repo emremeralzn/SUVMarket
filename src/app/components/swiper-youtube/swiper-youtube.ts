@@ -30,9 +30,9 @@ export class SwiperYoutubeComponent implements AfterViewInit {
   selectedVideo: string | null = null;
 
   videoUrls = [
+    'youtube.com/watch?v=mawxutSZYAY&source_ve_path=MjM4NTE&embeds_referring_euri=https%3A%2F%2Fwww.suvmarket.com%2F',
     'https://www.youtube.com/watch?v=uX1XMjQF3D4',
-    'https://www.youtube.com/watch?v=ahtrTUdNezA',
-    'https://www.youtube.com/watch?v=uX1XMjQF3D4'
+    'https://www.youtube.com/watch?v=ahtrTUdNezA&source_ve_path=MjM4NTE&embeds_referring_euri=https%3A%2F%2Fwww.suvmarket.com%2F'
   ];
 
   extractVideoId(url: string): string {
@@ -77,10 +77,17 @@ export class SwiperYoutubeComponent implements AfterViewInit {
   const swiperEl = this.swiperRef.nativeElement;
 
   Object.assign(swiperEl, {
-    // slidesPerView: 'auto' diyerek genişliği CSS'teki width: 300px/450px değerlerine bırakıyoruz
-    slidesPerView: '4', 
+    slidesperView: 1,
+    breakpoints: {
+      768: {
+        slidesPerView: 2
+      },
+      992: {
+        slidesPerView: 3
+      }
+    },
     centeredSlides: true,
-    spaceBetween: -20, // Negatif değer slide'ları birbirine yaklaştırır, boşluğu öldürür
+    spaceBetween: 20, // Negatif değer slide'ları birbirine yaklaştırır, boşluğu öldürür
     initialSlide: 1,
 
     pagination: {

@@ -1,0 +1,22 @@
+.title:hover{
+    font-weight: bold;
+}
+.title {
+  border-left: 2px solid transparent;
+  transition: 0.3s;
+}
+
+.title.active {
+  border-left: 2px solid #ff6600 !important;
+  color: #ff6600 !important;
+  font-weight: bold;
+}
+.cookie {
+    width: 20px;
+    color: #FF5100;
+    font-weight: 700;
+}
+.bg-column-1 { background-color: #fcede8; }
+.bg-column-2 { background-color: #e2e2f1; }
+.bg-column-3 { background-color: #e5f1d4; }
+.bg-column-4 { background-color: #d8e7ee; }

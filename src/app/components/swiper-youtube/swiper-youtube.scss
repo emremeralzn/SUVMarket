@@ -10,33 +10,8 @@
 swiper-container {
   width: 100%;
   height: auto;
-}
+    cursor: grab;  /* default */
 
-/* Senin paylaştığın Wrapper mantığı */
-.swiper-wrapper {
-  box-sizing: initial;
-  display: flex;
-  height: 100%;
-  position: relative;
-  transition-property: transform;
-  align-items: center; // Dikeyde ortala
-  cursor: grab;
-  z-index: 1;
-}
-
-/* SLIDE GENİŞLİKLERİ */
-/* SLIDE GENİŞLİKLERİ */
-swiper-slide {
-  width: 320px; /* Yanlardaki pasif slide */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* AKTİF (ORTADAKİ) SLIDE */
-swiper-slide.swiper-slide-active {
-  width: 520px; /* Ortadaki slide büyüyor */
 }
 .swiper-slide-active .video-card:hover .play-icon {
   opacity: 1;
@@ -48,11 +23,10 @@ swiper-slide.swiper-slide-active {
   position: relative;
   width: 100%;
   aspect-ratio: 16 / 9;
-  cursor: grab;  /* default */
-  opacity: 0.4;
+  filter: blur(2px);
+  opacity: 0.6;
   transform: scale(0.85);
   transition: all 0.5s ease;
-  border-radius: 20px;
   overflow: hidden;
 
   img {
@@ -67,10 +41,8 @@ swiper-slide.swiper-slide-active {
 .swiper-slide-active .video-card {
   opacity: 1;
   transform: scale(1);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-  cursor: grabbing;
+  filter: blur(0);
 }
-
 
 /* PLAY ICON */
 .play-icon {

@@ -98,9 +98,7 @@
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
 }
 #filterCollapse {
-    position: sticky;
-    top: 0;
-    max-height: calc(100vh - 50px); /* viewport yüksekliğine göre */
+    max-height: calc(100vh - 151px); /* viewport yüksekliğine göre */
 }
 .accordion-button:not(.collapsed) {
     background-color: #f4f4f4 !important; /* Açık header arka planı */
@@ -113,14 +111,11 @@
     box-shadow: none;
 }
 
-
-
 /* Accordion container scroll */
 #accordionDesktop,
 #accordionMobile {
-    max-height: 420px; /* 8 accordion gözükür */
+    max-height: 600px; /* 8 accordion gözükür */
     overflow-y: auto;
-    padding-right: 5px;
 }
 
 /* Accordion body içindeki listeler */
