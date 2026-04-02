@@ -54,8 +54,8 @@ export const routes: Routes = [
         path: 'kvkk',
         loadComponent: () => import('./pages/kvkk/kvkk').then((m) => m.Kvkk),
       },
-       {
-        path: '**', // diğer tüm eşleşmeyen URL’ler için
+      {
+        path: '**', // diğer tüm eşleşmeyen URL’ler için en sonda olmalı
         loadComponent: () => import('./pages/not-found/not-found').then((m) => m.NotFound),
       },
     ],

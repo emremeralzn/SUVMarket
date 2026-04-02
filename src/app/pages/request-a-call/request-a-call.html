@@ -33,7 +33,7 @@
 
           <div class="col-md-4 col-12">
             <div class="input-group ">
-            <span class="input-group-text phone-group">+90</span>
+            <span style="background-color: #cfd1d3;color: #818181;" class="input-group-text phone-group focusborderleft">+90</span>
             <input type="text" class="form-control" placeholder="Telefon No*" formControlName="phone" [class.is-invalid]="phone?.invalid && phone?.touched"/>
             
           </div>
@@ -63,7 +63,7 @@
           </div>
 
           <div class="col-md-4 col-12">
-            <input type="text" class="form-control" placeholder="Doğrulama Kodu" formControlName="verificationCode" [class.is-invalid]="verificationCode?.invalid && verificationCode?.touched"/>
+            <input type="text" class="form-control" placeholder="Doğrulama Kodu*" formControlName="verificationCode" [class.is-invalid]="verificationCode?.invalid && verificationCode?.touched"/>
             <div class="d-block text-danger fw-semibold fs-13 validation-message-slot mt-1">
                         @if(verificationCode?.touched && verificationCode?.errors?.['required']) {
                             <small class="fs-12 lh-16 fw-semibold text-danger">
@@ -85,9 +85,9 @@
         <div class="mt-5">
           <p class="fs-14">
             <a
-              href="https://www.suvmarket.com/kvk#3"
+              href="/kvkk#kvkk3"
               target="_blank"
-              class="common-color-orange fw-bold text-decoration-none"
+              class="common-color-orange fw-bold text-decoration-none cursor-pointer"
             >
               Aydınlatma metnini
             </a>

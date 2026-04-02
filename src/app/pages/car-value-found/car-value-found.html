@@ -1,12 +1,11 @@
 <div style="background-color: #f2f3f5" class="container-fluid pb-5">
-
-<div class="container">
+  <div class="container">
     <div class="d-flex justify-content-lg-between justify-content-center align-items-center ustkisim">
-        <img class="w-25 d-lg-block d-none imgler" src="/car-value-found/find-a-badge.png" alt="">
-        <div class="mt-xxl-5 mt-xl-0">
-            <h1 class="display-4 fw-bold text-center">Aracımın Değerini Bul</h1>
-            <p class="fs-20 common-color-orange">Aracınızı suvmarket HSS ile <span class="fs-20 fw-bold common-color-orange">anında ve değerinde nakite çevirin.</span></p>
-            <div class="row row-cols-xl-4 row-cols-lg-2 row-cols-md-4 row-cols-2 g-xl-0 g-4 mt-xl-4">
+      <img class="w-25 d-lg-block d-none imgler" src="/car-value-found/find-a-badge.png" alt="">
+      <div class="mt-xxl-5 mt-xl-0 text-center">
+        <h1 class="display-4 fw-bold">Aracımın Değerini Bul</h1>
+        <p class="fs-20 common-color-orange">Aracınızı suvmarket HSS ile <span class="fs-20 fw-bold common-color-orange">anında ve değerinde nakite çevirin.</span></p>
+        <div class="row row-cols-xl-4 row-cols-lg-2 row-cols-md-4 row-cols-2 g-xl-0 g-4 mt-xl-4">
                 <div class="col text-center ">
                     <span class="borderbot pb-1">1. Araç Bilgileri</span>
                  </div>
@@ -20,34 +19,89 @@
                     <span class="">4. Randevu</span>
                 </div>
             </div>
-        </div>
-        <img class="w-25 img-fluid d-lg-block d-none" src="/car-value-found/find-a-car.png" alt="">
+      </div>
+      <img class="w-25 img-fluid d-lg-block d-none" src="/car-value-found/find-a-car.png" alt="">
     </div>
-    <div class="d-lg-block d-none">
-        <ul class="d-flex align-items-center justify-content-center gap-2 list-unstyled text-white mt-xl-0 mt-lg-2">
-            <li class="layout active text-white d-flex justify-content-center align-items-center">Marka</li>
-            <li class="layout bg-secondary bg-opacity-50 d-flex justify-content-center align-items-center">Model</li>
-            <li class="layout bg-secondary bg-opacity-50 d-flex justify-content-center align-items-center">Model Yılı</li>
-            <li class="layout bg-secondary bg-opacity-50 d-flex justify-content-center align-items-center">Gövde</li>
-            <li class="layout bg-secondary bg-opacity-50 d-flex justify-content-center align-items-center">Makyaj</li>
-            <li class="layout bg-secondary bg-opacity-50 d-flex justify-content-center align-items-center">Koltuk</li>
-            <li class="layout bg-secondary bg-opacity-50 d-flex justify-content-center align-items-center">Motor</li>
-            <li class="layout bg-secondary bg-opacity-50 d-flex justify-content-center align-items-center">Çekiş Tipi</li>
-            <li class="layout bg-secondary bg-opacity-50 d-flex justify-content-center align-items-center">Vites</li>
-            <li class="layout bg-secondary bg-opacity-50 d-flex justify-content-center align-items-center">Donanım</li>
-            <li class="layout bg-secondary bg-opacity-50 d-flex justify-content-center align-items-center">Kilometre</li>
-        </ul>
-    </div>
-        <div class="bg-white p-lg-5 p-4 m-lg-5 mt-3">
-            <h1 class="fs-20 fw-bold ps-md-4">Marka Seçiniz</h1>
-            <div class="row row-cols-xl-3 row-cols-md-2 row-cols-1 g-3 mt-2 p-md-4">
-            <div class="col" *ngFor="let brand of brands">
-                <div style="padding-block: 14px; padding-left: 20px;background-color: #f2f3f5 !important; border: 1px solid #cfd1d3; color: #6b808a" class="btn bg-secondary bg-opacity-50 w-100 text-start fs-15">
-                {{ brand }}
-                </div>
-            </div>
-</div>
-        </div>
 
+    <div class="d-xxl-block d-none">
+      <ul class="d-flex align-items-center justify-content-around  list-unstyled text-white mt-xl-0 mt-lg-2">
+        @for (step of steps; track step; let i = $index) {
+            <div style="height: 105px;" class="d-flex flex-column justify-content-start align-items-center gap-2 step-item">
+  
+                <li class="layout d-flex justify-content-center align-items-center"
+                    (click)="goToStep(i)"
+                    [class.active]="i <= currentStepIndex"
+                    [class.bg-secondary]="i > currentStepIndex"
+                    [class.bg-opacity-50]="i > currentStepIndex"
+                    style="cursor: pointer;">
+                    {{ step }}
+                </li>
+
+                <span class="fs-12 mt-1 text-dark step-label" style="min-height: 16px;">
+                    {{
+                    i === 0 ? selectedBrand :
+                    i === 1 ? selectedModel :
+                    i === 2 ? selectedYear : ''
+                    }}
+                </span>
 </div>
+          
+        }
+      </ul>
+    </div>
+
+    <div class="bg-white p-lg-5 p-4 mt-xxl-0 mt-4 ">
+      <h1 class="fs-20 fw-bold ps-md-4">
+        @if (currentStepIndex === 0) {
+           Marka Seçiniz
+        } @else if (currentStepIndex === 1) {
+           Model Seçiniz
+        } @else if (currentStepIndex === 2) {
+           Model Yılı Seçiniz
+        }
+      </h1>
+
+      <div class="row row-cols-xl-3 row-cols-md-2 row-cols-1 g-3 mt-2 p-md-4">
+        
+        @if (currentStepIndex === 0) {
+          @for (brand of brands; track brand) {
+            <div class="col">
+              <div (click)="selectBrand(brand)" 
+                   style="padding-block: 14px; padding-left: 20px; background-color: #f2f3f5 !important; border: 1px solid #cfd1d3; color: #6b808a; cursor: pointer;" 
+                   class="btn w-100 text-start fs-15">
+                {{ brand }}
+              </div>
+            </div>
+          }
+        }
+
+        @if (currentStepIndex === 1) {
+          @for (model of filteredModels; track model) {
+            <div class="col">
+              <div (click)="selectModel(model)" 
+                   style="padding-block: 14px; padding-left: 20px; background-color: #f2f3f5 !important; border: 1px solid #cfd1d3; color: #6b808a; cursor: pointer;" 
+                   class="btn w-100 text-start fs-15">
+                {{ model }}
+              </div>
+            </div>
+          } @empty {
+            <div class="col-12 text-center">Bu marka için model bulunamadı.</div>
+          }
+        }
+
+        @if (currentStepIndex === 2) {
+          @for (year of filteredYears; track year) {
+            <div class="col">
+              <div (click)="selectYear(year)" 
+                   style="padding-block: 14px; padding-left: 20px; background-color: #f2f3f5 !important; border: 1px solid #cfd1d3; color: #6b808a; cursor: pointer;" 
+                   class="btn w-100 text-start fs-15">
+                {{ year }}
+              </div>
+            </div>
+          }
+        }
+
+      </div>
+    </div>
+  </div>
 </div>

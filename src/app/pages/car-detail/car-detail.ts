@@ -65,15 +65,15 @@ closeLightbox() {
   @ViewChild('thumbSwiper') thumbSwiper!: ElementRef;
 
   carImages: string[] = [
-    '/MG-HS-1.5T-GDiLuxury-0-8_orta.jpg',
     '/Suzuki-Vitara-MiLDHYBRiD1.4129GLELEGANCE4x2ATTEKRENKMK-0-10_buyuk.jpg',
-    '/bmw.jpg',
-    '/MG-HS-1.5T-GDiLuxury-0-8_orta.jpg',
-    '/bmw.jpg',
-    '/MG-HS-1.5T-GDiLuxury-0-8_orta.jpg',
-    '/bmw.jpg',
-    '/MG-HS-1.5T-GDiLuxury-0-8_orta.jpg',
-    '/bmw.jpg'
+    '/Suzuki-Vitara-MiLDHYBRiD1.4129GLELEGANCE4x2ATTEKRENKMK-0-7_buyuk.jpg',
+    '/Suzuki-Vitara-MiLDHYBRiD1.4129GLELEGANCE4x2ATTEKRENKMK-0-11_buyuk.jpg',
+    '/Suzuki-Vitara-MiLDHYBRiD1.4129GLELEGANCE4x2ATTEKRENKMK-0-7_buyuk.jpg',
+    '/Suzuki-Vitara-MiLDHYBRiD1.4129GLELEGANCE4x2ATTEKRENKMK-0-10_buyuk.jpg',
+    '/Suzuki-Vitara-MiLDHYBRiD1.4129GLELEGANCE4x2ATTEKRENKMK-0-11_buyuk.jpg',
+    '/Suzuki-Vitara-MiLDHYBRiD1.4129GLELEGANCE4x2ATTEKRENKMK-0-10_buyuk.jpg',
+    '/Suzuki-Vitara-MiLDHYBRiD1.4129GLELEGANCE4x2ATTEKRENKMK-0-7_buyuk.jpg',
+    '/Suzuki-Vitara-MiLDHYBRiD1.4129GLELEGANCE4x2ATTEKRENKMK-0-11_buyuk.jpg'
   ];
   // Thumbnail tıklanınca ana slider'ı o indexe sürükler
  setIndex(index: number) {
@@ -186,6 +186,8 @@ prevThumb() {
     const el = document.getElementById(section);
     if (!el) return;
     el.scrollIntoView({ behavior: 'smooth' });
+     this.menuOpen = false;
+
   }
 
   ngOnInit() {
@@ -249,6 +251,9 @@ prevThumb() {
       }
     });
   }
+  requireLogin() {
+  alert("Favorilerinize ekleyebilmeniz için, lütfen üye girişi yapınız!");
+}
   printPage() {
   const printContents = document.getElementById('printComponent')?.innerHTML;
   if (!printContents) return;

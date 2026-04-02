@@ -300,5 +300,11 @@ background-color: rgba(0, 0, 0, 0.8);  z-index: 10000;
   cursor: pointer;
   z-index: 10001;
 }
+/* global styles veya component css */
+.btn-close:focus,
+.btn-close:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
 .lightbox-nav button:first-child { left: -60px; }
 .lightbox-nav button:last-child { right: -60px; }

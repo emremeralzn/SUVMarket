@@ -98,7 +98,7 @@
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
 }
 #filterCollapse {
-    max-height: calc(100vh - 151px); /* viewport yüksekliğine göre */
+    max-height: calc(100vh - 146px); /* viewport yüksekliğine göre */
 }
 .accordion-button:not(.collapsed) {
     background-color: #f4f4f4 !important; /* Açık header arka planı */
@@ -152,3 +152,21 @@
 .form-control:focus {
     border-color: blue !important;
     box-shadow: none !important;}
+
+
+
+.pagination .page-link {
+  background-color: transparent;
+  color: #ff5400;
+  border: none;
+}
+
+.pagination .page-link:hover {
+  background-color: #ff5400;
+  color: #fff;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: #ff5400;
+  color: #fff;
+}

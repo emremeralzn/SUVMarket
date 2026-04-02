@@ -20,7 +20,7 @@ this.myForm = this.fb.group({
   numberPlate: ['',[Validators.required]],
   brand: ['',[Validators.required]],
   model: ['',[Validators.required]],
-  version: ['',[Validators.required]],
+  version: [''],
 
   modelYear: ['',[Validators.required]],
   fuelType: ['',[Validators.required]],
@@ -28,7 +28,7 @@ this.myForm = this.fb.group({
   bodyType: ['',[Validators.required]],
   kilometer: ['',[Validators.required]],
 
-  expectedWage: ['',[Validators.required]],
+  expectedWage: [''],
   askingPrice: ['',[Validators.required]],
   verificationCode: ['',[Validators.required]],
   kvkk: [false, Validators.requiredTrue]
@@ -45,13 +45,11 @@ get phone() {return this.myForm.get('phone');}
 get numberPlate() {return this.myForm.get('numberPlate');}
 get brand() {return this.myForm.get('brand');}
 get model() {return this.myForm.get('model');}
-get version() {return this.myForm.get('version');}
 get modelYear() {return this.myForm.get('modelYear');}
 get fuelType() {return this.myForm.get('fuelType');}
 get gearType() {return this.myForm.get('gearType');}
 get bodyType() {return this.myForm.get('bodyType');}
 get kilometer() {return this.myForm.get('kilometer');}
-get expectedWage() {return this.myForm.get('expectedWage');}
 get askingPrice() {return this.myForm.get('askingPrice');}
 get verificationCode() {return this.myForm.get('verificationCode');}
 get kvkk() {return this.myForm.get('kvkk');}

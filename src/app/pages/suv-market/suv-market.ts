@@ -21,10 +21,8 @@ ngOnInit() {
 ngAfterViewInit() {
   this.route.fragment.subscribe(fragment => {
     if (fragment) {
-      setTimeout(() => {
         const el = document.getElementById(fragment);
         el?.scrollIntoView({ behavior: 'smooth' });
-      }, 100); // DOM render beklemek için
     }
   });
   

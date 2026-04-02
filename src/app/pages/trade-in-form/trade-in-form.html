@@ -38,7 +38,7 @@
           <div class="col-md-3 col-12">
             <div class="input-group">
               <span style="background-color: #cfd1d3;color: #818181;" class="input-group-text phone-group focusborderleft ">+90</span>
-              <input type="text" class="form-control" placeholder="Telefon Numaranız*" formControlName="phone"/>
+              <input type="text" class="form-control" placeholder="Telefon Numaranız*" formControlName="phone"  [class.is-invalid]="phone?.invalid && phone?.touched"/>
             </div>
              <div class="d-block text-danger fw-semibold fs-13 validation-message-slot mt-1">
                           @if(phone?.touched && phone?.errors?.['required']) {
@@ -97,19 +97,13 @@
                  </div>
           </div>
          <div class="col-md-3 col-12">
-             <select class="form-select custom-form-element" formControlName="version" [class.is-invalid]="version?.invalid && version?.touched">
-               <option value="" disabled selected>Versiyon *</option>
+             <select class="form-select custom-form-element" formControlName="version">
+               <option value="" disabled selected>Versiyon</option>
                   <option>İstanbul</option>
                   <option>Ankara</option>
                   <option>İzmir</option>
                 </select>
-                <div class="d-block text-danger fw-semibold fs-13 validation-message-slot mt-1">
-                        @if(version?.touched && version?.errors?.['required']) {
-                            <small class="fs-12 lh-16 fw-semibold text-danger">
-                            *Lütfen bu alanı doldurunuz.  
-                            </small>
-                        }
-                 </div>
+                <div class="d-block text-danger fw-semibold fs-13 validation-message-slot mt-1"></div>
           </div>
           <div class="col-md-3 col-12">
              <select class="form-select custom-form-element" formControlName="modelYear" [class.is-invalid]="modelYear?.invalid && modelYear?.touched">
@@ -182,18 +176,14 @@
                           }
                   </div>
           </div>
+
           <div class="col-md-3 col-12">
             <div class="input-group">
-              <input type="text" class="form-control" placeholder="Talep Edilen Fiyat" formControlName="expectedWage" [class.is-invalid]="expectedWage?.invalid && expectedWage?.touched"/>
+              <input type="text" class="form-control" placeholder="Talep Edilen Fiyat" formControlName="expectedWage"/>
             </div>
-            <div class="d-block text-danger fw-semibold fs-13 validation-message-slot mt-1">
-                          @if(expectedWage?.touched && expectedWage?.errors?.['required']) {
-                              <small class="fs-12 lh-16 fw-semibold text-danger">
-                              *Lütfen bu alanı doldurunuz.  
-                              </small>
-                          }
-                  </div>
+            <div class="d-block text-danger fw-semibold fs-13 validation-message-slot mt-1"></div>
           </div>
+
           <div class="col-md-3 col-12">
             <input type="text" class="form-control" placeholder="Doğrulama Kodu*" formControlName="verificationCode" [class.is-invalid]="verificationCode?.invalid && verificationCode?.touched"/>
               <div class="d-block text-danger fw-semibold fs-13 validation-message-slot mt-1">

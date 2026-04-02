@@ -1,27 +1,29 @@
 <div style="background-color: #f2f3f5" class="container-fluid pt-3">
   <div class="container">
-    <h2 class="fs-13 cursor-pointer pt-2 ps-lg-1"> 2. El SUV İlanları > İkinci El Suzuki > Vitara > MILD HYBRID 1.4 129 GL ELEGANCE 4x2 AT ÇİFT RENK M > 35498</h2>
+    <h2 class="fs-13 cursor-pointer pt-2 ps-lg-1">
+      2. El SUV İlanları > İkinci El Suzuki > Vitara > MILD HYBRID 1.4 129 GL ELEGANCE 4x2 AT ÇİFT
+      RENK M > 35498
+    </h2>
     <div class="row">
       <div class="col-lg-6 col-md-10 pe-xl-5 pe-3 order-lg-1 order-1 mx-md-auto mx-lg-0">
         <div class="position-relative overflow-hidden cursor-pointer ornek">
-           <swiper-container (click)="openLightbox()" #mainSwiper>
-              @for (img of carImages; track $index) {
-                <swiper-slide >
-                  <div class="ratio ratio-4x3">
-                  <img [src]="img" class="w-100 object-fit-cover">
+          <swiper-container (click)="openLightbox()" #mainSwiper>
+            @for (img of carImages; track $index) {
+              <swiper-slide>
+                <div class="ratio ratio-4x3">
+                  <img [src]="img" class="w-100 object-fit-cover" />
+                </div>
+              </swiper-slide>
+            }
+          </swiper-container>
 
-                  </div>
-                </swiper-slide>
-              }
-           </swiper-container>
-
-             <!-- Overlay -->
-         <div  class="overlay d-lg-flex d-none position-absolute top-0 start-0 w-100 h-100 
-              d-flex align-items-center justify-content-center
-              bg-dark bg-opacity-50 z-1">
-    <i class="fa-solid fa-expand fa-2xl text-white"></i>
-    <div class="text-white fw-semibold ps-2 fs-14">Fotoğrafı Büyüt</div>
-  </div>
+          <!-- Overlay -->
+          <div
+            class="overlay d-lg-flex d-none position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-50 z-1"
+          >
+            <i class="fa-solid fa-expand fa-2xl text-white"></i>
+            <div class="text-white fw-semibold ps-2 fs-14">Fotoğrafı Büyüt</div>
+          </div>
           <button class="carousel-control-prev z-2" type="button" (click)="prevSlide()">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
@@ -38,56 +40,124 @@
         <div class="row flex-column gap-3">
           <div>
             <h1 class="fw-bold fs-39 mb-0 text-center text-lg-start">Suzuki Vitara</h1>
-            <h2 class="fw-bold fs-36 common-color-orange text-center text-lg-start">1.385.000 TL</h2>
-            <h2 class="fw-bold fs-23 mb-lg-3 pt-1 text-center text-lg-start">1.4 GL+ AT 4X2 Çift Renk Otm</h2>
+            <h2 class="fw-bold fs-36 common-color-orange text-center text-lg-start">
+              1.385.000 TL
+            </h2>
+            <h2 class="fw-bold fs-23 mb-lg-3 pt-1 text-center text-lg-start">
+              1.4 GL+ AT 4X2 Çift Renk Otm
+            </h2>
           </div>
-          <h3 class="fs-18 fw-light text-muted text-center text-lg-start">36.972 KM | 2019 | Benzinli | Otomatik | SUV</h3>
-          <h4 class="fw-light fs-18 common-color-orange text-center text-lg-start">İstanbul / Suvmarket Basın Ekspres</h4>
+          <h3 class="fs-18 fw-light text-muted text-center text-lg-start">
+            36.972 KM | 2019 | Benzinli | Otomatik | SUV
+          </h3>
+          <h4 class="fw-light fs-18 common-color-orange text-center text-lg-start">
+            İstanbul / Suvmarket Basın Ekspres
+          </h4>
           <h5 class="fw-light text-muted fs-16 text-center text-lg-start">Plaka : 34 CVA 662</h5>
-          
-          <div class="d-flex justify-content-between w-lg-75 w-100 px-lg-0 pt-2 mb-4 text-center text-lg-start">
+
+          <div
+            class="d-flex justify-content-between w-lg-75 w-100 px-lg-0 pt-2 mb-4 text-center text-lg-start"
+          >
             <div class="d-flex gap-lg-2 gap-1 justify-content-center align-items-center">
-              <svg class="cursor-pointer" xmlns="http://www.w3.org/2000/svg" height="30" width="30" viewBox="0 0 640 640"><path d="M448 256C501 256 544 213 544 160C544 107 501 64 448 64C395 64 352 107 352 160C352 165.4 352.5 170.8 353.3 176L223.6 248.1C206.7 233.1 184.4 224 160 224C107 224 64 267 64 320C64 373 107 416 160 416C184.4 416 206.6 406.9 223.6 391.9L353.3 464C352.4 469.2 352 474.5 352 480C352 533 395 576 448 576C501 576 544 533 544 480C544 427 501 384 448 384C423.6 384 401.4 393.1 384.4 408.1L254.7 336C255.6 330.8 256 325.5 256 320C256 314.5 255.5 309.2 254.7 304L384.4 231.9C401.3 246.9 423.6 256 448 256z"/></svg>
-              <a class="text-decoration-none fs-15 text-dark" href="">Aracı paylaş</a>
+              <svg
+                class="cursor-pointer"
+                xmlns="http://www.w3.org/2000/svg"
+                height="30"
+                width="30"
+                viewBox="0 0 640 640"
+                data-bs-toggle="modal"
+                data-bs-target="#shareModal"
+              >
+                <path
+                  d="M448 256C501 256 544 213 544 160C544 107 501 64 448 64C395 64 352 107 352 160C352 165.4 352.5 170.8 353.3 176L223.6 248.1C206.7 233.1 184.4 224 160 224C107 224 64 267 64 320C64 373 107 416 160 416C184.4 416 206.6 406.9 223.6 391.9L353.3 464C352.4 469.2 352 474.5 352 480C352 533 395 576 448 576C501 576 544 533 544 480C544 427 501 384 448 384C423.6 384 401.4 393.1 384.4 408.1L254.7 336C255.6 330.8 256 325.5 256 320C256 314.5 255.5 309.2 254.7 304L384.4 231.9C401.3 246.9 423.6 256 448 256z"
+                />
+              </svg>
+
+              <a
+                class="text-decoration-none fs-15 text-dark"
+                href="#"
+                data-bs-toggle="modal"
+                data-bs-target="#shareModal"
+                >Aracı paylaş</a
+              >
             </div>
-            <div class="d-flex gap-lg-2 gap-1 justify-content-center align-items-center">
-              <svg class="cursor-pointer" xmlns="http://www.w3.org/2000/svg" height="30" width="30" viewBox="0 0 640 640"><path d="M192 64C156.7 64 128 92.7 128 128L128 544C128 555.5 134.2 566.2 144.2 571.8C154.2 577.4 166.5 577.3 176.4 571.4L320 485.3L463.5 571.4C473.4 577.3 485.7 577.5 495.7 571.8C505.7 566.1 512 555.5 512 544L512 128C512 92.7 483.3 64 448 64L192 64z"/></svg>
-              <a class="text-decoration-none fs-14 text-dark" href="">Favorilere Ekle</a>
+            <div (click)="requireLogin()" class="d-flex gap-lg-2 gap-1 justify-content-center align-items-center">
+              <svg
+                class="cursor-pointer"
+                xmlns="http://www.w3.org/2000/svg"
+                height="30"
+                width="30"
+                viewBox="0 0 640 640"
+              >
+                <path
+                  d="M192 64C156.7 64 128 92.7 128 128L128 544C128 555.5 134.2 566.2 144.2 571.8C154.2 577.4 166.5 577.3 176.4 571.4L320 485.3L463.5 571.4C473.4 577.3 485.7 577.5 495.7 571.8C505.7 566.1 512 555.5 512 544L512 128C512 92.7 483.3 64 448 64L192 64z"
+                />
+              </svg>
+              <a class="text-decoration-none fs-14 text-dark cursor-pointer">Favorilere Ekle</a>
             </div>
-            <div (click)="printPage()" class="d-flex gap-lg-2 gap-1 justify-content-center align-items-center cursor-pointer">
+            <div
+              (click)="printPage()"
+              class="d-flex gap-lg-2 gap-1 justify-content-center align-items-center cursor-pointer"
+            >
               <app-print-template class="d-none" id="printComponent"></app-print-template>
-              <svg class="cursor-pointer" xmlns="http://www.w3.org/2000/svg" height="30" width="30" viewBox="0 0 640 640"><path d="M128 128C128 92.7 156.7 64 192 64L405.5 64C422.5 64 438.8 70.7 450.8 82.7L493.3 125.2C505.3 137.2 512 153.5 512 170.5L512 208L128 208L128 128zM64 320C64 284.7 92.7 256 128 256L512 256C547.3 256 576 284.7 576 320L576 416C576 433.7 561.7 448 544 448L512 448L512 512C512 547.3 483.3 576 448 576L192 576C156.7 576 128 547.3 128 512L128 448L96 448C78.3 448 64 433.7 64 416L64 320zM192 480L192 512L448 512L448 416L192 416L192 480zM520 336C520 322.7 509.3 312 496 312C482.7 312 472 322.7 472 336C472 349.3 482.7 360 496 360C509.3 360 520 349.3 520 336z"/></svg>
-              <a class="text-decoration-none fs-14 text-dark ">Yazdır</a>
+              <svg
+                class="cursor-pointer"
+                xmlns="http://www.w3.org/2000/svg"
+                height="30"
+                width="30"
+                viewBox="0 0 640 640"
+              >
+                <path
+                  d="M128 128C128 92.7 156.7 64 192 64L405.5 64C422.5 64 438.8 70.7 450.8 82.7L493.3 125.2C505.3 137.2 512 153.5 512 170.5L512 208L128 208L128 128zM64 320C64 284.7 92.7 256 128 256L512 256C547.3 256 576 284.7 576 320L576 416C576 433.7 561.7 448 544 448L512 448L512 512C512 547.3 483.3 576 448 576L192 576C156.7 576 128 547.3 128 512L128 448L96 448C78.3 448 64 433.7 64 416L64 320zM192 480L192 512L448 512L448 416L192 416L192 480zM520 336C520 322.7 509.3 312 496 312C482.7 312 472 322.7 472 336C472 349.3 482.7 360 496 360C509.3 360 520 349.3 520 336z"
+                />
+              </svg>
+              <a class="text-decoration-none fs-14 text-dark">Yazdır</a>
             </div>
           </div>
 
-          <div class="row m-0 p-0 d-flex justify-content-between w-lg-80 w-100 gx-lg-1 gy-lg-0 gy-2 px-md-2">
-            <div class="col-md-4"><button routerLink="/sizi-arayalim" class="btn-orange al fw-bold fs-15 w-100 p-0">SİZİ ARAYALIM</button></div>
-            <div class="col-md-4"><button routerLink="/aracimi-takasa-vermek-istiyorum" class="btn-orange sat fw-bold fs-15 w-100">TAKAS</button></div>
-            <div class="col-md-4"><button class="btn-dark-custom fw-bold fs-15 mt-1 mt-sm-0 w-100">SATIN AL</button></div>
+          <div
+            class="row m-0 p-0 d-flex justify-content-between w-lg-80 w-100 gx-lg-1 gy-lg-0 gy-2 px-md-2"
+          >
+            <div class="col-md-4">
+              <button routerLink="/sizi-arayalim" class="btn-orange al fw-bold fs-15 w-100 p-0">
+                SİZİ ARAYALIM
+              </button>
+            </div>
+            <div class="col-md-4">
+              <button
+                routerLink="/aracimi-takasa-vermek-istiyorum"
+                class="btn-orange sat fw-bold fs-15 w-100"
+              >
+                TAKAS
+              </button>
+            </div>
+            <div class="col-md-4">
+              <button class="btn-dark-custom fw-bold fs-15 mt-1 mt-sm-0 w-100">SATIN AL</button>
+            </div>
           </div>
         </div>
       </div>
 
       <div class="col-12 mb-lg-5 order-lg-3 order-2 d-sm-block d-none">
         <div class="d-flex justify-content-center mt-lg-4 mt-sm-3">
-          <div class="prev-tumb cursor-pointer p-3 px-4"  (click)="prevThumb()"></div>
+          <div class="prev-tumb cursor-pointer p-3 px-4" (click)="prevThumb()"></div>
 
-          <div class="w-80 ">
+          <div class="w-80">
             <swiper-container #mainSwiper (slidechange)="onSlideChange($event)" space-between="0">
-  </swiper-container>
+            </swiper-container>
 
-    <swiper-container #thumbSwiper space-between="10" >
-        @for (img of carImages; track $index) {
-          <swiper-slide>
-            <img 
-              [src]="img" 
-              class="img-fluid thumbnail-img" 
-              [class.active-thumb]="activeIndex === $index"
-              (click)="setIndex($index)">
-          </swiper-slide>
-        }
-      </swiper-container>
+            <swiper-container #thumbSwiper space-between="10">
+              @for (img of carImages; track $index) {
+                <swiper-slide>
+                  <img
+                    [src]="img"
+                    class="img-fluid thumbnail-img"
+                    [class.active-thumb]="activeIndex === $index"
+                    (click)="setIndex($index)"
+                  />
+                </swiper-slide>
+              }
+            </swiper-container>
           </div>
 
           <div class="next-tumb cursor-pointer p-3 px-4" (click)="nextThumb()"></div>
@@ -96,15 +166,12 @@
     </div>
   </div>
 </div>
-<nav style="background-color: #f2f3f5" class="navbar navbar-expand-lg p-0 sticky-lg-top ">
-  <div class="container-fluid navs p-lg-2 pt-5 ">
-
+<nav style="background-color: #f2f3f5" class="navbar navbar-expand-lg p-0 sticky-lg-top">
+  <div class="container-fluid navs p-lg-2 pt-5">
     <div class="container-lg position-relative px-0">
-
       <!-- MOBILE HEADER -->
       <div class="d-lg-none w-100">
         <div class="d-flex align-items-center shadow-sm rounded overflow-hidden bg-white">
-
           <button
             class="navbar-toggler border-0 rounded-0 px-4 py-3"
             type="button"
@@ -121,27 +188,37 @@
       <!--  ABSOLUTE MENU (MOBILE) -->
       <div class="mobile-menu d-lg-none" [class.open]="menuOpen">
         <ul class="navbar-nav fw-bold text-center">
-
           <li class="nav-item cursor-pointer">
-            <a class="nav-link text-white py-3 cursor-pointer" (click)="scrollTo('teknikSection')">TEKNİK VERİLER</a>
+            <a class="nav-link text-white py-3 cursor-pointer" (click)="scrollTo('teknikSection')"
+              >TEKNİK VERİLER</a
+            >
           </li>
 
           <li class="nav-item">
-            <a class="nav-link text-white py-3 cursor-pointer" (click)="scrollTo('donanimSection')">DONANIMLAR</a>
+            <a class="nav-link text-white py-3 cursor-pointer" (click)="scrollTo('donanimSection')"
+              >DONANIMLAR</a
+            >
           </li>
 
           <li class="nav-item">
-            <a class="nav-link text-white py-3 cursor-pointer" (click)="scrollTo('ekspertizSection')">EKSPERTİZ BİLGİSİ</a>
+            <a
+              class="nav-link text-white py-3 cursor-pointer"
+              (click)="scrollTo('ekspertizSection')"
+              >EKSPERTİZ BİLGİSİ</a
+            >
           </li>
 
           <li class="nav-item">
-            <a class="nav-link text-white py-3 cursor-pointer" (click)="scrollTo('saticiSection')">YETKİLİ SATICI</a>
+            <a class="nav-link text-white py-3 cursor-pointer" (click)="scrollTo('saticiSection')"
+              >YETKİLİ SATICI</a
+            >
           </li>
 
           <li class="nav-item">
-            <a class="nav-link text-white py-3 cursor-pointer" (click)="scrollTo('benzerSection')">BENZER OTOMOBİLLER</a>
+            <a class="nav-link text-white py-3 cursor-pointer" (click)="scrollTo('benzerSection')"
+              >BENZER OTOMOBİLLER</a
+            >
           </li>
-
         </ul>
       </div>
 
@@ -151,168 +228,222 @@
           style="background-color: #ff5100"
           class="navbar-nav fw-bold d-flex justify-content-center align-items-center gap-lg-5"
         >
-
           <li class="nav-item">
-            <a id="link-teknik" class="nav-link text-white title cursor-pointer" (click)="scrollTo('teknikSection')">TEKNİK VERİLER</a>
+            <a
+              id="link-teknik"
+              class="nav-link text-white title cursor-pointer"
+              (click)="scrollTo('teknikSection')"
+              >TEKNİK VERİLER</a
+            >
           </li>
 
           <div class="sticky-line"></div>
 
           <li class="nav-item">
-            <a id="link-donanım" class="nav-link text-white title cursor-pointer" (click)="scrollTo('donanimSection')">DONANIMLAR</a>
+            <a
+              id="link-donanım"
+              class="nav-link text-white title cursor-pointer"
+              (click)="scrollTo('donanimSection')"
+              >DONANIMLAR</a
+            >
           </li>
 
           <div class="sticky-line"></div>
 
           <li class="nav-item">
-            <a id="link-ekspertiz" class="nav-link text-white title cursor-pointer" (click)="scrollTo('ekspertizSection')">EKSPERTİZ BİLGİSİ</a>
+            <a
+              id="link-ekspertiz"
+              class="nav-link text-white title cursor-pointer"
+              (click)="scrollTo('ekspertizSection')"
+              >EKSPERTİZ BİLGİSİ</a
+            >
           </li>
 
           <div class="sticky-line"></div>
 
           <li class="nav-item">
-            <a id="link-satici" class="nav-link text-white title cursor-pointer" (click)="scrollTo('saticiSection')">YETKİLİ SATICI</a>
+            <a
+              id="link-satici"
+              class="nav-link text-white title cursor-pointer"
+              (click)="scrollTo('saticiSection')"
+              >YETKİLİ SATICI</a
+            >
           </li>
 
           <div class="sticky-line"></div>
 
           <li class="nav-item">
-            <a id="link-benzer" class="nav-link text-white title cursor-pointer" (click)="scrollTo('benzerSection')">BENZER OTOMOBİLLER</a>
+            <a
+              id="link-benzer"
+              class="nav-link text-white title cursor-pointer"
+              (click)="scrollTo('benzerSection')"
+              >BENZER OTOMOBİLLER</a
+            >
           </li>
-
         </ul>
       </div>
-
     </div>
   </div>
 </nav>
 <div style="background-color: #f2f3f5" class="container-fluid">
   <div class="container">
     <h4 id="teknikSection" class="fw-bold pt-7 pb-3 text-lg-start text-center">TEKNİK VERİLER</h4>
-      <div class="row m-0 p-0 bg-white teknik-veri">
-        <div class="col-xl-3 col-lg-4 col-md-6 col-12 d-flex justify-content-between p-sm-4 px-sm-5 p-4 align-items-center">
-          <div>
-            <p class="fs-13 common-color-orange mb-0 lh-grid">MOTOR HACMİ / MOTOR GÜCÜ</p>
-            <p class="fs-16">cc / hp kw</p>
-          </div>
-          <img
-            style="width: 65px; height: 60px"
-            src="https://www.suvmarket.com/Content/images/car-detail-icon-1.png"
-            alt=""
-          />
+    <div class="row m-0 p-0 bg-white teknik-veri">
+      <div
+        class="col-xl-3 col-lg-4 col-md-6 col-12 d-flex justify-content-between p-sm-4 px-sm-5 p-4 align-items-center"
+      >
+        <div>
+          <p class="fs-13 common-color-orange mb-0 lh-grid">MOTOR HACMİ / MOTOR GÜCÜ</p>
+          <p class="fs-16">cc / hp kw</p>
         </div>
-        <div class="col-xl-3 col-lg-4 col-md-6 col-12 d-flex justify-content-between p-sm-4 px-sm-5 p-4 align-items-center">
-          <div>
-            <p class="fs-13 common-color-orange mb-0 lh-grid">ŞANZIMAN</p>
-            <p class="fs-16">Otomatik</p>
-          </div>
-          <img
-            style="width: 65px; height: 60px"
-            src="https://www.suvmarket.com/Content/images/car-detail-icon-2.png"
-            alt=""
-          />
+        <img
+          style="width: 65px; height: 60px"
+          src="https://www.suvmarket.com/Content/images/car-detail-icon-1.png"
+          alt=""
+        />
+      </div>
+      <div
+        class="col-xl-3 col-lg-4 col-md-6 col-12 d-flex justify-content-between p-sm-4 px-sm-5 p-4 align-items-center"
+      >
+        <div>
+          <p class="fs-13 common-color-orange mb-0 lh-grid">ŞANZIMAN</p>
+          <p class="fs-16">Otomatik</p>
         </div>
-        <div class="col-xl-3 col-lg-4 col-md-6 col-12 d-flex justify-content-between p-sm-4 px-sm-5 p-4 align-items-center ">
-          <div>
-            <p class="fs-13 common-color-orange mb-0 lh-grid">YAKIT TİPİ</p>
-            <p class="fs-16">Benzinli</p>
-          </div>
-          <img
-            style="width: 65px; height: 60px"
-            src="https://www.suvmarket.com/Content/images/car-detail-icon-3.png"
-            alt=""
-          />
+        <img
+          style="width: 65px; height: 60px"
+          src="https://www.suvmarket.com/Content/images/car-detail-icon-2.png"
+          alt=""
+        />
+      </div>
+      <div
+        class="col-xl-3 col-lg-4 col-md-6 col-12 d-flex justify-content-between p-sm-4 px-sm-5 p-4 align-items-center"
+      >
+        <div>
+          <p class="fs-13 common-color-orange mb-0 lh-grid">YAKIT TİPİ</p>
+          <p class="fs-16">Benzinli</p>
         </div>
-        <div class="col-xl-3 col-lg-4 col-md-6 col-12 d-flex justify-content-between p-sm-4 px-sm-5 p-4 align-items-center ">
-          <div>
-            <p class="fs-13 common-color-orange mb-0 lh-grid">KM</p>
-            <p class="fs-16">36.972 Km</p>
-          </div>
-          <img
-            style="width: 65px; height: 60px"
-            src="https://www.suvmarket.com/Content/images/car-detail-icon-4.png"
-            alt=""
-          />
+        <img
+          style="width: 65px; height: 60px"
+          src="https://www.suvmarket.com/Content/images/car-detail-icon-3.png"
+          alt=""
+        />
+      </div>
+      <div
+        class="col-xl-3 col-lg-4 col-md-6 col-12 d-flex justify-content-between p-sm-4 px-sm-5 p-4 align-items-center"
+      >
+        <div>
+          <p class="fs-13 common-color-orange mb-0 lh-grid">KM</p>
+          <p class="fs-16">36.972 Km</p>
         </div>
-        <div class="col-xl-3 col-lg-4 col-md-6 col-12 d-flex justify-content-between p-sm-4 px-sm-5 p-4 align-items-center ">
-          <div>
-            <p class="fs-13 common-color-orange mb-0 lh-grid">MODEL YILI</p>
-            <p class="fs-16">2019</p>
-          </div>
-          <img
-            style="width: 65px; height: 60px"
-            src="https://www.suvmarket.com/Content/images/car-detail-icon-5.png"
-            alt=""
-          />
+        <img
+          style="width: 65px; height: 60px"
+          src="https://www.suvmarket.com/Content/images/car-detail-icon-4.png"
+          alt=""
+        />
+      </div>
+      <div
+        class="col-xl-3 col-lg-4 col-md-6 col-12 d-flex justify-content-between p-sm-4 px-sm-5 p-4 align-items-center"
+      >
+        <div>
+          <p class="fs-13 common-color-orange mb-0 lh-grid">MODEL YILI</p>
+          <p class="fs-16">2019</p>
         </div>
-        <div class="col-xl-3 col-lg-4 col-md-6 col-12 d-flex justify-content-between p-sm-4 px-sm-5 p-4 align-items-center ">
-          <div>
-            <p class="fs-13 common-color-orange mb-0 lh-grid">ŞASİ NO</p>
-            <p class="fs-16">TSMLYDA1S00******</p>
-          </div>
-          <img
-            style="width: 65px; height: 60px"
-            src="https://www.suvmarket.com/Content/images/car-detail-icon-6.png"
-            alt=""
-          />
+        <img
+          style="width: 65px; height: 60px"
+          src="https://www.suvmarket.com/Content/images/car-detail-icon-5.png"
+          alt=""
+        />
+      </div>
+      <div
+        class="col-xl-3 col-lg-4 col-md-6 col-12 d-flex justify-content-between p-sm-4 px-sm-5 p-4 align-items-center"
+      >
+        <div>
+          <p class="fs-13 common-color-orange mb-0 lh-grid">ŞASİ NO</p>
+          <p class="fs-16">TSMLYDA1S00******</p>
         </div>
-        <div class="col-xl-3 col-lg-4 col-md-6 col-12 d-flex justify-content-between p-sm-4 px-sm-5 p-4 align-items-center " >
-          <div>
-            <p class="fs-13 common-color-orange mb-0 lh-grid">RENK</p>
-            <p class="fs-16">Sarı</p>
-          </div>
-          <img
-            style="width: 65px; height: 60px"
-            src="https://www.suvmarket.com/Content/images/car-detail-icon-7.png"
-            alt=""
-          />
+        <img
+          style="width: 65px; height: 60px"
+          src="https://www.suvmarket.com/Content/images/car-detail-icon-6.png"
+          alt=""
+        />
+      </div>
+      <div
+        class="col-xl-3 col-lg-4 col-md-6 col-12 d-flex justify-content-between p-sm-4 px-sm-5 p-4 align-items-center"
+      >
+        <div>
+          <p class="fs-13 common-color-orange mb-0 lh-grid">RENK</p>
+          <p class="fs-16">Sarı</p>
         </div>
-        <div class="col-xl-3 col-lg-4 col-md-6 col-12 d-flex justify-content-between p-sm-4 px-sm-5 p-4 align-items-center ">
-          <div>
-            <p class="fs-13 common-color-orange mb-0 lh-grid">MOTOR NO</p>
-            <p class="fs-16">K14C1******</p>
-          </div>
-        </div>
-        <div class="col-xl-3 col-lg-4 col-md-6 col-12 d-flex justify-content-between p-sm-4 px-sm-5 p-4 align-items-center ">
-          <div>
-            <p class="fs-13 common-color-orange mb-0 lh-grid">REHİN</p>
-            <p class="fs-16">Yok</p>
-          </div>
-        </div>
-        <div class="col-xl-3 col-lg-4 col-md-6 col-12 d-flex justify-content-between p-sm-4 px-sm-5 p-4 align-items-center ">
-          <div>
-            <p class="fs-13 common-color-orange mb-0 lh-grid">REHİN SORGU TARİHİ</p>
-            <p class="fs-16">18.03.2026</p>
-          </div>
-        </div>
-        <div class="col-xl-3 col-lg-4 col-md-6 col-12 d-flex justify-content-between p-sm-4 px-sm-5 p-4 align-items-center ">
-          <div>
-            <p class="fs-13 common-color-orange mb-0 lh-grid">HACİZ</p>
-            <p class="fs-16">Yok</p>
-          </div>
-        </div>
-        <div class="col-xl-3 col-lg-4 col-md-6 col-12 d-flex justify-content-between p-sm-4 px-sm-5 p-4 align-items-center ">
-          <div>
-            <p class="fs-13 common-color-orange mb-0 lh-grid">HACİZ SORGU TARİHİ</p>
-            <p class="fs-16">18.03.2026</p>
-          </div>
-        </div>
-        <div class="col-xl-3 col-lg-4 col-md-6 col-12 d-flex justify-content-between p-sm-4 px-sm-5 p-4 align-items-center " >
-          <div>
-            <p class="fs-13 common-color-orange mb-0 lh-grid">YEDEK ANAHTAR</p>
-            <p class="fs-16">Yok</p>
-          </div>
+        <img
+          style="width: 65px; height: 60px"
+          src="https://www.suvmarket.com/Content/images/car-detail-icon-7.png"
+          alt=""
+        />
+      </div>
+      <div
+        class="col-xl-3 col-lg-4 col-md-6 col-12 d-flex justify-content-between p-sm-4 px-sm-5 p-4 align-items-center"
+      >
+        <div>
+          <p class="fs-13 common-color-orange mb-0 lh-grid">MOTOR NO</p>
+          <p class="fs-16">K14C1******</p>
         </div>
       </div>
+      <div
+        class="col-xl-3 col-lg-4 col-md-6 col-12 d-flex justify-content-between p-sm-4 px-sm-5 p-4 align-items-center"
+      >
+        <div>
+          <p class="fs-13 common-color-orange mb-0 lh-grid">REHİN</p>
+          <p class="fs-16">Yok</p>
+        </div>
+      </div>
+      <div
+        class="col-xl-3 col-lg-4 col-md-6 col-12 d-flex justify-content-between p-sm-4 px-sm-5 p-4 align-items-center"
+      >
+        <div>
+          <p class="fs-13 common-color-orange mb-0 lh-grid">REHİN SORGU TARİHİ</p>
+          <p class="fs-16">18.03.2026</p>
+        </div>
+      </div>
+      <div
+        class="col-xl-3 col-lg-4 col-md-6 col-12 d-flex justify-content-between p-sm-4 px-sm-5 p-4 align-items-center"
+      >
+        <div>
+          <p class="fs-13 common-color-orange mb-0 lh-grid">HACİZ</p>
+          <p class="fs-16">Yok</p>
+        </div>
+      </div>
+      <div
+        class="col-xl-3 col-lg-4 col-md-6 col-12 d-flex justify-content-between p-sm-4 px-sm-5 p-4 align-items-center"
+      >
+        <div>
+          <p class="fs-13 common-color-orange mb-0 lh-grid">HACİZ SORGU TARİHİ</p>
+          <p class="fs-16">18.03.2026</p>
+        </div>
+      </div>
+      <div
+        class="col-xl-3 col-lg-4 col-md-6 col-12 d-flex justify-content-between p-sm-4 px-sm-5 p-4 align-items-center"
+      >
+        <div>
+          <p class="fs-13 common-color-orange mb-0 lh-grid">YEDEK ANAHTAR</p>
+          <p class="fs-16">Yok</p>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="container">
-    <h4 id="donanimSection" style="border-bottom: 1px solid white" class="fw-bold pt-7 pb-3 text-lg-start text-center">
+    <h4
+      id="donanimSection"
+      style="border-bottom: 1px solid white"
+      class="fw-bold pt-7 pb-3 text-lg-start text-center"
+    >
       DONANIMLAR
     </h4>
   </div>
   <div style="background-color: #f2f3f5" class="container-fluid">
     <div class="container">
-      <h4 id="ekspertizSection" class="fw-bold pt-7 pb-3 text-lg-start text-center">EKSPERTİZ BİLGİLERİ</h4>
+      <h4 id="ekspertizSection" class="fw-bold pt-7 pb-3 text-lg-start text-center">
+        EKSPERTİZ BİLGİLERİ
+      </h4>
 
       <div class="row">
         <div class="col-lg-8 col-12">
@@ -335,17 +466,15 @@
         </div>
 
         <div class="col-lg-4 col-12">
-          <a 
-            href="https://www.suvmarket.com/sertifika/35470_34MZM369.pdf" 
-            target="_blank" 
+          <a
+            href="https://www.suvmarket.com/sertifika/35470_34MZM369.pdf"
+            target="_blank"
             class="text-decoration-none text-dark"
           >
             <div class="bg-white cursor-pointer">
               <div class="d-flex flex-sm-row flex-column align-items-center mb-3 mb-lg-0">
                 <img style="height: 95px" src="/car-detail/tse-logo.png" alt="TSE Logo" />
-                <p class="fs-15 mb-1 ms-sm-2 mt-2 mt-sm-0">
-                  Onaylı Ekspertiz Raporu'nu indir.
-                </p>
+                <p class="fs-15 mb-1 ms-sm-2 mt-2 mt-sm-0">Onaylı Ekspertiz Raporu'nu indir.</p>
               </div>
             </div>
           </a>
@@ -356,28 +485,40 @@
             <div class="row">
               <div class="col-lg-4 col-12 px-3">
                 <div class="row">
-                  <div style="height: 100px;" class="col-xl-3 col-lg-6 col-3 border-bottom border-end d-flex flex-column align-items-center justify-content-center">
+                  <div
+                    style="height: 100px"
+                    class="col-xl-3 col-lg-6 col-3 border-bottom border-end d-flex flex-column align-items-center justify-content-center"
+                  >
                     <img
                       style="width: 28px; height: 28px"
                       src="/car-detail/expertise-icons/iyi.png"
                     />
                     <p class="fs-11 mt-2 mb-0">İyi</p>
                   </div>
-                  <div style="height: 100px;" class="col-xl-3 col-lg-6 col-3 border-bottom border-end d-flex flex-column align-items-center justify-content-center">
+                  <div
+                    style="height: 100px"
+                    class="col-xl-3 col-lg-6 col-3 border-bottom border-end d-flex flex-column align-items-center justify-content-center"
+                  >
                     <img
                       style="width: 28px; height: 28px"
                       src="/car-detail/expertise-icons/Boyali.png"
                     />
                     <p class="fs-11 mt-2 mb-0">Boyalı</p>
                   </div>
-                  <div style="height: 100px;" class="col-xl-3 col-lg-6 col-3 border-bottom border-end d-flex flex-column align-items-center justify-content-center">
+                  <div
+                    style="height: 100px"
+                    class="col-xl-3 col-lg-6 col-3 border-bottom border-end d-flex flex-column align-items-center justify-content-center"
+                  >
                     <img
                       style="width: 28px; height: 28px"
                       src="/car-detail/expertise-icons/degismis.png"
                     />
                     <p class="fs-11 mt-2 mb-0">Değişmiş</p>
                   </div>
-                  <div style="height: 100px;" class="col-xl-3 col-lg-6 col-3 border-bottom border-end d-flex flex-column align-items-center justify-content-center">
+                  <div
+                    style="height: 100px"
+                    class="col-xl-3 col-lg-6 col-3 border-bottom border-end d-flex flex-column align-items-center justify-content-center"
+                  >
                     <img
                       style="width: 28px; height: 28px"
                       src="/car-detail/expertise-icons/yarimboyali-.png"
@@ -390,7 +531,8 @@
                   <div
                     class="col-12 d-flex justify-content-between align-items-center border-bottom fs-6 fsfs"
                   >
-                    <div>Tavan</div><div>İyi</div>
+                    <div>Tavan</div>
+                    <div>İyi</div>
                   </div>
                   <div
                     class="col-12 d-flex justify-content-between align-items-center border-bottom fs-6 fsfs"
@@ -447,107 +589,109 @@
                   >
                     <span>Ön Tampon</span><span>İyi</span>
                   </div>
-                  <div class="col-12 d-flex justify-content-between align-items-center mb-lg-0 mb-5">
+                  <div
+                    class="col-12 d-flex justify-content-between align-items-center mb-lg-0 mb-5"
+                  >
                     <span>Arka Tampon</span><span>Boyalı</span>
                   </div>
                 </div>
               </div>
 
-              <div class="col-lg-8 col-12 d-flex justify-content-center align-items-center position-relative">
+              <div
+                class="col-lg-8 col-12 d-flex justify-content-center align-items-center position-relative"
+              >
                 <div class="position-relative">
                   <!-- Ana Resim -->
-                  <img class="img-fluid w-100" src="/car-detail/expertises.png" alt="Araç Expertisesi" />
+                  <img
+                    class="img-fluid w-100"
+                    src="/car-detail/expertises.png"
+                    alt="Araç Expertisesi"
+                  />
 
                   <!-- İkonlar (resim üzerinde) -->
                   <img
                     src="/car-detail/expertise-icons/iyi.png"
                     class="position-absolute"
-                    style="top: 40%; left: 84%; width: 28px; height: 28px;"
+                    style="top: 40%; left: 84%; width: 28px; height: 28px"
                     alt="İyi"
                   />
                   <img
                     src="/car-detail/expertise-icons/iyi.png"
                     class="position-absolute"
-                    style="top: 40%; left: 10%; width: 28px; height: 28px;"
+                    style="top: 40%; left: 10%; width: 28px; height: 28px"
                     alt="İyi"
                   />
                   <img
                     src="/car-detail/expertise-icons/iyi.png"
                     class="position-absolute"
-                    style="top: 58%; left: 10%; width: 28px; height: 28px;"
+                    style="top: 58%; left: 10%; width: 28px; height: 28px"
                     alt="İyi"
                   />
                   <img
                     src="/car-detail/expertise-icons/iyi.png"
                     class="position-absolute"
-                    style="top: 81%; left: 10%; width: 28px; height: 28px;"
+                    style="top: 81%; left: 10%; width: 28px; height: 28px"
                     alt="İyi"
                   />
                   <img
                     src="/car-detail/expertise-icons/iyi.png"
                     class="position-absolute"
-                    style="top: 15%; left: 86%; width: 28px; height: 28px;"
+                    style="top: 15%; left: 86%; width: 28px; height: 28px"
                     alt="İyi"
                   />
                   <img
                     src="/car-detail/expertise-icons/iyi.png"
                     class="position-absolute"
-                    style="top: 15%; left: 10%; width: 28px; height: 28px;"
+                    style="top: 15%; left: 10%; width: 28px; height: 28px"
                     alt="İyi"
                   />
                   <img
                     src="/car-detail/expertise-icons/iyi.png"
                     class="position-absolute"
-                    style="top: 88%; left: 46%; width: 28px; height: 28px;"
+                    style="top: 88%; left: 46%; width: 28px; height: 28px"
                     alt="İyi"
                   />
 
                   <img
                     src="/car-detail/expertise-icons/Boyali.png"
                     class="position-absolute"
-                    style="top: 15%; left: 47%; width: 28px; height: 28px;"
+                    style="top: 15%; left: 47%; width: 28px; height: 28px"
                     alt="Boyalı"
                   />
-
-
 
                   <img
                     src="/car-detail/expertise-icons/Boyali.png"
                     class="position-absolute"
-                    style="top: 58%; left: 84%; width: 28px; height: 28px;"
-                    alt="Boyalı"
-                  />
-                  <img
-                    src="/car-detail/expertise-icons/Boyali.png"
-                    class="position-absolute"
-                    style="top: 81%; left: 84%; width: 28px; height: 28px;"
+                    style="top: 58%; left: 84%; width: 28px; height: 28px"
                     alt="Boyalı"
                   />
                   <img
                     src="/car-detail/expertise-icons/Boyali.png"
                     class="position-absolute"
-                    style="top: 2%; left: 47%; width: 28px; height: 28px;"
+                    style="top: 81%; left: 84%; width: 28px; height: 28px"
                     alt="Boyalı"
                   />
-
-
-
+                  <img
+                    src="/car-detail/expertise-icons/Boyali.png"
+                    class="position-absolute"
+                    style="top: 2%; left: 47%; width: 28px; height: 28px"
+                    alt="Boyalı"
+                  />
 
                   <img
                     src="/car-detail/expertise-icons/degismis.png"
                     class="position-absolute"
-                    style="top: 57%; left: 48%; width: 28px; height: 28px;"
+                    style="top: 57%; left: 48%; width: 28px; height: 28px"
                     alt="Değişmiş"
                   />
 
                   <img
                     src="/car-detail/expertise-icons/yarimboyali-.png"
                     class="position-absolute"
-                    style="top: 95%; left: 46%; width: 28px; height: 28px;"
+                    style="top: 95%; left: 46%; width: 28px; height: 28px"
                     alt="Yarım Boyalı"
                   />
                 </div>
-
               </div>
             </div>
           </div>
@@ -601,7 +745,7 @@
     </div>
 
     <div class="container pb-5">
-            <h4 id="benzerSection" class="fw-bold pb-3 text-lg-start text-center py-5">BENZER ARAÇLAR</h4>
+      <h4 id="benzerSection" class="fw-bold pb-3 text-lg-start text-center py-5">BENZER ARAÇLAR</h4>
 
       <div class="row row-cols-lg-3 row-cols-sm-2 row-cols-1 g-3">
         <div class="col">
@@ -620,46 +764,106 @@
 
 @if (isLightboxOpen) {
   <div class="lightbox-backdrop" (click)="closeLightbox()">
-    <div class="lightbox-dialog w-xxl-40 w-60  d-lg-block d-none" (click)="$event.stopPropagation()">
-      
+    <div class="lightbox-dialog w-xxl-40 w-60 d-lg-block d-none" (click)="$event.stopPropagation()">
       <button class="lb-close" (click)="closeLightbox()">&times;</button>
 
-        <div class="position-relative overflow-hidden ">
-           <swiper-container #lbmainSwiper (slidechange)="onLbSlideChange($event)">
+      <div class="position-relative overflow-hidden">
+        <swiper-container #lbmainSwiper (slidechange)="onLbSlideChange($event)">
           @for (img of carImages; track $index) {
-            <swiper-slide >
-              <img [src]="img" class="w-100 object-fit-cover ratio-4x3">
-
+            <swiper-slide>
+              <img [src]="img" class="w-100 object-fit-cover ratio-4x3" />
             </swiper-slide>
           }
-  </swiper-container>
-          <button class="carousel-control-prev z-2" type="button" (click)="lbPrevSlide()">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
+        </swiper-container>
+        <button class="carousel-control-prev z-2" type="button" (click)="lbPrevSlide()">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
 
-          <button class="carousel-control-next z-2" type="button" (click)="lbNextSlide()">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
+        <button class="carousel-control-next z-2" type="button" (click)="lbNextSlide()">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
 
-        <div class="thumbs-container mt-3">
-          <div class="d-flex justify-content-center">
-            <div class="w-100 position-relative">
-              <div class="prev-tumb position-absolute start-0 top-0 h-100 d-flex align-items-center px-4 z-1 cursor-pointer" (click)="lbPrevThumb()"></div>
-              <swiper-container #lbthumbSwiper slides-per-view="5" space-between="10" class="mx-5">
-                @for (img of carImages; track $index) {
-                  <swiper-slide>
-                    <img [src]="img" class="img-fluid lb-thumbnail-img user-select-none" [class.active-thumb]="activeIndex === $index" (click)="setIndex($index)">
-                  </swiper-slide>
-                }
-              </swiper-container>
-              <div class="next-tumb position-absolute end-0 top-0 h-100 d-flex align-items-center px-4 z-1 cursor-pointer" (click)="lbNextThumb()"></div>
-            </div>
+      <div class="thumbs-container mt-3">
+        <div class="d-flex justify-content-center">
+          <div class="w-100 position-relative">
+            <div
+              class="prev-tumb position-absolute start-0 top-0 h-100 d-flex align-items-center px-4 z-1 cursor-pointer"
+              (click)="lbPrevThumb()"
+            ></div>
+            <swiper-container #lbthumbSwiper slides-per-view="5" space-between="10" class="mx-5">
+              @for (img of carImages; track $index) {
+                <swiper-slide>
+                  <img
+                    [src]="img"
+                    class="img-fluid lb-thumbnail-img user-select-none"
+                    [class.active-thumb]="activeIndex === $index"
+                    (click)="setIndex($index)"
+                  />
+                </swiper-slide>
+              }
+            </swiper-container>
+            <div
+              class="next-tumb position-absolute end-0 top-0 h-100 d-flex align-items-center px-4 z-1 cursor-pointer"
+              (click)="lbNextThumb()"
+            ></div>
           </div>
         </div>
-
+      </div>
     </div>
   </div>
 }
+
+<div
+  class="modal fade"
+  id="shareModal"
+  tabindex="-1"
+  aria-labelledby="shareModalLabel"
+  aria-hidden="true"
+>
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="shareModalLabel">Aracı Paylaş</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Kapat"></button>
+        </div>
+        <div class="modal-body text-center">
+          Hayalindeki Aracı <br> Arkadaşlarınla Paylaş..
+        </div>
+        <div class="modal-footer justify-content-center">
+    <div class="row w-100 justify-content-center">
+      <div class="col-3 d-flex justify-content-center">
+        <a href="#" class="text-decoration-none text-dark d-flex flex-column align-items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" style="width:40px;height:40px;" viewBox="0 0 640 640">
+            <path fill ="#1877F2" d="M576 320C576 178.6 461.4 64 320 64C178.6 64 64 178.6 64 320C64 440 146.7 540.8 258.2 568.5L258.2 398.2L205.4 398.2L205.4 320L258.2 320L258.2 286.3C258.2 199.2 297.6 158.8 383.2 158.8C399.4 158.8 427.4 162 438.9 165.2L438.9 236C432.9 235.4 422.4 235 409.3 235C367.3 235 351.1 250.9 351.1 292.2L351.1 320L434.7 320L420.3 398.2L351 398.2L351 574.1C477.8 558.8 576 450.9 576 320z"/>
+          </svg>
+        </a>
+      </div>
+      <div class="col-3 d-flex justify-content-center">
+        <a href="#" class="text-decoration-none text-dark d-flex flex-column align-items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" style="width:40px;height:40px" viewBox="0 0 640 640">
+            <path fill ="#1DA1F2" d="M523.4 215.7C523.7 220.2 523.7 224.8 523.7 229.3C523.7 368 418.1 527.9 225.1 527.9C165.6 527.9 110.4 510.7 64 480.8C72.4 481.8 80.6 482.1 89.3 482.1C138.4 482.1 183.5 465.5 219.6 437.3C173.5 436.3 134.8 406.1 121.5 364.5C128 365.5 134.5 366.1 141.3 366.1C150.7 366.1 160.1 364.8 168.9 362.5C120.8 352.8 84.8 310.5 84.8 259.5L84.8 258.2C98.8 266 115 270.9 132.2 271.5C103.9 252.7 85.4 220.5 85.4 184.1C85.4 164.6 90.6 146.7 99.7 131.1C151.4 194.8 229 236.4 316.1 240.9C314.5 233.1 313.5 225 313.5 216.9C313.5 159.1 360.3 112 418.4 112C448.6 112 475.9 124.7 495.1 145.1C518.8 140.6 541.6 131.8 561.7 119.8C553.9 144.2 537.3 164.6 515.6 177.6C536.7 175.3 557.2 169.5 576 161.4C561.7 182.2 543.8 200.7 523.4 215.7z"/>
+          </svg>
+        </a>
+      </div>
+      <div class="col-3 d-flex justify-content-center">
+        <a href="#" class="text-decoration-none text-dark d-flex flex-column align-items-center">
+          <svg style="width:40px;height:40px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+            <path fill ="#EA4335" d="M112 128C85.5 128 64 149.5 64 176C64 191.1 71.1 205.3 83.2 214.4L291.2 370.4C308.3 383.2 331.7 383.2 348.8 370.4L556.8 214.4C568.9 205.3 576 191.1 576 176C576 149.5 554.5 128 528 128L112 128zM64 260L64 448C64 483.3 92.7 512 128 512L512 512C547.3 512 576 483.3 576 448L576 260L377.6 408.8C343.5 434.4 296.5 434.4 262.4 408.8L64 260z"/>
+          </svg>
+        </a>
+      </div>
+      <div class="col-3 d-flex justify-content-center">
+        <a href="#" class="text-decoration-none text-dark d-flex flex-column align-items-center">
+          <svg style="width:40px;height:40px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+            <path fill ="#25D366" d="M476.9 161.1C435 119.1 379.2 96 319.9 96C197.5 96 97.9 195.6 97.9 318C97.9 357.1 108.1 395.3 127.5 429L96 544L213.7 513.1C246.1 530.8 282.6 540.1 319.8 540.1L319.9 540.1C442.2 540.1 544 440.5 544 318.1C544 258.8 518.8 203.1 476.9 161.1zM319.9 502.7C286.7 502.7 254.2 493.8 225.9 477L219.2 473L149.4 491.3L168 423.2L163.6 416.2C145.1 386.8 135.4 352.9 135.4 318C135.4 216.3 218.2 133.5 320 133.5C369.3 133.5 415.6 152.7 450.4 187.6C485.2 222.5 506.6 268.8 506.5 318.1C506.5 419.9 421.6 502.7 319.9 502.7zM421.1 364.5C415.6 361.7 388.3 348.3 383.2 346.5C378.1 344.6 374.4 343.7 370.7 349.3C367 354.9 356.4 367.3 353.1 371.1C349.9 374.8 346.6 375.3 341.1 372.5C308.5 356.2 287.1 343.4 265.6 306.5C259.9 296.7 271.3 297.4 281.9 276.2C283.7 272.5 282.8 269.3 281.4 266.5C280 263.7 268.9 236.4 264.3 225.3C259.8 214.5 255.2 216 251.8 215.8C248.6 215.6 244.9 215.6 241.2 215.6C237.5 215.6 231.5 217 226.4 222.5C221.3 228.1 207 241.5 207 268.8C207 296.1 226.9 322.5 229.6 326.2C232.4 329.9 268.7 385.9 324.4 410C359.6 425.2 373.4 426.5 391 423.9C401.7 422.3 423.8 410.5 428.4 397.5C433 384.5 433 373.4 431.6 371.1C430.3 368.6 426.6 367.2 421.1 364.5z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+      </div>
+    </div>
+</div>
