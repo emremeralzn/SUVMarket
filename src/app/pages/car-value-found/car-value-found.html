@@ -24,7 +24,7 @@
     </div>
 
     <div class="d-xxl-block d-none">
-      <ul class="d-flex align-items-center justify-content-around  list-unstyled text-white mt-xl-0 mt-lg-2">
+      <ul class="d-flex align-items-center justify-content-between list-unstyled text-white mt-xl-0 mt-lg-2">
         @for (step of steps; track step; let i = $index) {
             <div style="height: 105px;" class="d-flex flex-column justify-content-start align-items-center gap-2 step-item">
   
@@ -44,7 +44,7 @@
                     i === 2 ? selectedYear : ''
                     }}
                 </span>
-</div>
+            </div>
           
         }
       </ul>

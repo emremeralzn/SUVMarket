@@ -11,3 +11,6 @@
  width: 110px;
     height: 50px;
 }
+.container-fluid{
+  min-height: calc(100dvh - 296px);
+}

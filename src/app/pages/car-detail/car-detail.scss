@@ -308,3 +308,8 @@ background-color: rgba(0, 0, 0, 0.8);  z-index: 10000;
 }
 .lightbox-nav button:first-child { left: -60px; }
 .lightbox-nav button:last-child { right: -60px; }
+
+.action-btn:hover{
+  opacity: 0.6 !important;
+  transition: all 0.3s ease;
+}
